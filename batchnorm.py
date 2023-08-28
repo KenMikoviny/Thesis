@@ -24,17 +24,24 @@ from torch.utils.data import DataLoader
 from matplotlib import pyplot as plt
 from tqdm import tqdm
 
+
+# Energy consumption measurement
+from carbontracker.tracker import CarbonTracker
+from carbontracker import parser
+
 matplotlib.style.use('ggplot')
 
 
 # learning parameters
 batch_size = 512
-epochs = 200
+epochs = 2
 sample_size = 64 # fixed sample size
 nz = 128 # latent vector size (cannot be directly accessed during training)
 k = 1 # number of steps to apply to the discriminator
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
+# Energy consumption measurement
+tracker = CarbonTracker(epochs=epochs)
 
 transform = transforms.Compose([
                                 transforms.ToTensor(),
@@ -60,15 +67,21 @@ class Generator(nn.Module):
         super(Generator, self).__init__()
         self.nz = nz
         self.main = nn.Sequential(
+            #nn.BatchNorm1d(self.nz),
             nn.Linear(self.nz, 256), # in_features equal to nz, that is 128. The out_features is 256
-            nn.BatchNorm1d(256),
+            
             nn.LeakyReLU(0.2),
             # add BatchNormalization here
+            #nn.BatchNorm1d(256),
             nn.Linear(256, 512),
+            
             nn.LeakyReLU(0.2),
             # add BatchNormalization here
+            #nn.BatchNorm1d(512),
             nn.Linear(512, 1024),
+            
             nn.LeakyReLU(0.2),
+            #nn.BatchNorm1d(1024),
             # add BatchNormalization here
             nn.Linear(1024, 784),
             nn.Tanh(),
@@ -85,7 +98,7 @@ class Discriminator(nn.Module):
         self.main = nn.Sequential(
             nn.Linear(self.n_input, 1024),
             # add BatchNormalization here
-            nn.BatchNorm1d(1024),
+            #nn.BatchNorm1d(1024),
             nn.LeakyReLU(0.2),
             nn.Dropout(0.3),
             
@@ -190,7 +203,10 @@ discriminator.train()
 start_time = time.time()
 print("\nStart of training\n")
 
+logs = parser.print_aggregate(log_dir="./logs/")
+
 for epoch in range(epochs):
+    tracker.epoch_start()
     loss_g = 0.0
     loss_d = 0.0
     for bi, data in tqdm(enumerate(train_loader), total=int(len(train_data)/train_loader.batch_size)):
@@ -218,13 +234,28 @@ for epoch in range(epochs):
     losses_g.append(epoch_loss_g.detach().cpu())
     losses_d.append(epoch_loss_d.detach().cpu())
     
+    tracker.epoch_end()
     print(f"Epoch {epoch} of {epochs}")
     print(f"Generator loss: {epoch_loss_g:.8f}, Discriminator loss: {epoch_loss_d:.8f}")
 
 print('DONE TRAINING')
+tracker.stop()
 end_time = time.time()
 print("total time spent training:" +  str((end_time - start_time) / 60) + " minutes.")
 torch.save(generator.state_dict(), './outputs/batchnorm/generator.pth')
+
+
+print("printing logs")
+logs = parser.print_aggregate(log_dir="./logs/")
+print(parser.print_aggregate(log_dir="./logs"))
+first_log = logs[0]
+
+print(f"Output file name: {first_log['output_filename']}")
+print(f"Standard file name: {first_log['standard_filename']}")
+print(f"Stopped early: {first_log['early_stop']}")
+print(f"Measured consumption: {first_log['actual']}")
+print(f"Predicted consumption: {first_log['pred']}")
+print(f"Measured GPU devices: {first_log['components']['gpu']['devices']}")
 
 # save the generated images as GIF file
 imgs = [np.array(to_pil_image(img)) for img in images]
@@ -236,3 +267,15 @@ plt.plot(losses_g, label='Generator loss')
 plt.plot(losses_d, label='Discriminator Loss')
 plt.legend()
 plt.savefig('./outputs/batchnorm/loss.png')
+
+
+# plot and save the generator and discriminator loss, restricted y axis
+plt.figure()
+plt.plot(losses_g, label='Generator loss')
+plt.plot(losses_d, label='Discriminator Loss')
+plt.legend()
+plt.ylim([-1, 5])
+plt.savefig('./outputs/batchnorm/loss2.png')
+
+
+# end of energy consumption measurements
