@@ -70,7 +70,7 @@ ngf = 64
 ndf = 64
 """Size of feature maps in discriminator"""
 
-num_epochs = 1
+num_epochs = 5 # TODO remove this if stop criterion works correctly
 """Number of training epochs"""
 
 lr = 0.0002
@@ -108,9 +108,8 @@ total_images = total_batches * batch_size
 print_interval = 50
 
 # Initialize variables for early stopping
-improvement_threshold = 0.1  # Define the improvement threshold (10%)
-consecutive_no_improvement = 0  # Counter to keep track of consecutive iterations with no improvement
-window_size = 500  # Set the window size for calculating average loss
+improvement_threshold = 0.05  # Define the improvement threshold (5%)
+window_size = 100  # Set the window size for calculating average loss
 
 def main():
     start_time = time.time()
@@ -170,9 +169,8 @@ def main():
 
     # Variables for tracking loss
     prev_avg_loss = float('inf')  # Initialize with a large value
-    # Initialize variables for early stopping
-    improvement = float('inf')  # Initialize with a large value
     image_counter = 0  # Counter to keep track of the number of images processed
+    consecutive_no_improvement = 0  # Counter to keep track of consecutive iterations with no improvement
 
     # Lists to keep track of progress
     img_list = []
@@ -267,13 +265,17 @@ def main():
                 avg_loss = sum(epoch_losses[-window_size:]) / min(window_size, len(epoch_losses))
 
                 # Print the improvement for this epoch, remove later
-                print(f'Iteration [{i+1}/{total_images}]')
+                print(f'Iteration [{i+1}/{total_images}] - Consecutive avg_windows without improvement: {consecutive_no_improvement}')
                 print(f'Avg loss [{avg_loss:.4f}] - Previous avg loss: {prev_avg_loss:.4f}')
 
                 if avg_loss > ((1 - improvement_threshold) * prev_avg_loss):
-                    print("Stopping training due to insufficient improvement.")
-                    stop_training = True  # Set the flag to stop training
-                    break  # Exit the training loop
+                    consecutive_no_improvement += 1
+                    #if consecutive_no_improvement > 5:
+                        #print("Stopping training due to insufficient improvement.")
+                        #stop_training = True  # Set the flag to stop training
+                        #break  # Exit the training loop
+                else:
+                    consecutive_no_improvement = 0
 
                 prev_avg_loss = avg_loss  # Update the previous average loss
                 
@@ -283,7 +285,7 @@ def main():
             if (image_counter % print_interval == 0):
                 # Output training stats
                 print(f'[{epoch}/{num_epochs}][{i}/{len(dataloader)}]\t'
-                    f'Processed [{image_counter}/{total_images}] \t'
+                    f'Processed [{image_counter + 1}/{total_images}] \t'
                     f'Loss_D: {errD.item():.4f}\tLoss_G: {errG.item():.4f}\t'
                     f'D(x): {D_x:.4f}\tD(G(z)): {D_G_z1:.4f} / {D_G_z2:.4f}\t'
                     )
