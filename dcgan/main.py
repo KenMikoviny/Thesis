@@ -20,6 +20,7 @@ import argparse
 
 from generator import Generator, GeneratorBN
 from discriminator import Discriminator, DiscriminatorBN
+from inception import calculate_inception_score, resize_image
 
 from IPython.display import HTML
 
@@ -73,7 +74,7 @@ ndf = 64
 num_epochs = 5 # TODO remove this if stop criterion works correctly
 """Number of training epochs"""
 
-lr = 0.0002
+lr = 0.00005
 """Learning rate for optimizers"""
 
 beta1 = 0.5
@@ -251,33 +252,79 @@ def main():
 
             # Update the total number of images processed
             image_counter += 1
+            img_list2 = []
+            # Check inception score every x epochs
+            if i % 500 == 0:
+                # Generate and save 100 fake images
+                fake_images = []
+
+                with torch.no_grad():
+                    fake_images = netG(fixed_noise).detach().cpu()
+                    # Apply the function to each image in the batch
+                    processed_images = torch.stack([resize_image(image) for image in fake_images])
+
+                img_list2.append(vutils.make_grid(fake_images, padding=2, normalize=True))
+                print("Processed images shape")
+                print(processed_images.shape)
+                calculate_inception_score(processed_images)
+
+                # Configure the grid layout
+                num_rows = 2  # Number of rows in the grid layout
+                num_cols = 5  # Number of columns in the grid layout (change to 5 for 10 images)
+                figsize = (12, 4)  # Figure size in inches
+
+                # Create the plot
+                fig, axs = plt.subplots(num_rows, num_cols, figsize=figsize)
+
+                for i, image in enumerate(processed_images[:10]):  # Display the first 10 images
+                    row = i // num_cols
+                    col = i % num_cols
+                    axs[row, col].imshow(image)
+                    axs[row, col].axis("off")
+
+                # Display the plot
+                plt.tight_layout()
+                plt.show()
+
+                # Plot the fake images from the last epoch
+                plt.subplot(1,2,1)
+                plt.axis("off")
+                plt.title("Fake Images")
+                plt.imshow(np.transpose(img_list[-1],(1,2,0)))
+
+                # Plot the fake images from the last epoch
+                plt.subplot(1,2,2)
+                plt.axis("off")
+                plt.title("Processed Fake Images")
+                plt.imshow(np.transpose(img_list2[-1],(1,2,0)))
+                plt.show()
 
             # Check how the generator is doing by saving G's output on fixed_noise
             if (image_counter % 500 == 0) or ((epoch == num_epochs-1) and (i == len(dataloader)-1)):
                 with torch.no_grad():
                     fake = netG(fixed_noise).detach().cpu()
                 img_list.append(vutils.make_grid(fake, padding=2, normalize=True))
+            
+            # # Check the stopping condition based on improvement in avg_loss
+            # if i % window_size == 0:
 
-            # Check the stopping condition based on improvement in avg_loss
-            if i % window_size == 0:
+            #     # Calculate the average loss for the current window
+            #     avg_loss = sum(epoch_losses[-window_size:]) / min(window_size, len(epoch_losses))
 
-                # Calculate the average loss for the current window
-                avg_loss = sum(epoch_losses[-window_size:]) / min(window_size, len(epoch_losses))
+            #     # Print the improvement for this epoch, remove later
+            #     print(f'Iteration [{i+1}/{total_images}] - Consecutive avg_windows without improvement: {consecutive_no_improvement}')
+            #     print(f'Avg loss [{avg_loss:.4f}] - Previous avg loss: {prev_avg_loss:.4f}')
 
-                # Print the improvement for this epoch, remove later
-                print(f'Iteration [{i+1}/{total_images}] - Consecutive avg_windows without improvement: {consecutive_no_improvement}')
-                print(f'Avg loss [{avg_loss:.4f}] - Previous avg loss: {prev_avg_loss:.4f}')
+            #     if avg_loss > ((1 - improvement_threshold) * prev_avg_loss):
+            #         consecutive_no_improvement += 1
+            #         #if consecutive_no_improvement > 5:
+            #             #print("Stopping training due to insufficient improvement.")
+            #             #stop_training = True  # Set the flag to stop training
+            #             #break  # Exit the training loop
+            #     else:
+            #         consecutive_no_improvement = 0
 
-                if avg_loss > ((1 - improvement_threshold) * prev_avg_loss):
-                    consecutive_no_improvement += 1
-                    #if consecutive_no_improvement > 5:
-                        #print("Stopping training due to insufficient improvement.")
-                        #stop_training = True  # Set the flag to stop training
-                        #break  # Exit the training loop
-                else:
-                    consecutive_no_improvement = 0
-
-                prev_avg_loss = avg_loss  # Update the previous average loss
+            #     prev_avg_loss = avg_loss  # Update the previous average loss
                 
 
 
@@ -297,7 +344,6 @@ def main():
     end_time = time.time()
     print('DONE TRAINING')
     print("total time spent training:" +  str((end_time - start_time) / 60) + " minutes.")
-
 
 
 
