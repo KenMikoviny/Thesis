@@ -74,7 +74,7 @@ ndf = 64
 num_epochs = 5 # TODO remove this if stop criterion works correctly
 """Number of training epochs"""
 
-lr = 0.00005
+lr = 0.0002
 """Learning rate for optimizers"""
 
 beta1 = 0.5
@@ -254,7 +254,7 @@ def main():
             image_counter += 1
             img_list2 = []
             # Check inception score every x epochs
-            if i % 500 == 0:
+            if i % 500 == 0 and i != 0:
                 # Generate and save 100 fake images
                 fake_images = []
 
