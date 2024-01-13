@@ -50,21 +50,6 @@ def calculate_inception_score(images, n_split=10, eps=1E-16):
 	print('inception score std: ', is_std)
 	return is_avg, is_std
 
-# # pretend to load images
-# images = ones((50, 299, 299, 3))
-# print('loaded', images.shape)
-# # calculate inception score
-# is_avg, is_std = calculate_inception_score(images)
-# print('score', is_avg, is_std)
-
-# transforms image to have the shape 299x299x3, pixels in [0,255]
-# def resize_image(image):
-#     # Ensure pixel values are in [0, 255]
-#     resized_image = (image + 1) * 127.5
-#     resized_image = resized_image.clamp(0, 255).byte()
-
-#     return resized_image
-
 def resize_image(image, target_size=(299, 299)):
 	
    # Step 1: Rescale pixel values to [0, 1]

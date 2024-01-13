@@ -1,0 +1,438 @@
+Average Inception score for the last 50 processed images at [300/1583]  is [(2.3730874, 0.15778565)]
+[3/4][301/1583] Processed [5050/202624]         Loss_D: 0.9474  Loss_G: 0.7322  D(x): 0.8606    D(G(z)): 0.5404 / 0.4836        
+[3/4][351/1583] Processed [5100/202624]         Loss_D: 0.9414  Loss_G: 0.7212  D(x): 0.8536    D(G(z)): 0.5252 / 0.4894        
+202/202 [==============================] - 291s 1s/step
+inception score mean:  2.280927
+
+
+
+[3/4][251/1583] Processed [5000/202624]         Loss_D: 0.9537  Loss_G: 0.6799  D(x): 0.8817    D(G(z)): 0.5532 / 0.5091
+[3/4][351/1583] Processed [5050/202624]         Loss_D: 0.9474  Loss_G: 0.7322  D(x): 0.8606    D(G(z)): 0.5404 / 0.4836
+aaaaa
+CarbonTracker: 
+Actual consumption for 4 epoch(s):
+        Time:   2:24:42
+        Energy: 0.0479835 kWh
+        CO2eq:  4.8395105 g
+        This is equivalent to:
+        0.045019 km travelled by car
+CarbonTracker: 
+Predicted consumption for 4 epoch(s):
+        Time:   2:24:42
+        Energy: 0.0479835 kWh
+        CO2eq:  4.8395105 g
+        This is equivalent to:
+        0.045019 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:144.7148549715678 minutes.
+10 images saved in outputs/
+
+
+
+
+
+PS C:\Users\kenmi\Desktop\skol\P2\Thesis\dcgan> py main.py --no_batchnorm --no_pruning
+Random Seed:  999
+CarbonTracker: The following components were found: GPU with device(s) NVIDIA GeForce RTX 3060 Laptop GPU.
+Generator(
+  (main): Sequential(
+    (0): ConvTranspose2d(100, 512, kernel_size=(4, 4), stride=(1, 1), bias=False)
+    (1): ReLU(inplace=True)
+    (2): ConvTranspose2d(512, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (3): ReLU(inplace=True)
+    (4): ConvTranspose2d(256, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (5): ReLU(inplace=True)
+    (6): ConvTranspose2d(128, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (7): ReLU(inplace=True)
+    (8): ConvTranspose2d(64, 3, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (9): Tanh()
+  )
+)
+Discriminator(
+  (main): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (1): LeakyReLU(negative_slope=0.2, inplace=True)
+    (2): Conv2d(64, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (3): LeakyReLU(negative_slope=0.2, inplace=True)
+    (4): Conv2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (5): LeakyReLU(negative_slope=0.2, inplace=True)
+    (6): Conv2d(256, 512, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (7): LeakyReLU(negative_slope=0.2, inplace=True)
+    (8): Conv2d(512, 1, kernel_size=(4, 4), stride=(1, 1), bias=False)
+    (9): Sigmoid()
+  )
+)
+Starting Training Loop...
+[0/4][50/1583]  Processed [50/202624]   Loss_D: 0.7931  Loss_G: 0.6387  D(x): 0.9083    D(G(z)): 0.4868 / 0.5280
+[0/4][100/1583] Processed [100/202624]  Loss_D: 0.7248  Loss_G: 0.6733  D(x): 0.9938    D(G(z)): 0.5124 / 0.5100
+2023-10-31 10:03:48.431596: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+202/202 [==============================] - 237s 1s/step
+inception score mean:  1.7011067
+inception score std:  0.2689236
+Average Inception score for the last 50 processed images at [100/1583]  is [(1.7011067, 0.2689236)] 
+[0/4][150/1583] Processed [150/202624]  Loss_D: 0.7070  Loss_G: 0.8031  D(x): 0.9545    D(G(z)): 0.4806 / 0.4480
+[0/4][200/1583] Processed [200/202624]  Loss_D: 0.8134  Loss_G: 0.7200  D(x): 0.9570    D(G(z)): 0.5361 / 0.4868
+202/202 [==============================] - 251s 1s/step
+inception score mean:  1.6324116
+inception score std:  0.21588488
+Average Inception score for the last 50 processed images at [200/1583]  is [(1.6324116, 0.21588488)]
+[0/4][250/1583] Processed [250/202624]  Loss_D: 0.9504  Loss_G: 0.7039  D(x): 0.9461    D(G(z)): 0.5894 / 0.4946
+[0/4][300/1583] Processed [300/202624]  Loss_D: 0.7735  Loss_G: 0.7777  D(x): 0.9511    D(G(z)): 0.5126 / 0.4595
+202/202 [==============================] - 238s 1s/step
+inception score mean:  1.6527607
+inception score std:  0.2378329
+Average Inception score for the last 50 processed images at [300/1583]  is [(1.6527607, 0.2378329)]
+[0/4][350/1583] Processed [350/202624]  Loss_D: 0.7969  Loss_G: 0.7779  D(x): 0.9618    D(G(z)): 0.5271 / 0.4602
+[0/4][400/1583] Processed [400/202624]  Loss_D: 0.6555  Loss_G: 0.7975  D(x): 0.9823    D(G(z)): 0.4702 / 0.4505
+202/202 [==============================] - 239s 1s/step
+inception score mean:  1.6094748
+inception score std:  0.12612487
+Average Inception score for the last 50 processed images at [400/1583]  is [(1.6094748, 0.12612487)]
+[0/4][450/1583] Processed [450/202624]  Loss_D: 0.8138  Loss_G: 0.6962  D(x): 0.9109    D(G(z)): 0.5076 / 0.4985
+[0/4][500/1583] Processed [500/202624]  Loss_D: 0.8267  Loss_G: 0.6945  D(x): 0.9457    D(G(z)): 0.5356 / 0.4994
+202/202 [==============================] - 237s 1s/step
+inception score mean:  1.6378549
+inception score std:  0.18458809
+Average Inception score for the last 50 processed images at [500/1583]  is [(1.6378549, 0.18458809)]
+[0/4][550/1583] Processed [550/202624]  Loss_D: 0.8058  Loss_G: 0.7397  D(x): 0.9232    D(G(z)): 0.5101 / 0.4783
+[0/4][600/1583] Processed [600/202624]  Loss_D: 0.8325  Loss_G: 0.6628  D(x): 0.9431    D(G(z)): 0.5369 / 0.5158
+202/202 [==============================] - 232s 1s/step
+inception score mean:  2.0859458
+inception score std:  0.28835538
+Average Inception score for the last 50 processed images at [600/1583]  is [(2.0859458, 0.28835538)] 
+[0/4][650/1583] Processed [650/202624]  Loss_D: 0.9544  Loss_G: 0.7645  D(x): 0.8668    D(G(z)): 0.5472 / 0.4669
+[0/4][700/1583] Processed [700/202624]  Loss_D: 1.0113  Loss_G: 0.8118  D(x): 0.8973    D(G(z)): 0.5898 / 0.4470
+202/202 [==============================] - 236s 1s/step
+inception score mean:  1.9016994
+inception score std:  0.16351765
+Average Inception score for the last 50 processed images at [700/1583]  is [(1.9016994, 0.16351765)] 
+[0/4][750/1583] Processed [750/202624]  Loss_D: 0.8442  Loss_G: 0.7898  D(x): 0.9174    D(G(z)): 0.5244 / 0.4548
+[0/4][800/1583] Processed [800/202624]  Loss_D: 1.0067  Loss_G: 0.6269  D(x): 0.9272    D(G(z)): 0.5999 / 0.5361
+202/202 [==============================] - 220s 1s/step
+inception score mean:  2.104853
+inception score std:  0.23982161
+Average Inception score for the last 50 processed images at [800/1583]  is [(2.104853, 0.23982161)] 
+[0/4][850/1583] Processed [850/202624]  Loss_D: 0.9192  Loss_G: 0.7053  D(x): 0.8898    D(G(z)): 0.5472 / 0.4955
+[0/4][900/1583] Processed [900/202624]  Loss_D: 0.8574  Loss_G: 0.7467  D(x): 0.9356    D(G(z)): 0.5451 / 0.4745
+202/202 [==============================] - 230s 1s/step
+inception score mean:  2.2758222
+inception score std:  0.19316803
+Average Inception score for the last 50 processed images at [900/1583]  is [(2.2758222, 0.19316803)] 
+[0/4][950/1583] Processed [950/202624]  Loss_D: 0.9351  Loss_G: 0.6976  D(x): 0.8720    D(G(z)): 0.5457 / 0.4983
+[0/4][1000/1583]        Processed [1000/202624]         Loss_D: 0.8907  Loss_G: 0.6370  D(x): 0.9063    D(G(z)): 0.5411 / 0.5299
+202/202 [==============================] - 216s 1s/step
+inception score mean:  2.3846755
+inception score std:  0.28226456
+Average Inception score for the last 50 processed images at [1000/1583] is [(2.3846755, 0.28226456)] 
+[0/4][1050/1583]        Processed [1050/202624]         Loss_D: 0.8985  Loss_G: 0.6813  D(x): 0.9053    D(G(z)): 0.5450 / 0.5070
+[0/4][1100/1583]        Processed [1100/202624]         Loss_D: 0.9480  Loss_G: 0.8568  D(x): 0.9350    D(G(z)): 0.5813 / 0.4275
+202/202 [==============================] - 221s 1s/step
+inception score mean:  2.4829464
+inception score std:  0.18741801
+Average Inception score for the last 50 processed images at [1100/1583] is [(2.4829464, 0.18741801)] 
+[0/4][1150/1583]        Processed [1150/202624]         Loss_D: 0.8800  Loss_G: 0.7060  D(x): 0.8909    D(G(z)): 0.5297 / 0.4942
+[0/4][1200/1583]        Processed [1200/202624]         Loss_D: 0.8804  Loss_G: 0.6460  D(x): 0.9025    D(G(z)): 0.5346 / 0.5253
+202/202 [==============================] - 228s 1s/step
+inception score mean:  2.6229527
+inception score std:  0.3236398
+Average Inception score for the last 50 processed images at [1200/1583] is [(2.6229527, 0.3236398)] 
+[0/4][1250/1583]        Processed [1250/202624]         Loss_D: 0.8933  Loss_G: 0.6733  D(x): 0.9297    D(G(z)): 0.5562 / 0.5108
+[0/4][1300/1583]        Processed [1300/202624]         Loss_D: 0.8644  Loss_G: 0.6813  D(x): 0.9158    D(G(z)): 0.5343 / 0.5070
+202/202 [==============================] - 225s 1s/step
+inception score mean:  2.5565925
+inception score std:  0.2551893
+Average Inception score for the last 50 processed images at [1300/1583] is [(2.5565925, 0.2551893)]
+[0/4][1350/1583]        Processed [1350/202624]         Loss_D: 0.9102  Loss_G: 0.7224  D(x): 0.8725    D(G(z)): 0.5315 / 0.4873
+[0/4][1400/1583]        Processed [1400/202624]         Loss_D: 0.9522  Loss_G: 0.6480  D(x): 0.9237    D(G(z)): 0.5793 / 0.5238
+202/202 [==============================] - 237s 1s/step
+inception score mean:  2.4547162
+inception score std:  0.33084357
+Average Inception score for the last 50 processed images at [1400/1583] is [(2.4547162, 0.33084357)]
+[0/4][1450/1583]        Processed [1450/202624]         Loss_D: 0.9783  Loss_G: 0.6320  D(x): 0.8921    D(G(z)): 0.5735 / 0.5322
+[0/4][1500/1583]        Processed [1500/202624]         Loss_D: 0.9483  Loss_G: 0.6856  D(x): 0.9157    D(G(z)): 0.5709 / 0.5047
+202/202 [==============================] - 228s 1s/step
+inception score mean:  2.772039
+inception score std:  0.178187
+Average Inception score for the last 50 processed images at [1500/1583] is [(2.772039, 0.178187)] 
+[0/4][1550/1583]        Processed [1550/202624]         Loss_D: 1.0573  Loss_G: 0.7371  D(x): 0.9202    D(G(z)): 0.6178 / 0.4798
+[1/4][17/1583]  Processed [1600/202624]         Loss_D: 0.8971  Loss_G: 0.6903  D(x): 0.9044    D(G(z)): 0.5442 / 0.5034
+[1/4][67/1583]  Processed [1650/202624]         Loss_D: 0.9292  Loss_G: 0.6765  D(x): 0.9057    D(G(z)): 0.5585 / 0.5093
+202/202 [==============================] - 229s 1s/step
+inception score mean:  2.7179523
+inception score std:  0.24327342
+Average Inception score for the last 50 processed images at [100/1583]  is [(2.7179523, 0.24327342)] 
+[1/4][117/1583] Processed [1700/202624]         Loss_D: 0.8383  Loss_G: 0.7851  D(x): 0.9165    D(G(z)): 0.5220 / 0.4580
+[1/4][167/1583] Processed [1750/202624]         Loss_D: 0.9827  Loss_G: 0.6927  D(x): 0.8275    D(G(z)): 0.5347 / 0.5014
+202/202 [==============================] - 216s 1s/step
+inception score mean:  2.7586586
+inception score std:  0.23947051
+Average Inception score for the last 50 processed images at [200/1583]  is [(2.7586586, 0.23947051)] 
+[1/4][217/1583] Processed [1800/202624]         Loss_D: 0.8438  Loss_G: 0.7232  D(x): 0.9233    D(G(z)): 0.5304 / 0.4861
+[1/4][267/1583] Processed [1850/202624]         Loss_D: 0.7960  Loss_G: 0.7583  D(x): 0.9164    D(G(z)): 0.5028 / 0.4690
+202/202 [==============================] - 211s 1s/step
+inception score mean:  2.8604178
+inception score std:  0.27512258
+Average Inception score for the last 50 processed images at [300/1583]  is [(2.8604178, 0.27512258)]
+[1/4][317/1583] Processed [1900/202624]         Loss_D: 0.9278  Loss_G: 0.7032  D(x): 0.8899    D(G(z)): 0.5500 / 0.4973
+[1/4][367/1583] Processed [1950/202624]         Loss_D: 1.0939  Loss_G: 0.6858  D(x): 0.9086    D(G(z)): 0.6253 / 0.5068
+202/202 [==============================] - 204s 998ms/step
+inception score mean:  2.840004
+inception score std:  0.19813308
+Average Inception score for the last 50 processed images at [400/1583]  is [(2.840004, 0.19813308)]
+[1/4][417/1583] Processed [2000/202624]         Loss_D: 0.9201  Loss_G: 0.6119  D(x): 0.9038    D(G(z)): 0.5536 / 0.5430        
+[1/4][467/1583] Processed [2050/202624]         Loss_D: 0.8441  Loss_G: 0.7557  D(x): 0.9267    D(G(z)): 0.5338 / 0.4703        
+202/202 [==============================] - 232s 1s/step
+inception score mean:  2.7217603
+inception score std:  0.2737631
+Average Inception score for the last 50 processed images at [500/1583]  is [(2.7217603, 0.2737631)]
+[1/4][517/1583] Processed [2100/202624]         Loss_D: 0.9999  Loss_G: 0.5986  D(x): 0.8473    D(G(z)): 0.5547 / 0.5503        
+[1/4][567/1583] Processed [2150/202624]         Loss_D: 0.8469  Loss_G: 0.7115  D(x): 0.9070    D(G(z)): 0.5220 / 0.4926        
+202/202 [==============================] - 230s 1s/step
+inception score mean:  2.7222047
+inception score std:  0.2812089
+Average Inception score for the last 50 processed images at [600/1583]  is [(2.7222047, 0.2812089)]
+[1/4][617/1583] Processed [2200/202624]         Loss_D: 0.8954  Loss_G: 0.7040  D(x): 0.9054    D(G(z)): 0.5415 / 0.4958        
+[1/4][667/1583] Processed [2250/202624]         Loss_D: 0.8689  Loss_G: 0.7010  D(x): 0.9009    D(G(z)): 0.5193 / 0.4974        
+202/202 [==============================] - 212s 1s/step
+inception score mean:  2.4845214
+inception score std:  0.2566295
+Average Inception score for the last 50 processed images at [700/1583]  is [(2.4845214, 0.2566295)] 
+[1/4][717/1583] Processed [2300/202624]         Loss_D: 0.8747  Loss_G: 0.6957  D(x): 0.9213    D(G(z)): 0.5420 / 0.4995
+[1/4][767/1583] Processed [2350/202624]         Loss_D: 0.9051  Loss_G: 0.6812  D(x): 0.9200    D(G(z)): 0.5555 / 0.5072
+202/202 [==============================] - 235s 1s/step
+inception score mean:  2.6319432
+inception score std:  0.31209278
+Average Inception score for the last 50 processed images at [800/1583]  is [(2.6319432, 0.31209278)] 
+[1/4][817/1583] Processed [2400/202624]         Loss_D: 0.9057  Loss_G: 0.6640  D(x): 0.8728    D(G(z)): 0.5277 / 0.5160
+[1/4][867/1583] Processed [2450/202624]         Loss_D: 0.9695  Loss_G: 0.6712  D(x): 0.9228    D(G(z)): 0.5831 / 0.5149
+202/202 [==============================] - 220s 1s/step
+inception score mean:  2.6122475
+inception score std:  0.26020324
+Average Inception score for the last 50 processed images at [900/1583]  is [(2.6122475, 0.26020324)] 
+[1/4][917/1583] Processed [2500/202624]         Loss_D: 0.9830  Loss_G: 0.6739  D(x): 0.9475    D(G(z)): 0.5992 / 0.5123
+[1/4][967/1583] Processed [2550/202624]         Loss_D: 0.8442  Loss_G: 0.7449  D(x): 0.9362    D(G(z)): 0.5379 / 0.4763
+202/202 [==============================] - 222s 1s/step
+inception score mean:  2.494763
+inception score std:  0.33600402
+Average Inception score for the last 50 processed images at [1000/1583] is [(2.494763, 0.33600402)] 
+[1/4][1017/1583]        Processed [2600/202624]         Loss_D: 0.9079  Loss_G: 0.7603  D(x): 0.9245    D(G(z)): 0.5591 / 0.4695
+[1/4][1067/1583]        Processed [2650/202624]         Loss_D: 0.9231  Loss_G: 0.6652  D(x): 0.9066    D(G(z)): 0.5508 / 0.5151
+202/202 [==============================] - 222s 1s/step
+inception score mean:  2.6326473
+inception score std:  0.17148061
+Average Inception score for the last 50 processed images at [1100/1583] is [(2.6326473, 0.17148061)] 
+[1/4][1117/1583]        Processed [2700/202624]         Loss_D: 0.9547  Loss_G: 0.6718  D(x): 0.8709    D(G(z)): 0.5438 / 0.5120
+[1/4][1167/1583]        Processed [2750/202624]         Loss_D: 0.8961  Loss_G: 0.6943  D(x): 0.8857    D(G(z)): 0.5322 / 0.5001
+202/202 [==============================] - 209s 1s/step
+inception score mean:  2.5464258
+inception score std:  0.23100966
+Average Inception score for the last 50 processed images at [1200/1583] is [(2.5464258, 0.23100966)] 
+[1/4][1217/1583]        Processed [2800/202624]         Loss_D: 0.8892  Loss_G: 0.7127  D(x): 0.9069    D(G(z)): 0.5404 / 0.4915
+[1/4][1267/1583]        Processed [2850/202624]         Loss_D: 0.8639  Loss_G: 0.7084  D(x): 0.9335    D(G(z)): 0.5449 / 0.4942
+202/202 [==============================] - 215s 1s/step
+inception score mean:  2.64125
+inception score std:  0.22844051
+Average Inception score for the last 50 processed images at [1300/1583] is [(2.64125, 0.22844051)]
+[1/4][1317/1583]        Processed [2900/202624]         Loss_D: 0.9511  Loss_G: 0.6421  D(x): 0.8569    D(G(z)): 0.5367 / 0.5291[1/4][1367/1583]        Processed [2950/202624]         Loss_D: 0.9705  Loss_G: 0.6467  D(x): 0.8827    D(G(z)): 0.5651 / 0.5250202/202 [==============================] - 215s 1s/step
+inception score mean:  2.6296775
+inception score std:  0.24782214
+Average Inception score for the last 50 processed images at [1400/1583] is [(2.6296775, 0.24782214)]
+[1/4][1417/1583]        Processed [3000/202624]         Loss_D: 1.0054  Loss_G: 0.6081  D(x): 0.8352    D(G(z)): 0.5480 / 0.5466[1/4][1467/1583]        Processed [3050/202624]         Loss_D: 0.9129  Loss_G: 0.6756  D(x): 0.9064    D(G(z)): 0.5489 / 0.5104202/202 [==============================] - 209s 1s/step
+inception score mean:  2.7084153
+inception score std:  0.3081939
+Average Inception score for the last 50 processed images at [1500/1583] is [(2.7084153, 0.3081939)]
+[1/4][1517/1583]        Processed [3100/202624]         Loss_D: 0.8580  Loss_G: 0.7210  D(x): 0.8953    D(G(z)): 0.5188 / 0.4885[1/4][1567/1583]        Processed [3150/202624]         Loss_D: 0.9387  Loss_G: 0.6743  D(x): 0.9017    D(G(z)): 0.5601 / 0.5117[2/4][34/1583]  Processed [3200/202624]         Loss_D: 0.9602  Loss_G: 0.6894  D(x): 0.8928    D(G(z)): 0.5632 / 0.5031        
+[2/4][84/1583]  Processed [3250/202624]         Loss_D: 0.9066  Loss_G: 0.6818  D(x): 0.9057    D(G(z)): 0.5483 / 0.5069        
+202/202 [==============================] - 220s 1s/step
+inception score mean:  2.5231562
+inception score std:  0.27227408
+Average Inception score for the last 50 processed images at [100/1583]  is [(2.5231562, 0.27227408)]
+[2/4][134/1583] Processed [3300/202624]         Loss_D: 0.9265  Loss_G: 0.6676  D(x): 0.8573    D(G(z)): 0.5287 / 0.5146
+[2/4][184/1583] Processed [3350/202624]         Loss_D: 1.0637  Loss_G: 0.6079  D(x): 0.8076    D(G(z)): 0.5506 / 0.5470
+202/202 [==============================] - 222s 1s/step
+inception score mean:  2.407576
+inception score std:  0.20905392
+Average Inception score for the last 50 processed images at [200/1583]  is [(2.407576, 0.20905392)] 
+[2/4][234/1583] Processed [3400/202624]         Loss_D: 0.9705  Loss_G: 0.6470  D(x): 0.8586    D(G(z)): 0.5489 / 0.5250
+[2/4][284/1583] Processed [3450/202624]         Loss_D: 0.9325  Loss_G: 0.7559  D(x): 0.9239    D(G(z)): 0.5690 / 0.4713
+202/202 [==============================] - 208s 1s/step
+inception score mean:  2.4798732
+inception score std:  0.1831401
+Average Inception score for the last 50 processed images at [300/1583]  is [(2.4798732, 0.1831401)]
+[2/4][334/1583] Processed [3500/202624]         Loss_D: 1.0217  Loss_G: 0.6714  D(x): 0.8305    D(G(z)): 0.5556 / 0.5130        
+[2/4][384/1583] Processed [3550/202624]         Loss_D: 1.0192  Loss_G: 0.6632  D(x): 0.8330    D(G(z)): 0.5539 / 0.5175        
+202/202 [==============================] - 211s 1s/step
+inception score mean:  2.6014848
+inception score std:  0.18919888
+Average Inception score for the last 50 processed images at [400/1583]  is [(2.6014848, 0.18919888)]
+[2/4][434/1583] Processed [3600/202624]         Loss_D: 1.1100  Loss_G: 0.6021  D(x): 0.9659    D(G(z)): 0.6476 / 0.5506        
+[2/4][484/1583] Processed [3650/202624]         Loss_D: 0.9303  Loss_G: 0.6725  D(x): 0.8593    D(G(z)): 0.5309 / 0.5128        
+202/202 [==============================] - 201s 984ms/step
+inception score mean:  2.399015
+inception score std:  0.17237964
+Average Inception score for the last 50 processed images at [500/1583]  is [(2.399015, 0.17237964)]
+[2/4][534/1583] Processed [3700/202624]         Loss_D: 0.9407  Loss_G: 0.6604  D(x): 0.9059    D(G(z)): 0.5646 / 0.5181        
+[2/4][584/1583] Processed [3750/202624]         Loss_D: 0.9466  Loss_G: 0.6968  D(x): 0.8912    D(G(z)): 0.5560 / 0.4998        
+202/202 [==============================] - 225s 1s/step
+inception score mean:  2.4097364
+inception score std:  0.1338432
+Average Inception score for the last 50 processed images at [600/1583]  is [(2.4097364, 0.1338432)] 
+[2/4][634/1583] Processed [3800/202624]         Loss_D: 0.9337  Loss_G: 0.6738  D(x): 0.8796    D(G(z)): 0.5422 / 0.5122
+[2/4][684/1583] Processed [3850/202624]         Loss_D: 0.9496  Loss_G: 0.6626  D(x): 0.8446    D(G(z)): 0.5319 / 0.5205
+202/202 [==============================] - 261s 1s/step
+inception score mean:  2.4152806
+inception score std:  0.13125288
+Average Inception score for the last 50 processed images at [700/1583]  is [(2.4152806, 0.13125288)] 
+[2/4][734/1583] Processed [3900/202624]         Loss_D: 0.9819  Loss_G: 0.6672  D(x): 0.8742    D(G(z)): 0.5598 / 0.5147
+[2/4][784/1583] Processed [3950/202624]         Loss_D: 0.9796  Loss_G: 0.6355  D(x): 0.8419    D(G(z)): 0.5441 / 0.5312
+202/202 [==============================] - 289s 1s/step
+inception score mean:  2.4217381
+inception score std:  0.14835088
+Average Inception score for the last 50 processed images at [800/1583]  is [(2.4217381, 0.14835088)] 
+[2/4][834/1583] Processed [4000/202624]         Loss_D: 0.9492  Loss_G: 0.7185  D(x): 0.9032    D(G(z)): 0.5655 / 0.4896
+[2/4][884/1583] Processed [4050/202624]         Loss_D: 0.9690  Loss_G: 0.7927  D(x): 0.9269    D(G(z)): 0.5810 / 0.4554
+202/202 [==============================] - 256s 1s/step
+inception score mean:  2.5007339
+inception score std:  0.20386909
+Average Inception score for the last 50 processed images at [900/1583]  is [(2.5007339, 0.20386909)] 
+[2/4][934/1583] Processed [4100/202624]         Loss_D: 0.9347  Loss_G: 0.6740  D(x): 0.8273    D(G(z)): 0.5169 / 0.5113
+[2/4][984/1583] Processed [4150/202624]         Loss_D: 1.0756  Loss_G: 0.6749  D(x): 0.8979    D(G(z)): 0.6037 / 0.5114
+202/202 [==============================] - 226s 1s/step
+inception score mean:  2.3358808
+inception score std:  0.1833456
+Average Inception score for the last 50 processed images at [1000/1583] is [(2.3358808, 0.1833456)] 
+[2/4][1034/1583]        Processed [4200/202624]         Loss_D: 0.8712  Loss_G: 0.7293  D(x): 0.9178    D(G(z)): 0.5380 / 0.4839
+[2/4][1084/1583]        Processed [4250/202624]         Loss_D: 0.9619  Loss_G: 0.6857  D(x): 0.8981    D(G(z)): 0.5621 / 0.5063
+202/202 [==============================] - 252s 1s/step
+inception score mean:  2.3972929
+inception score std:  0.15426481
+Average Inception score for the last 50 processed images at [1100/1583] is [(2.3972929, 0.15426481)] 
+[2/4][1134/1583]        Processed [4300/202624]         Loss_D: 0.9695  Loss_G: 0.6825  D(x): 0.9104    D(G(z)): 0.5726 / 0.5074
+[2/4][1184/1583]        Processed [4350/202624]         Loss_D: 0.9778  Loss_G: 0.6441  D(x): 0.8321    D(G(z)): 0.5373 / 0.5273
+202/202 [==============================] - 237s 1s/step
+inception score mean:  2.3821828
+inception score std:  0.18001102
+Average Inception score for the last 50 processed images at [1200/1583] is [(2.3821828, 0.18001102)] 
+[2/4][1234/1583]        Processed [4400/202624]         Loss_D: 0.9717  Loss_G: 0.6412  D(x): 0.8701    D(G(z)): 0.5546 / 0.5282
+[2/4][1284/1583]        Processed [4450/202624]         Loss_D: 0.9790  Loss_G: 0.7027  D(x): 0.8866    D(G(z)): 0.5668 / 0.4978
+202/202 [==============================] - 259s 1s/step
+inception score mean:  2.2835245
+inception score std:  0.10498604
+Average Inception score for the last 50 processed images at [1300/1583] is [(2.2835245, 0.10498604)] 
+[2/4][1334/1583]        Processed [4500/202624]         Loss_D: 0.9981  Loss_G: 0.6724  D(x): 0.8423    D(G(z)): 0.5493 / 0.5136
+[2/4][1384/1583]        Processed [4550/202624]         Loss_D: 0.9015  Loss_G: 0.6838  D(x): 0.8867    D(G(z)): 0.5320 / 0.5072
+202/202 [==============================] - 265s 1s/step
+inception score mean:  2.4657993
+inception score std:  0.14566138
+Average Inception score for the last 50 processed images at [1400/1583] is [(2.4657993, 0.14566138)] 
+[2/4][1434/1583]        Processed [4600/202624]         Loss_D: 1.0294  Loss_G: 0.6678  D(x): 0.8467    D(G(z)): 0.5610 / 0.5144
+[2/4][1484/1583]        Processed [4650/202624]         Loss_D: 0.9772  Loss_G: 0.6367  D(x): 0.8233    D(G(z)): 0.5296 / 0.5308
+202/202 [==============================] - 238s 1s/step
+inception score mean:  2.3996682
+inception score std:  0.12610523
+Average Inception score for the last 50 processed images at [1500/1583] is [(2.3996682, 0.12610523)] 
+[2/4][1534/1583]        Processed [4700/202624]         Loss_D: 0.9906  Loss_G: 0.6992  D(x): 0.9071    D(G(z)): 0.5844 / 0.4991
+[3/4][1/1583]   Processed [4750/202624]         Loss_D: 0.9163  Loss_G: 0.6987  D(x): 0.8851    D(G(z)): 0.5394 / 0.4996
+[3/4][51/1583]  Processed [4800/202624]         Loss_D: 1.0503  Loss_G: 0.6218  D(x): 0.8595    D(G(z)): 0.5692 / 0.5424
+202/202 [==============================] - 245s 1s/step
+inception score mean:  2.340576
+inception score std:  0.18819909
+Average Inception score for the last 50 processed images at [100/1583]  is [(2.340576, 0.18819909)] 
+[3/4][101/1583] Processed [4850/202624]         Loss_D: 0.9545  Loss_G: 0.6188  D(x): 0.8620    D(G(z)): 0.5442 / 0.5436        
+[3/4][151/1583] Processed [4900/202624]         Loss_D: 0.9101  Loss_G: 0.7188  D(x): 0.8655    D(G(z)): 0.5234 / 0.4917
+202/202 [==============================] - 244s 1s/step
+inception score mean:  2.3860676
+inception score std:  0.10386467
+Average Inception score for the last 50 processed images at [200/1583]  is [(2.3860676, 0.10386467)] 
+[3/4][201/1583] Processed [4950/202624]         Loss_D: 0.9384  Loss_G: 0.7153  D(x): 0.9010    D(G(z)): 0.5549 / 0.4916
+[3/4][251/1583] Processed [5000/202624]         Loss_D: 0.9537  Loss_G: 0.6799  D(x): 0.8817    D(G(z)): 0.5532 / 0.5091
+202/202 [==============================] - 232s 1s/step
+inception score mean:  2.3730874
+inception score std:  0.15778565
+Average Inception score for the last 50 processed images at [300/1583]  is [(2.3730874, 0.15778565)]
+[3/4][301/1583] Processed [5050/202624]         Loss_D: 0.9474  Loss_G: 0.7322  D(x): 0.8606    D(G(z)): 0.5404 / 0.4836        
+[3/4][351/1583] Processed [5100/202624]         Loss_D: 0.9414  Loss_G: 0.7212  D(x): 0.8536    D(G(z)): 0.5252 / 0.4894        
+202/202 [==============================] - 291s 1s/step
+inception score mean:  2.280927
+inception score std:  0.14462748
+Average Inception score for the last 50 processed images at [400/1583]  is [(2.280927, 0.14462748)]
+[3/4][401/1583] Processed [5150/202624]         Loss_D: 0.9796  Loss_G: 0.7141  D(x): 0.8940    D(G(z)): 0.5706 / 0.4913        
+[3/4][451/1583] Processed [5200/202624]         Loss_D: 0.9849  Loss_G: 0.6639  D(x): 0.9252    D(G(z)): 0.5908 / 0.5170        
+202/202 [==============================] - 245s 1s/step
+inception score mean:  2.3589423
+inception score std:  0.112480596
+Average Inception score for the last 50 processed images at [500/1583]  is [(2.3589423, 0.112480596)]
+[3/4][501/1583] Processed [5250/202624]         Loss_D: 0.9952  Loss_G: 0.6524  D(x): 0.8865    D(G(z)): 0.5742 / 0.5235        
+[3/4][551/1583] Processed [5300/202624]         Loss_D: 0.9935  Loss_G: 0.7039  D(x): 0.8947    D(G(z)): 0.5782 / 0.4970
+202/202 [==============================] - 250s 1s/step
+inception score mean:  2.2784188
+inception score std:  0.11265787
+Average Inception score for the last 50 processed images at [600/1583]  is [(2.2784188, 0.11265787)] 
+[3/4][601/1583] Processed [5350/202624]         Loss_D: 0.9373  Loss_G: 0.7469  D(x): 0.8835    D(G(z)): 0.5439 / 0.4764
+[3/4][651/1583] Processed [5400/202624]         Loss_D: 0.9359  Loss_G: 0.7194  D(x): 0.9082    D(G(z)): 0.5621 / 0.4889
+202/202 [==============================] - 248s 1s/step
+inception score mean:  2.215802
+inception score std:  0.087896354
+Average Inception score for the last 50 processed images at [700/1583]  is [(2.215802, 0.087896354)] 
+[3/4][701/1583] Processed [5450/202624]         Loss_D: 0.9943  Loss_G: 0.7005  D(x): 0.9170    D(G(z)): 0.5868 / 0.4999        
+[3/4][751/1583] Processed [5500/202624]         Loss_D: 0.9989  Loss_G: 0.6397  D(x): 0.8555    D(G(z)): 0.5572 / 0.5295
+202/202 [==============================] - 250s 1s/step
+inception score mean:  2.278503
+inception score std:  0.14088462
+Average Inception score for the last 50 processed images at [800/1583]  is [(2.278503, 0.14088462)] 
+[3/4][801/1583] Processed [5550/202624]         Loss_D: 0.9734  Loss_G: 0.7220  D(x): 0.9027    D(G(z)): 0.5717 / 0.4884
+[3/4][851/1583] Processed [5600/202624]         Loss_D: 0.9718  Loss_G: 0.7698  D(x): 0.9216    D(G(z)): 0.5831 / 0.4650
+202/202 [==============================] - 242s 1s/step
+inception score mean:  2.3533757
+inception score std:  0.1320025
+Average Inception score for the last 50 processed images at [900/1583]  is [(2.3533757, 0.1320025)] 
+[3/4][901/1583] Processed [5650/202624]         Loss_D: 0.9313  Loss_G: 0.7362  D(x): 0.8840    D(G(z)): 0.5441 / 0.4813        
+[3/4][951/1583] Processed [5700/202624]         Loss_D: 0.9538  Loss_G: 0.6299  D(x): 0.8068    D(G(z)): 0.5043 / 0.5392
+202/202 [==============================] - 234s 1s/step
+inception score mean:  2.3147285
+inception score std:  0.13380693
+Average Inception score for the last 50 processed images at [1000/1583] is [(2.3147285, 0.13380693)] 
+[3/4][1001/1583]        Processed [5750/202624]         Loss_D: 0.9337  Loss_G: 0.6724  D(x): 0.8717    D(G(z)): 0.5412 / 0.5128
+[3/4][1051/1583]        Processed [5800/202624]         Loss_D: 1.0567  Loss_G: 0.7134  D(x): 0.8209    D(G(z)): 0.5516 / 0.4924
+202/202 [==============================] - 242s 1s/step
+inception score mean:  2.2634761
+inception score std:  0.07817618
+Average Inception score for the last 50 processed images at [1100/1583] is [(2.2634761, 0.07817618)] 
+[3/4][1101/1583]        Processed [5850/202624]         Loss_D: 0.9705  Loss_G: 0.6716  D(x): 0.9264    D(G(z)): 0.5835 / 0.5138
+[3/4][1151/1583]        Processed [5900/202624]         Loss_D: 0.8938  Loss_G: 0.7499  D(x): 0.9015    D(G(z)): 0.5384 / 0.4756
+202/202 [==============================] - 254s 1s/step
+inception score mean:  2.33774
+inception score std:  0.076136135
+Average Inception score for the last 50 processed images at [1200/1583] is [(2.33774, 0.076136135)] 
+[3/4][1201/1583]        Processed [5950/202624]         Loss_D: 0.9097  Loss_G: 0.7311  D(x): 0.8170    D(G(z)): 0.4927 / 0.4839
+[3/4][1251/1583]        Processed [6000/202624]         Loss_D: 0.9883  Loss_G: 0.6635  D(x): 0.8668    D(G(z)): 0.5551 / 0.5180
+202/202 [==============================] - 239s 1s/step
+inception score mean:  2.3312442
+inception score std:  0.079512484
+Average Inception score for the last 50 processed images at [1300/1583] is [(2.3312442, 0.079512484)] 
+[3/4][1301/1583]        Processed [6050/202624]         Loss_D: 1.0063  Loss_G: 0.6167  D(x): 0.8178    D(G(z)): 0.5403 / 0.5424
+[3/4][1351/1583]        Processed [6100/202624]         Loss_D: 1.1276  Loss_G: 0.6347  D(x): 0.7944    D(G(z)): 0.5459 / 0.5348
+202/202 [==============================] - 258s 1s/step
+inception score mean:  2.3594766
+inception score std:  0.111112796
+Average Inception score for the last 50 processed images at [1400/1583] is [(2.3594766, 0.111112796)] 
+[3/4][1401/1583]        Processed [6150/202624]         Loss_D: 1.0654  Loss_G: 0.7733  D(x): 0.9123    D(G(z)): 0.6146 / 0.4682
+[3/4][1451/1583]        Processed [6200/202624]         Loss_D: 1.2084  Loss_G: 0.8623  D(x): 0.9443    D(G(z)): 0.6686 / 0.4291
+202/202 [==============================] - 312s 1s/step
+inception score mean:  2.317459
+inception score std:  0.0803744
+Average Inception score for the last 50 processed images at [1500/1583] is [(2.317459, 0.0803744)] 
+[3/4][1501/1583]        Processed [6250/202624]         Loss_D: 0.9766  Loss_G: 0.7372  D(x): 0.8563    D(G(z)): 0.5434 / 0.4810
+[3/4][1551/1583]        Processed [6300/202624]         Loss_D: 0.9422  Loss_G: 0.7172  D(x): 0.8840    D(G(z)): 0.5503 / 0.4908
+CarbonTracker: 
+Actual consumption for 4 epoch(s):
+        Time:   8:24:58
+        Energy: 0.2318059 kWh
+        CO2eq:  23.3794331 g
+        This is equivalent to:
+        0.217483 km travelled by car
+CarbonTracker: 
+Predicted consumption for 4 epoch(s):
+        Time:   8:24:58

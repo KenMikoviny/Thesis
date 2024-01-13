@@ -31,6 +31,8 @@ from carbontracker import parser
 # Saving lists
 import cv2
 
+# Import the necessary library for structured pruning
+import torch.nn.utils.prune as prune
 
 # Set random seed for reproducibility
 manualSeed = 999
@@ -44,6 +46,8 @@ parser = argparse.ArgumentParser(description="Setup model")
 # Run the script with --batchnorm for batch normalization enabled and --no_batchnorm to disable
 parser.add_argument('--batchnorm', action='store_true', help="Enable batch normalization?")
 parser.add_argument('--no_batchnorm', dest='batchnorm', action='store_false', help="Disable batch normalization")
+parser.add_argument('--pruning', action='store_true', help="Enable pruning?")
+parser.add_argument('--no_pruning', dest='pruning', action='store_false', help="Disable pruning")
 
 args = parser.parse_args()
 
@@ -71,7 +75,7 @@ ngf = 64
 ndf = 64
 """Size of feature maps in discriminator"""
 
-num_epochs = 5 # TODO remove this if stop criterion works correctly
+num_epochs = 4 # TODO remove this if stop criterion works correctly
 """Number of training epochs"""
 
 lr = 0.0002
@@ -85,6 +89,9 @@ ngpu = 1
 
 batchnorm_enabled = args.batchnorm
 """ Boolean that decides if batch normalization is included or not"""
+
+pruning_enabled = args.pruning
+""" Boolean that decides if pruning is included or not"""
 
 # We can use an image folder dataset the way we have it setup.
 # Create the dataset
@@ -116,7 +123,7 @@ def main():
     start_time = time.time()
 
     # Energy consumption measurement
-    tracker = CarbonTracker(epochs=num_epochs)
+    tracker = CarbonTracker(epochs=num_epochs, epochs_before_pred = -1, monitor_epochs=-1, decimal_precision = 7)
 
     # Decide which device we want to run on
     device = torch.device("cuda:0" if (torch.cuda.is_available() and ngpu > 0) else "cpu")
@@ -155,7 +162,7 @@ def main():
     criterion = nn.BCELoss()
 
     # Create batch of latent vectors that we will use to visualize
-    #  the progression of the generator
+    #  the progression of the generator. This means every time we create 64 fake images
     fixed_noise = torch.randn(64, nz, 1, 1, device=device)
 
     # Establish convention for real and fake labels during training
@@ -169,9 +176,10 @@ def main():
     # Training loop
 
     # Variables for tracking loss
-    prev_avg_loss = float('inf')  # Initialize with a large value
     image_counter = 0  # Counter to keep track of the number of images processed
-    consecutive_no_improvement = 0  # Counter to keep track of consecutive iterations with no improvement
+
+    # For inception score measuring
+    fake_images = []
 
     # Lists to keep track of progress
     img_list = []
@@ -179,11 +187,12 @@ def main():
     D_losses = []
 
     print("Starting Training Loop...")
+    # Initialize flag variable for early stopping
+    stop_training = False
+
     # For each epoch
     for epoch in range(num_epochs):
-
-        # Initialize flag variable for early stopping
-        stop_training = False
+      
         if stop_training:
             break  # Exit the epoch processing loop
 
@@ -192,7 +201,7 @@ def main():
         epoch_losses = []
         # For each batch in the dataloader
         for i, data in enumerate(dataloader, 0):
-
+            
             ############################
             # (1) Update D network: maximize log(D(x)) + log(1 - D(G(z)))
             ###########################
@@ -242,7 +251,6 @@ def main():
             D_G_z2 = output.mean().item()
             # Update G
             optimizerG.step()
-            
             # Save Losses for plotting later
             G_losses.append(errG.item())
             D_losses.append(errD.item())
@@ -252,59 +260,114 @@ def main():
 
             # Update the total number of images processed
             image_counter += 1
-            img_list2 = []
-            # Check inception score every x epochs
-            if i % 500 == 0 and i != 0:
-                # Generate and save 100 fake images
-                fake_images = []
 
-                with torch.no_grad():
-                    fake_images = netG(fixed_noise).detach().cpu()
-                    # Apply the function to each image in the batch
-                    processed_images = torch.stack([resize_image(image) for image in fake_images])
-
-                img_list2.append(vutils.make_grid(fake_images, padding=2, normalize=True))
-                print("Processed images shape")
-                print(processed_images.shape)
-                calculate_inception_score(processed_images)
-
-                # Configure the grid layout
-                num_rows = 2  # Number of rows in the grid layout
-                num_cols = 5  # Number of columns in the grid layout (change to 5 for 10 images)
-                figsize = (12, 4)  # Figure size in inches
-
-                # Create the plot
-                fig, axs = plt.subplots(num_rows, num_cols, figsize=figsize)
-
-                for i, image in enumerate(processed_images[:10]):  # Display the first 10 images
-                    row = i // num_cols
-                    col = i % num_cols
-                    axs[row, col].imshow(image)
-                    axs[row, col].axis("off")
-
-                # Display the plot
-                plt.tight_layout()
-                plt.show()
-
-                # Plot the fake images from the last epoch
-                plt.subplot(1,2,1)
-                plt.axis("off")
-                plt.title("Fake Images")
-                plt.imshow(np.transpose(img_list[-1],(1,2,0)))
-
-                # Plot the fake images from the last epoch
-                plt.subplot(1,2,2)
-                plt.axis("off")
-                plt.title("Processed Fake Images")
-                plt.imshow(np.transpose(img_list2[-1],(1,2,0)))
-                plt.show()
 
             # Check how the generator is doing by saving G's output on fixed_noise
             if (image_counter % 500 == 0) or ((epoch == num_epochs-1) and (i == len(dataloader)-1)):
                 with torch.no_grad():
                     fake = netG(fixed_noise).detach().cpu()
                 img_list.append(vutils.make_grid(fake, padding=2, normalize=True))
+
+
+            # img_list2 = []
+            # Check inception score every 50 epochs
+            with torch.no_grad():
+                new_fake_batch = netG(fixed_noise).detach().cpu()
             
+            
+            if (i == 0): fake_images = new_fake_batch 
+            else: fake_images = torch.cat((fake_images,new_fake_batch), dim=0)   
+
+             
+
+            if (i % 100 == 0 and i != 0 and epoch > 0):
+                # Apply the function to each image in the batch
+                processed_images = torch.stack([resize_image(image) for image in fake_images])
+
+                inception_score = calculate_inception_score(processed_images)
+
+                # img_list2.append(vutils.make_grid(fake_images, padding=2, normalize=True))
+                print(f'Average Inception score for the last 100 processed images at [{i}/{len(dataloader)}]\t'
+                      f'is [{inception_score}] \t'
+                     )
+                
+                
+            if (i % 100 == 0 and pruning_enabled): fake_images = new_fake_batch # Reset
+                # # Configure the grid layout
+                # num_rows = 2  # Number of rows in the grid layout
+                # num_cols = 5  # Number of columns in the grid layout (change to 5 for 10 images)
+                # figsize = (12, 4)  # Figure size in inches
+
+                # # Create the plot
+                # fig, axs = plt.subplots(num_rows, num_cols, figsize=figsize)
+
+                # for i, image in enumerate(processed_images[:10]):  # Display the first 10 images
+                #     row = i // num_cols
+                #     col = i % num_cols
+                #     axs[row, col].imshow(image)
+                #     axs[row, col].axis("off")
+
+                # Display the plot
+                # plt.tight_layout()
+                # plt.show()
+
+                # # Plot the fake images from the last epoch
+                # plt.subplot(1,2,1)
+                # plt.axis("off")
+                # plt.title("Fake Images")
+                # plt.imshow(np.transpose(img_list[-1],(1,2,0)))
+
+                # # Plot the fake images from the last epoch
+                # plt.subplot(1,2,2)
+                # plt.axis("off")
+                # plt.title("Processed Fake Images")
+                # plt.imshow(np.transpose(img_list2[-1],(1,2,0)))
+                # plt.show()
+
+
+            # if(i == 501 and epoch == 1) : 
+            #     stop_training = True
+            #     print('aaaaa')
+            #     break
+
+            #Create a mask for structured pruning (L1 norm-based)
+            if (i == 500 and epoch == 0 and pruning_enabled):
+
+                # # Inspect model weights before and after pruning
+                # print("Weights before pruning:")
+                # for name, param in netD.named_parameters():
+                #     if 'weight' in name:
+                #         print(name, param.abs().mean().item())
+
+                print("\n\nStart of pruning\n\n")
+    
+                # Iterate through the layers and prune ConvTranspose2d layers
+                # Prune 80% of feature maps for layer with 512 output channels and 20% for others
+                for index, layer in enumerate(netD.main):
+                    if isinstance(layer, nn.Conv2d):
+                        if index == 0:  # First layer
+                            prune.l1_unstructured(layer, name="weight", amount=0.8)
+                        else:  # Subsequent layers
+                            prune.l1_unstructured(layer, name="weight", amount=0.2)
+
+                # Remove the pruning re-parametrization to speed up inference
+                for layer in netD.main:
+                    if isinstance(layer, nn.Conv2d):
+                        prune.remove(layer, 'weight')
+
+                for index, layer in enumerate(netG.main):
+                    if isinstance(layer, nn.Conv2d):
+                        if index == 0:  # First layer
+                            prune.l1_unstructured(layer, name="weight", amount=0.8)
+                        else:  # Subsequent layers
+                            prune.l1_unstructured(layer, name="weight", amount=0.2)
+
+                # Remove the pruning re-parametrization to speed up inference
+                for layer in netG.main:
+                    if isinstance(layer, nn.Conv2d):
+                        prune.remove(layer, 'weight')
+
+                print("\n\nEnd of pruning\n\n")
             # # Check the stopping condition based on improvement in avg_loss
             # if i % window_size == 0:
 
@@ -331,13 +394,12 @@ def main():
             # Output training stats at the defined print interval
             if (image_counter % print_interval == 0):
                 # Output training stats
-                print(f'[{epoch}/{num_epochs}][{i}/{len(dataloader)}]\t'
-                    f'Processed [{image_counter + 1}/{total_images}] \t'
+                print(f'[{epoch}/{num_epochs}][{i+1}/{len(dataloader)}]\t'
+                    f'Processed [{image_counter}/{total_images}] \t'
                     f'Loss_D: {errD.item():.4f}\tLoss_G: {errG.item():.4f}\t'
                     f'D(x): {D_x:.4f}\tD(G(z)): {D_G_z1:.4f} / {D_G_z2:.4f}\t'
                     )
                 
-
         tracker.epoch_end()
 
     tracker.stop()
