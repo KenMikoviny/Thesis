@@ -1,0 +1,193 @@
+nobatchnorm no pruning 996
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.9633  Loss_G: 0.7088  D(x): 0.8918    D(G(z)): 0.5644 / 0.4958
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 1.0585  Loss_G: 0.5892  D(x): 0.7642    D(G(z)): 0.5256 / 0.5579
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-01-24 19:00:18.712893: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 303s 958ms/step
+313/313 [==============================] - 303s 966ms/step
+FID: 461.673
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.67318927851596]
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:19:52
+        Energy: 0.0846806 kWh
+        CO2eq:  8.5406966 g
+        This is equivalent to:
+        0.079448 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:259.886762658755 minutes.
+80 images saved in outputs/
+
+
+
+997 
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 1.0392  Loss_G: 0.5466  D(x): 0.7656    D(G(z)): 0.5191 / 0.5812
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.9741  Loss_G: 0.7360  D(x): 0.8705    D(G(z)): 0.5564 / 0.4819
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-01-25 15:51:50.943065: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 304s 964ms/step
+313/313 [==============================] - 305s 968ms/step
+FID: 461.625
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.62505350345936]
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:24:02
+        Energy: 0.0849995 kWh
+        CO2eq:  8.5728592 g
+        This is equivalent to:
+        0.079748 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:264.04898554881413 minutes.
+80 images saved in outputs/
+
+
+998
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 1.1113  Loss_G: 0.7213  D(x): 0.9160    D(G(z)): 0.6308 / 0.4890
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.9832  Loss_G: 0.6269  D(x): 0.8201    D(G(z)): 0.5310 / 0.5384
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-01-26 17:56:47.229302: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 321s 1s/step
+313/313 [==============================] - 308s 983ms/step
+FID: 461.637
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.63668423080776]
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:23:12
+        Energy: 0.0861619 kWh
+        CO2eq:  8.6901022 g
+        This is equivalent to:
+        0.080838 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:263.22725820938746 minutes.
+80 images saved in outputs/
+
+
+
+
+
+BATCHNORM enabled
+998 
+[4/5][1468/1583]        Processed [7800/202624]         Loss_D: 0.5980  Loss_G: 3.3162  D(x): 0.8891    D(G(z)): 0.3503 / 0.0469
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.4576  Loss_G: 2.8615  D(x): 0.8669    D(G(z)): 0.2403 / 0.0755
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.5362  Loss_G: 2.6615  D(x): 0.7191    D(G(z)): 0.1466 / 0.0973
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-01-27 16:10:28.721708: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 306s 971ms/step
+313/313 [==============================] - 302s 962ms/step
+FID: 460.932
+Average FID score for the last 10000 processed images at [9999/1583]    is [460.9323803830039] 
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:43:29
+        Energy: 0.0909411 kWh
+        CO2eq:  9.1721257 g
+        This is equivalent to:
+        0.085322 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:283.5129336555799 minutes.
+
+997
+[4/5][1468/1583]        Processed [7800/202624]         Loss_D: 0.5949  Loss_G: 3.1365  D(x): 0.8462    D(G(z)): 0.3128 / 0.0572
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.3567  Loss_G: 2.7522  D(x): 0.8343    D(G(z)): 0.1430 / 0.0823
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.5191  Loss_G: 2.0043  D(x): 0.6960    D(G(z)): 0.1089 / 0.1712
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-01-28 16:42:37.086081: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 305s 965ms/step
+313/313 [==============================] - 308s 978ms/step
+FID: 460.647
+Average FID score for the last 10000 processed images at [9999/1583]    is [460.6465831918082]
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:44:58
+        Energy: 0.0962301 kWh
+        CO2eq:  9.7055606 g
+        This is equivalent to:
+        0.090284 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:284.99838571548463 minutes.
+
+
+
+
+PRUNING  no batchnorm pruning 
+
+996 
+
+[4/5][1368/1583]        Processed [7700/202624]         Loss_D: 1.0185  Loss_G: 0.7204  D(x): 0.8624    D(G(z)): 0.5651 / 0.4922
+[4/5][1418/1583]        Processed [7750/202624]         Loss_D: 0.9533  Loss_G: 0.6803  D(x): 0.8226    D(G(z)): 0.5157 / 0.5102
+[4/5][1468/1583]        Processed [7800/202624]         Loss_D: 0.9955  Loss_G: 0.6475  D(x): 0.8653    D(G(z)): 0.5618 / 0.5285
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 1.0058  Loss_G: 0.6305  D(x): 0.8470    D(G(z)): 0.5560 / 0.5343
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 1.0178  Loss_G: 0.6712  D(x): 0.7794    D(G(z)): 0.5155 / 0.5144
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-01-30 14:37:52.536506: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 315s 994ms/step
+313/313 [==============================] - 306s 969ms/step
+FID: 461.483
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.4826430028304]
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:22:48
+        Energy: 0.0879608 kWh
+        CO2eq:  8.8715301 g
+        This is equivalent to:
+        0.082526 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:262.81912575562797 minutes.
+
+
+997
+
+[4/5][568/1583] Processed [6900/202624]         Loss_D: 1.0523  Loss_G: 0.6547  D(x): 0.7325    D(G(z)): 0.4968 / 0.5232
+[4/5][618/1583] Processed [6950/202624]         Loss_D: 0.9987  Loss_G: 0.8464  D(x): 0.9046    D(G(z)): 0.5850 / 0.4337
+[4/5][668/1583] Processed [7000/202624]         Loss_D: 1.0482  Loss_G: 0.6231  D(x): 0.8366    D(G(z)): 0.5630 / 0.5388
+[4/5][718/1583] Processed [7050/202624]         Loss_D: 1.0558  Loss_G: 0.6456  D(x): 0.8335    D(G(z)): 0.5653 / 0.5289
+[4/5][768/1583] Processed [7100/202624]         Loss_D: 0.9168  Loss_G: 0.7697  D(x): 0.8873    D(G(z)): 0.5419 / 0.4658
+[4/5][818/1583] Processed [7150/202624]         Loss_D: 0.9477  Loss_G: 0.7561  D(x): 0.8625    D(G(z)): 0.5414 / 0.4723
+[4/5][868/1583] Processed [7200/202624]         Loss_D: 1.0279  Loss_G: 0.5894  D(x): 0.8133    D(G(z)): 0.5490 / 0.5568
+[4/5][918/1583] Processed [7250/202624]         Loss_D: 0.9706  Loss_G: 0.6801  D(x): 0.7993    D(G(z)): 0.5151 / 0.5113
+[4/5][968/1583] Processed [7300/202624]         Loss_D: 1.0047  Loss_G: 0.7346  D(x): 0.8149    D(G(z)): 0.5399 / 0.4834
+[4/5][1018/1583]        Processed [7350/202624]         Loss_D: 0.9467  Loss_G: 0.7251  D(x): 0.8329    D(G(z)): 0.5225 / 0.4873
+[4/5][1068/1583]        Processed [7400/202624]         Loss_D: 0.9872  Loss_G: 0.6634  D(x): 0.8159    D(G(z)): 0.5329 / 0.5175
+[4/5][1118/1583]        Processed [7450/202624]         Loss_D: 0.9818  Loss_G: 0.7376  D(x): 0.9145    D(G(z)): 0.5836 / 0.4819
+[4/5][1168/1583]        Processed [7500/202624]         Loss_D: 1.0043  Loss_G: 0.7352  D(x): 0.7918    D(G(z)): 0.5217 / 0.4835
+[4/5][1218/1583]        Processed [7550/202624]         Loss_D: 0.9970  Loss_G: 0.6708  D(x): 0.8171    D(G(z)): 0.5369 / 0.5144
+[4/5][1268/1583]        Processed [7600/202624]         Loss_D: 0.9463  Loss_G: 0.7289  D(x): 0.8413    D(G(z)): 0.5276 / 0.4860
+[4/5][1318/1583]        Processed [7650/202624]         Loss_D: 1.0425  Loss_G: 0.6499  D(x): 0.7991    D(G(z)): 0.5425 / 0.5265
+[4/5][1368/1583]        Processed [7700/202624]         Loss_D: 0.9932  Loss_G: 0.6327  D(x): 0.8336    D(G(z)): 0.5443 / 0.5362
+[4/5][1418/1583]        Processed [7750/202624]         Loss_D: 0.9713  Loss_G: 0.6713  D(x): 0.8372    D(G(z)): 0.5384 / 0.5129
+[4/5][1468/1583]        Processed [7800/202624]         Loss_D: 0.9866  Loss_G: 0.6990  D(x): 0.8590    D(G(z)): 0.5567 / 0.4996
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 1.0438  Loss_G: 0.5967  D(x): 0.7839    D(G(z)): 0.5350 / 0.5535
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.9751  Loss_G: 0.7757  D(x): 0.8227    D(G(z)): 0.5309 / 0.4633
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-01-31 06:02:24.714986: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 304s 961ms/step
+313/313 [==============================] - 304s 960ms/step
+FID: 461.525
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.52534202808215]
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:21:38
+        Energy: 0.0922255 kWh
+        CO2eq:  9.3016648 g
+        This is equivalent to:
+        0.086527 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:261.6628876288732 minutes.
+80 images saved in outputs/

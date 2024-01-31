@@ -1,0 +1,342 @@
+Real Images loaded
+CarbonTracker: The following components were found: GPU with device(s) NVIDIA GeForce RTX 3060 Laptop GPU.
+Generator(
+  (main): Sequential(
+    (0): ConvTranspose2d(100, 512, kernel_size=(4, 4), stride=(1, 1), bias=False)
+    (1): ReLU(inplace=True)
+    (2): ConvTranspose2d(512, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (3): ReLU(inplace=True)
+    (4): ConvTranspose2d(256, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (5): ReLU(inplace=True)
+    (6): ConvTranspose2d(128, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (7): ReLU(inplace=True)
+    (8): ConvTranspose2d(64, 3, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (9): Tanh()
+  )
+)
+Discriminator(
+  (main): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (1): LeakyReLU(negative_slope=0.2, inplace=True)
+    (2): Conv2d(64, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (3): LeakyReLU(negative_slope=0.2, inplace=True)
+    (4): Conv2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (5): LeakyReLU(negative_slope=0.2, inplace=True)
+    (6): Conv2d(256, 512, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (7): LeakyReLU(negative_slope=0.2, inplace=True)
+    (8): Conv2d(512, 1, kernel_size=(4, 4), stride=(1, 1), bias=False)
+    (9): Sigmoid()
+  )
+)
+Starting Training Loop...
+[0/5][50/1583]  Processed [50/202624]   Loss_D: 0.7195  Loss_G: 0.6806  D(x): 0.9922    D(G(z)): 0.5090 / 0.5063
+[0/5][100/1583] Processed [100/202624]  Loss_D: 0.7429  Loss_G: 0.7121  D(x): 0.9856    D(G(z)): 0.5152 / 0.4906
+[0/5][150/1583] Processed [150/202624]  Loss_D: 0.7498  Loss_G: 0.7059  D(x): 0.9572    D(G(z)): 0.4919 / 0.4937
+[0/5][200/1583] Processed [200/202624]  Loss_D: 0.8934  Loss_G: 0.6502  D(x): 0.9476    D(G(z)): 0.5621 / 0.5220
+[0/5][250/1583] Processed [250/202624]  Loss_D: 0.7789  Loss_G: 0.6807  D(x): 0.9751    D(G(z)): 0.5284 / 0.5063
+[0/5][300/1583] Processed [300/202624]  Loss_D: 0.9013  Loss_G: 0.6697  D(x): 0.9014    D(G(z)): 0.5440 / 0.5119
+[0/5][350/1583] Processed [350/202624]  Loss_D: 0.8532  Loss_G: 0.5990  D(x): 0.9118    D(G(z)): 0.5251 / 0.5495
+[0/5][400/1583] Processed [400/202624]  Loss_D: 0.7302  Loss_G: 0.7389  D(x): 0.9686    D(G(z)): 0.5015 / 0.4777
+[0/5][450/1583] Processed [450/202624]  Loss_D: 0.7690  Loss_G: 0.6670  D(x): 0.9737    D(G(z)): 0.5224 / 0.5133
+[0/5][500/1583] Processed [500/202624]  Loss_D: 0.7926  Loss_G: 0.7078  D(x): 0.9572    D(G(z)): 0.5216 / 0.4928
+Scaled (6464, 299, 299, 3) (10000, 299, 299, 3)
+2024-01-15 20:56:37.731098: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+202/202 [==============================] - 197s 963ms/step
+313/313 [==============================] - 309s 978ms/step
+FID: 463.255
+Average FID score for the last 10000 processed images at [6463/1583]    is [463.2553919198734]
+[0/5][550/1583] Processed [550/202624]  Loss_D: 0.8761  Loss_G: 0.6443  D(x): 0.9304    D(G(z)): 0.5486 / 0.5254
+[0/5][600/1583] Processed [600/202624]  Loss_D: 0.7990  Loss_G: 0.7154  D(x): 0.9249    D(G(z)): 0.5089 / 0.4892
+[0/5][650/1583] Processed [650/202624]  Loss_D: 0.8517  Loss_G: 0.6390  D(x): 0.9434    D(G(z)): 0.5453 / 0.5282
+[0/5][700/1583] Processed [700/202624]  Loss_D: 0.8301  Loss_G: 0.7697  D(x): 0.8713    D(G(z)): 0.4908 / 0.4634
+[0/5][750/1583] Processed [750/202624]  Loss_D: 0.8338  Loss_G: 0.7806  D(x): 0.8759    D(G(z)): 0.4896 / 0.4586
+[0/5][800/1583] Processed [800/202624]  Loss_D: 0.9026  Loss_G: 0.8277  D(x): 0.8654    D(G(z)): 0.5234 / 0.4408
+[0/5][850/1583] Processed [850/202624]  Loss_D: 0.8382  Loss_G: 0.6898  D(x): 0.8827    D(G(z)): 0.5024 / 0.5055
+[0/5][900/1583] Processed [900/202624]  Loss_D: 0.9160  Loss_G: 0.7418  D(x): 0.9470    D(G(z)): 0.5748 / 0.4778
+[0/5][950/1583] Processed [950/202624]  Loss_D: 0.9326  Loss_G: 0.6588  D(x): 0.9034    D(G(z)): 0.5610 / 0.5179
+[0/5][1000/1583]        Processed [1000/202624]         Loss_D: 0.8007  Loss_G: 0.7963  D(x): 0.9420    D(G(z)): 0.5212 / 0.4518
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+313/313 [==============================] - 314s 990ms/step
+313/313 [==============================] - 302s 964ms/step
+FID: 463.189
+Average FID score for the last 10000 processed images at [9999/1583]    is [463.1892195484421]
+[0/5][1050/1583]        Processed [1050/202624]         Loss_D: 0.9088  Loss_G: 0.6719  D(x): 0.9079    D(G(z)): 0.5527 / 0.5111
+[0/5][1100/1583]        Processed [1100/202624]         Loss_D: 0.8734  Loss_G: 0.7048  D(x): 0.9082    D(G(z)): 0.5363 / 0.4947
+[0/5][1150/1583]        Processed [1150/202624]         Loss_D: 0.8819  Loss_G: 0.6760  D(x): 0.9260    D(G(z)): 0.5490 / 0.5095
+[0/5][1200/1583]        Processed [1200/202624]         Loss_D: 1.0223  Loss_G: 0.5789  D(x): 0.9549    D(G(z)): 0.6178 / 0.5614
+[0/5][1250/1583]        Processed [1250/202624]         Loss_D: 0.8325  Loss_G: 0.7398  D(x): 0.9158    D(G(z)): 0.5222 / 0.4776
+[0/5][1300/1583]        Processed [1300/202624]         Loss_D: 0.9880  Loss_G: 0.6865  D(x): 0.9345    D(G(z)): 0.5970 / 0.5060
+[0/5][1350/1583]        Processed [1350/202624]         Loss_D: 0.7906  Loss_G: 0.7673  D(x): 0.9264    D(G(z)): 0.5071 / 0.4657
+[0/5][1400/1583]        Processed [1400/202624]         Loss_D: 0.8837  Loss_G: 0.7355  D(x): 0.9412    D(G(z)): 0.5574 / 0.4805
+[0/5][1450/1583]        Processed [1450/202624]         Loss_D: 0.8284  Loss_G: 0.8862  D(x): 0.8849    D(G(z)): 0.4986 / 0.4144
+[0/5][1500/1583]        Processed [1500/202624]         Loss_D: 0.8257  Loss_G: 0.7054  D(x): 0.9139    D(G(z)): 0.5169 / 0.4942
+Scaled (6464, 299, 299, 3) (10000, 299, 299, 3)
+202/202 [==============================] - 193s 943ms/step
+313/313 [==============================] - 318s 972ms/step
+FID: 462.967
+Average FID score for the last 10000 processed images at [6463/1583]    is [462.9670398623516]
+[0/5][1550/1583]        Processed [1550/202624]         Loss_D: 0.7376  Loss_G: 0.7690  D(x): 0.9721    D(G(z)): 0.5070 / 0.4637
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000001B61604C640>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+CarbonTracker: 
+Predicted consumption for 5 epoch(s):
+        Time:   7:07:16
+        Energy: 0.1464650 kWh
+        CO2eq:  14.7721371 g
+        This is equivalent to:
+        0.137415 km travelled by car
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x00000208F46897C0>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x00000260E49797C0>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+[1/5][17/1583]  Processed [1600/202624]         Loss_D: 0.9623  Loss_G: 0.5914  D(x): 0.9477    D(G(z)): 0.5911 / 0.5543
+[1/5][67/1583]  Processed [1650/202624]         Loss_D: 0.9292  Loss_G: 0.6727  D(x): 0.9006    D(G(z)): 0.5558 / 0.5110
+[1/5][117/1583] Processed [1700/202624]         Loss_D: 0.7969  Loss_G: 0.7709  D(x): 0.9613    D(G(z)): 0.5292 / 0.4636
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000001B61604CA00>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+[1/5][167/1583] Processed [1750/202624]         Loss_D: 0.8091  Loss_G: 0.6877  D(x): 0.9410    D(G(z)): 0.5243 / 0.5033
+[1/5][217/1583] Processed [1800/202624]         Loss_D: 0.8062  Loss_G: 0.7577  D(x): 0.9403    D(G(z)): 0.5194 / 0.4693
+[1/5][267/1583] Processed [1850/202624]         Loss_D: 0.7975  Loss_G: 0.6801  D(x): 0.9535    D(G(z)): 0.5250 / 0.5072
+[1/5][317/1583] Processed [1900/202624]         Loss_D: 0.8409  Loss_G: 0.6721  D(x): 0.8924    D(G(z)): 0.5021 / 0.5112
+[1/5][367/1583] Processed [1950/202624]         Loss_D: 0.8318  Loss_G: 0.7417  D(x): 0.9203    D(G(z)): 0.5242 / 0.4767
+[1/5][417/1583] Processed [2000/202624]         Loss_D: 0.9134  Loss_G: 0.5833  D(x): 0.9027    D(G(z)): 0.5363 / 0.5588
+[1/5][467/1583] Processed [2050/202624]         Loss_D: 0.8401  Loss_G: 0.6879  D(x): 0.9091    D(G(z)): 0.5183 / 0.5033
+Scaled (6464, 299, 299, 3) (10000, 299, 299, 3)
+105/202 [==============>...............] - ETA: 1:30Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000001B6E4B63730>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+202/202 [==============================] - 191s 931ms/step
+313/313 [==============================] - 308s 978ms/step
+FID: 462.428
+Average FID score for the last 10000 processed images at [6463/1583]    is [462.4284472489776]
+[1/5][517/1583] Processed [2100/202624]         Loss_D: 0.8194  Loss_G: 0.6975  D(x): 0.9279    D(G(z)): 0.5221 / 0.4987
+[1/5][567/1583] Processed [2150/202624]         Loss_D: 0.9473  Loss_G: 0.6812  D(x): 0.9330    D(G(z)): 0.5801 / 0.5066
+[1/5][617/1583] Processed [2200/202624]         Loss_D: 0.8926  Loss_G: 0.6751  D(x): 0.9227    D(G(z)): 0.5521 / 0.5098
+[1/5][667/1583] Processed [2250/202624]         Loss_D: 0.8374  Loss_G: 0.6932  D(x): 0.9558    D(G(z)): 0.5454 / 0.5007
+[1/5][717/1583] Processed [2300/202624]         Loss_D: 0.8673  Loss_G: 0.7258  D(x): 0.9199    D(G(z)): 0.5368 / 0.4850
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000001B6E4B5AAC0>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+[1/5][767/1583] Processed [2350/202624]         Loss_D: 0.8745  Loss_G: 0.6565  D(x): 0.9111    D(G(z)): 0.5357 / 0.5193
+[1/5][817/1583] Processed [2400/202624]         Loss_D: 0.8346  Loss_G: 0.6946  D(x): 0.9409    D(G(z)): 0.5368 / 0.4997
+[1/5][867/1583] Processed [2450/202624]         Loss_D: 0.8991  Loss_G: 0.6626  D(x): 0.8897    D(G(z)): 0.5309 / 0.5162
+[1/5][917/1583] Processed [2500/202624]         Loss_D: 0.9802  Loss_G: 0.6502  D(x): 0.8787    D(G(z)): 0.5662 / 0.5231
+[1/5][967/1583] Processed [2550/202624]         Loss_D: 0.8489  Loss_G: 0.7147  D(x): 0.9227    D(G(z)): 0.5321 / 0.4902
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+274/313 [=========================>....] - ETA: 37sStatus code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000001B6F556E7F0>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+313/313 [==============================] - 303s 963ms/step
+313/313 [==============================] - 300s 955ms/step
+FID: 461.875
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.8753415906514]
+[1/5][1017/1583]        Processed [2600/202624]         Loss_D: 0.8383  Loss_G: 0.7576  D(x): 0.9287    D(G(z)): 0.5314 / 0.4695
+[1/5][1067/1583]        Processed [2650/202624]         Loss_D: 0.9182  Loss_G: 0.7022  D(x): 0.9605    D(G(z)): 0.5823 / 0.4963
+[1/5][1117/1583]        Processed [2700/202624]         Loss_D: 0.8706  Loss_G: 0.6661  D(x): 0.9518    D(G(z)): 0.5579 / 0.5142
+[1/5][1167/1583]        Processed [2750/202624]         Loss_D: 0.8467  Loss_G: 0.7518  D(x): 0.9639    D(G(z)): 0.5532 / 0.4723
+[1/5][1217/1583]        Processed [2800/202624]         Loss_D: 0.8387  Loss_G: 0.6786  D(x): 0.9450    D(G(z)): 0.5388 / 0.5084
+[1/5][1267/1583]        Processed [2850/202624]         Loss_D: 0.8378  Loss_G: 0.7015  D(x): 0.9260    D(G(z)): 0.5292 / 0.4967
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000001B615681E80>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+[1/5][1317/1583]        Processed [2900/202624]         Loss_D: 0.8373  Loss_G: 0.7113  D(x): 0.9000    D(G(z)): 0.5132 / 0.4918
+[1/5][1367/1583]        Processed [2950/202624]         Loss_D: 0.8493  Loss_G: 0.7622  D(x): 0.9132    D(G(z)): 0.5264 / 0.4678
+[1/5][1417/1583]        Processed [3000/202624]         Loss_D: 0.8621  Loss_G: 0.6767  D(x): 0.9265    D(G(z)): 0.5390 / 0.5092
+[1/5][1467/1583]        Processed [3050/202624]         Loss_D: 0.8384  Loss_G: 0.7009  D(x): 0.9396    D(G(z)): 0.5332 / 0.4975
+Scaled (6464, 299, 299, 3) (10000, 299, 299, 3)
+202/202 [==============================] - 204s 975ms/step
+142/313 [============>.................] - ETA: 2:52Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000001B6E824EFA0>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+313/313 [==============================] - 313s 991ms/step
+FID: 461.800
+Average FID score for the last 10000 processed images at [6463/1583]    is [461.79982445102837]
+[1/5][1517/1583]        Processed [3100/202624]         Loss_D: 0.8774  Loss_G: 0.5954  D(x): 0.9213    D(G(z)): 0.5432 / 0.5521
+[1/5][1567/1583]        Processed [3150/202624]         Loss_D: 0.8590  Loss_G: 0.6469  D(x): 0.8996    D(G(z)): 0.5232 / 0.5247
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000001C7DCA89550>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000002B40B8594C0>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+[2/5][34/1583]  Processed [3200/202624]         Loss_D: 0.8870  Loss_G: 0.6760  D(x): 0.9227    D(G(z)): 0.5476 / 0.5094
+[2/5][84/1583]  Processed [3250/202624]         Loss_D: 1.0301  Loss_G: 0.6642  D(x): 0.9275    D(G(z)): 0.5988 / 0.5153
+[2/5][134/1583] Processed [3300/202624]         Loss_D: 0.8798  Loss_G: 0.6794  D(x): 0.9055    D(G(z)): 0.5336 / 0.5082
+[2/5][184/1583] Processed [3350/202624]         Loss_D: 0.8547  Loss_G: 0.6597  D(x): 0.9086    D(G(z)): 0.5244 / 0.5181
+[2/5][234/1583] Processed [3400/202624]         Loss_D: 0.8757  Loss_G: 0.6879  D(x): 0.8990    D(G(z)): 0.5311 / 0.5034
+[2/5][284/1583] Processed [3450/202624]         Loss_D: 0.9105  Loss_G: 0.6919  D(x): 0.8932    D(G(z)): 0.5416 / 0.5017
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000001B63FBCA2E0>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+[2/5][334/1583] Processed [3500/202624]         Loss_D: 0.9130  Loss_G: 0.6751  D(x): 0.9223    D(G(z)): 0.5586 / 0.5106
+[2/5][384/1583] Processed [3550/202624]         Loss_D: 0.9362  Loss_G: 0.6348  D(x): 0.8800    D(G(z)): 0.5465 / 0.5312
+[2/5][434/1583] Processed [3600/202624]         Loss_D: 0.9061  Loss_G: 0.6605  D(x): 0.8956    D(G(z)): 0.5424 / 0.5175
+[2/5][484/1583] Processed [3650/202624]         Loss_D: 0.9464  Loss_G: 0.6608  D(x): 0.8515    D(G(z)): 0.5312 / 0.5182
+Scaled (6464, 299, 299, 3) (10000, 299, 299, 3)
+202/202 [==============================] - 191s 932ms/step
+180/313 [================>.............] - ETA: 2:09Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000001B6EB788400>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+313/313 [==============================] - 306s 973ms/step
+FID: 461.867
+Average FID score for the last 10000 processed images at [6463/1583]    is [461.8671068811039]
+[2/5][534/1583] Processed [3700/202624]         Loss_D: 0.8718  Loss_G: 0.6854  D(x): 0.9155    D(G(z)): 0.5377 / 0.5048
+[2/5][584/1583] Processed [3750/202624]         Loss_D: 0.9273  Loss_G: 0.6460  D(x): 0.8911    D(G(z)): 0.5517 / 0.5247
+[2/5][634/1583] Processed [3800/202624]         Loss_D: 0.9529  Loss_G: 0.6334  D(x): 0.9174    D(G(z)): 0.5728 / 0.5338
+[2/5][684/1583] Processed [3850/202624]         Loss_D: 0.9396  Loss_G: 0.6654  D(x): 0.8824    D(G(z)): 0.5459 / 0.5149
+[2/5][734/1583] Processed [3900/202624]         Loss_D: 0.9288  Loss_G: 0.7021  D(x): 0.8780    D(G(z)): 0.5430 / 0.4969
+[2/5][784/1583] Processed [3950/202624]         Loss_D: 0.8613  Loss_G: 0.7042  D(x): 0.9073    D(G(z)): 0.5252 / 0.4961
+[2/5][834/1583] Processed [4000/202624]         Loss_D: 0.8608  Loss_G: 0.6957  D(x): 0.9288    D(G(z)): 0.5417 / 0.4996
+[2/5][884/1583] Processed [4050/202624]         Loss_D: 0.8486  Loss_G: 0.7110  D(x): 0.8910    D(G(z)): 0.5130 / 0.4922
+[2/5][934/1583] Processed [4100/202624]         Loss_D: 0.8944  Loss_G: 0.6658  D(x): 0.8605    D(G(z)): 0.5126 / 0.5152
+[2/5][984/1583] Processed [4150/202624]         Loss_D: 0.8597  Loss_G: 0.6698  D(x): 0.9405    D(G(z)): 0.5469 / 0.5126
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+313/313 [==============================] - 306s 972ms/step
+313/313 [==============================] - 308s 981ms/step
+FID: 461.588
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.5879555159071]
+[2/5][1034/1583]        Processed [4200/202624]         Loss_D: 0.8470  Loss_G: 0.6983  D(x): 0.9201    D(G(z)): 0.5302 / 0.4983
+[2/5][1084/1583]        Processed [4250/202624]         Loss_D: 0.8732  Loss_G: 0.6797  D(x): 0.8711    D(G(z)): 0.5117 / 0.5080
+[2/5][1134/1583]        Processed [4300/202624]         Loss_D: 0.8829  Loss_G: 0.6803  D(x): 0.8886    D(G(z)): 0.5248 / 0.5075
+[2/5][1184/1583]        Processed [4350/202624]         Loss_D: 0.8940  Loss_G: 0.6830  D(x): 0.8867    D(G(z)): 0.5304 / 0.5064
+[2/5][1234/1583]        Processed [4400/202624]         Loss_D: 0.8940  Loss_G: 0.6606  D(x): 0.9214    D(G(z)): 0.5489 / 0.5177
+[2/5][1284/1583]        Processed [4450/202624]         Loss_D: 0.9812  Loss_G: 0.6183  D(x): 0.9094    D(G(z)): 0.5772 / 0.5427
+[2/5][1334/1583]        Processed [4500/202624]         Loss_D: 0.8902  Loss_G: 0.6295  D(x): 0.9211    D(G(z)): 0.5493 / 0.5343
+[2/5][1384/1583]        Processed [4550/202624]         Loss_D: 0.8993  Loss_G: 0.6785  D(x): 0.9058    D(G(z)): 0.5433 / 0.5097
+[2/5][1434/1583]        Processed [4600/202624]         Loss_D: 0.9067  Loss_G: 0.7971  D(x): 0.8807    D(G(z)): 0.5287 / 0.4596
+[2/5][1484/1583]        Processed [4650/202624]         Loss_D: 0.8988  Loss_G: 0.6569  D(x): 0.8899    D(G(z)): 0.5337 / 0.5198
+Scaled (6464, 299, 299, 3) (10000, 299, 299, 3)
+202/202 [==============================] - 196s 960ms/step
+313/313 [==============================] - 313s 986ms/step
+FID: 461.395
+Average FID score for the last 10000 processed images at [6463/1583]    is [461.3950836603924]
+[2/5][1534/1583]        Processed [4700/202624]         Loss_D: 0.9970  Loss_G: 0.6836  D(x): 0.9000    D(G(z)): 0.5814 / 0.5072
+[3/5][1/1583]   Processed [4750/202624]         Loss_D: 0.9769  Loss_G: 0.6238  D(x): 0.9155    D(G(z)): 0.5750 / 0.5390
+[3/5][51/1583]  Processed [4800/202624]         Loss_D: 0.8517  Loss_G: 0.6754  D(x): 0.8849    D(G(z)): 0.5101 / 0.5109
+[3/5][101/1583] Processed [4850/202624]         Loss_D: 0.9101  Loss_G: 0.6798  D(x): 0.8979    D(G(z)): 0.5399 / 0.5101
+[3/5][151/1583] Processed [4900/202624]         Loss_D: 0.8864  Loss_G: 0.7221  D(x): 0.9040    D(G(z)): 0.5390 / 0.4869
+[3/5][201/1583] Processed [4950/202624]         Loss_D: 0.9427  Loss_G: 0.7089  D(x): 0.9039    D(G(z)): 0.5636 / 0.4940
+[3/5][251/1583] Processed [5000/202624]         Loss_D: 0.8889  Loss_G: 0.6468  D(x): 0.8883    D(G(z)): 0.5272 / 0.5255
+[3/5][301/1583] Processed [5050/202624]         Loss_D: 0.8984  Loss_G: 0.6925  D(x): 0.8588    D(G(z)): 0.5144 / 0.5019
+[3/5][351/1583] Processed [5100/202624]         Loss_D: 1.0948  Loss_G: 0.4964  D(x): 0.6956    D(G(z)): 0.4739 / 0.6113
+[3/5][401/1583] Processed [5150/202624]         Loss_D: 0.9140  Loss_G: 0.6292  D(x): 0.8757    D(G(z)): 0.5311 / 0.5341
+[3/5][451/1583] Processed [5200/202624]         Loss_D: 0.9148  Loss_G: 0.6280  D(x): 0.8792    D(G(z)): 0.5320 / 0.5358
+Scaled (6464, 299, 299, 3) (10000, 299, 299, 3)
+202/202 [==============================] - 192s 940ms/step
+313/313 [==============================] - 303s 962ms/step
+FID: 461.505
+Average FID score for the last 10000 processed images at [6463/1583]    is [461.50470917358587]
+[3/5][6464/1583]        Processed [5250/202624]         Loss_D: 0.9637  Loss_G: 0.6280  D(x): 0.9110    D(G(z)): 0.5767 / 0.5351
+[3/5][551/1583] Processed [5300/202624]         Loss_D: 0.8881  Loss_G: 0.7063  D(x): 0.9046    D(G(z)): 0.5401 / 0.4958
+[3/5][601/1583] Processed [5350/202624]         Loss_D: 0.8779  Loss_G: 0.6965  D(x): 0.8439    D(G(z)): 0.4949 / 0.5024
+[3/5][651/1583] Processed [5400/202624]         Loss_D: 0.9805  Loss_G: 0.6479  D(x): 0.9315    D(G(z)): 0.5919 / 0.5250
+[3/5][701/1583] Processed [5450/202624]         Loss_D: 0.8601  Loss_G: 0.7677  D(x): 0.9292    D(G(z)): 0.5398 / 0.4669
+[3/5][751/1583] Processed [5500/202624]         Loss_D: 0.9835  Loss_G: 0.6578  D(x): 0.9164    D(G(z)): 0.5814 / 0.5207
+[3/5][801/1583] Processed [5550/202624]         Loss_D: 0.9088  Loss_G: 0.6535  D(x): 0.8506    D(G(z)): 0.5138 / 0.5223
+[3/5][851/1583] Processed [5600/202624]         Loss_D: 0.9327  Loss_G: 0.7160  D(x): 0.9063    D(G(z)): 0.5601 / 0.4906
+[3/5][901/1583] Processed [5650/202624]         Loss_D: 0.8946  Loss_G: 0.6769  D(x): 0.9098    D(G(z)): 0.5411 / 0.5115
+[3/5][951/1583] Processed [5700/202624]         Loss_D: 0.8328  Loss_G: 0.7419  D(x): 0.8833    D(G(z)): 0.4993 / 0.4790
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+313/313 [==============================] - 305s 967ms/step
+313/313 [==============================] - 303s 965ms/step
+FID: 461.413
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.41265035171597]
+[3/5][10000/1583]       Processed [5750/202624]         Loss_D: 0.8690  Loss_G: 0.7040  D(x): 0.9270    D(G(z)): 0.5426 / 0.4965
+[3/5][1051/1583]        Processed [5800/202624]         Loss_D: 0.9150  Loss_G: 0.7164  D(x): 0.9198    D(G(z)): 0.5567 / 0.4906
+[3/5][1101/1583]        Processed [5850/202624]         Loss_D: 0.9067  Loss_G: 0.7132  D(x): 0.9019    D(G(z)): 0.5464 / 0.4916
+[3/5][1151/1583]        Processed [5900/202624]         Loss_D: 0.9742  Loss_G: 0.6318  D(x): 0.8916    D(G(z)): 0.5674 / 0.5341
+[3/5][1201/1583]        Processed [5950/202624]         Loss_D: 1.0018  Loss_G: 0.6505  D(x): 0.8268    D(G(z)): 0.5420 / 0.5247
+[3/5][1251/1583]        Processed [6000/202624]         Loss_D: 1.0062  Loss_G: 0.6061  D(x): 0.8216    D(G(z)): 0.5423 / 0.5470
+[3/5][1301/1583]        Processed [6050/202624]         Loss_D: 0.8964  Loss_G: 0.7797  D(x): 0.9318    D(G(z)): 0.5535 / 0.4625
+[3/5][1351/1583]        Processed [6100/202624]         Loss_D: 0.9640  Loss_G: 0.6502  D(x): 0.8446    D(G(z)): 0.5351 / 0.5257
+[3/5][1401/1583]        Processed [6150/202624]         Loss_D: 0.9521  Loss_G: 0.7002  D(x): 0.8684    D(G(z)): 0.5400 / 0.4984
+[3/5][1451/1583]        Processed [6200/202624]         Loss_D: 0.9315  Loss_G: 0.7742  D(x): 0.9028    D(G(z)): 0.5545 / 0.4642
+Scaled (6464, 299, 299, 3) (10000, 299, 299, 3)
+202/202 [==============================] - 200s 978ms/step
+313/313 [==============================] - 308s 977ms/step
+FID: 461.396
+Average FID score for the last 10000 processed images at [6463/1583]    is [461.3957672188091]
+[3/5][6464/1583]        Processed [6250/202624]         Loss_D: 0.8910  Loss_G: 0.6641  D(x): 0.8780    D(G(z)): 0.5208 / 0.5184
+[3/5][1551/1583]        Processed [6300/202624]         Loss_D: 0.9907  Loss_G: 0.6018  D(x): 0.8564    D(G(z)): 0.5503 / 0.5503
+[4/5][18/1583]  Processed [6350/202624]         Loss_D: 0.9590  Loss_G: 0.7316  D(x): 0.8875    D(G(z)): 0.5556 / 0.4835
+[4/5][68/1583]  Processed [6400/202624]         Loss_D: 1.0204  Loss_G: 0.6414  D(x): 0.9023    D(G(z)): 0.5913 / 0.5289
+[4/5][118/1583] Processed [6450/202624]         Loss_D: 0.9596  Loss_G: 0.6313  D(x): 0.8094    D(G(z)): 0.5114 / 0.5345
+[4/5][168/1583] Processed [6500/202624]         Loss_D: 0.9655  Loss_G: 0.6480  D(x): 0.8130    D(G(z)): 0.5102 / 0.5256
+[4/5][218/1583] Processed [6550/202624]         Loss_D: 0.9348  Loss_G: 0.6864  D(x): 0.8660    D(G(z)): 0.5339 / 0.5061
+[4/5][268/1583] Processed [6600/202624]         Loss_D: 0.9775  Loss_G: 0.7366  D(x): 0.9321    D(G(z)): 0.5906 / 0.4820
+[4/5][318/1583] Processed [6650/202624]         Loss_D: 0.8857  Loss_G: 0.7924  D(x): 0.9147    D(G(z)): 0.5434 / 0.4552
+[4/5][368/1583] Processed [6700/202624]         Loss_D: 0.9185  Loss_G: 0.6964  D(x): 0.9174    D(G(z)): 0.5605 / 0.4999
+[4/5][418/1583] Processed [6750/202624]         Loss_D: 0.9547  Loss_G: 0.6216  D(x): 0.8052    D(G(z)): 0.5033 / 0.5395
+[4/5][468/1583] Processed [6800/202624]         Loss_D: 0.9027  Loss_G: 0.7043  D(x): 0.8509    D(G(z)): 0.5115 / 0.5001
+Scaled (6464, 299, 299, 3) (10000, 299, 299, 3)
+202/202 [==============================] - 192s 936ms/step
+313/313 [==============================] - 305s 968ms/step
+FID: 461.623
+Average FID score for the last 10000 processed images at [6463/1583]    is [461.6225391460543]
+[4/5][518/1583] Processed [6850/202624]         Loss_D: 0.9429  Loss_G: 0.7362  D(x): 0.8998    D(G(z)): 0.5610 / 0.4809
+[4/5][568/1583] Processed [6900/202624]         Loss_D: 0.9797  Loss_G: 0.6597  D(x): 0.8682    D(G(z)): 0.5593 / 0.5192
+[4/5][618/1583] Processed [6950/202624]         Loss_D: 0.9439  Loss_G: 0.7028  D(x): 0.8892    D(G(z)): 0.5539 / 0.4982
+[4/5][668/1583] Processed [7000/202624]         Loss_D: 0.9481  Loss_G: 0.7121  D(x): 0.8565    D(G(z)): 0.5317 / 0.4926
+[4/5][718/1583] Processed [7050/202624]         Loss_D: 1.0423  Loss_G: 0.6422  D(x): 0.8915    D(G(z)): 0.5861 / 0.5283
+[4/5][768/1583] Processed [7100/202624]         Loss_D: 1.0634  Loss_G: 0.5211  D(x): 0.7148    D(G(z)): 0.4909 / 0.5970
+[4/5][818/1583] Processed [7150/202624]         Loss_D: 0.9792  Loss_G: 0.7378  D(x): 0.8586    D(G(z)): 0.5473 / 0.4808
+[4/5][868/1583] Processed [7200/202624]         Loss_D: 0.9736  Loss_G: 0.7823  D(x): 0.9168    D(G(z)): 0.5808 / 0.4600
+[4/5][918/1583] Processed [7250/202624]         Loss_D: 1.0660  Loss_G: 0.7204  D(x): 0.9372    D(G(z)): 0.6233 / 0.4916
+[4/5][968/1583] Processed [7300/202624]         Loss_D: 0.9601  Loss_G: 0.6843  D(x): 0.8594    D(G(z)): 0.5433 / 0.5076
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+313/313 [==============================] - 316s 997ms/step
+313/313 [==============================] - 307s 978ms/step
+FID: 461.560
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.5598716368943]
+[4/5][1018/1583]        Processed [7350/202624]         Loss_D: 0.9247  Loss_G: 0.7651  D(x): 0.9153    D(G(z)): 0.5592 / 0.4701
+[4/5][1068/1583]        Processed [7400/202624]         Loss_D: 0.9180  Loss_G: 0.6721  D(x): 0.8594    D(G(z)): 0.5252 / 0.5136
+[4/5][1118/1583]        Processed [7450/202624]         Loss_D: 0.8706  Loss_G: 0.7343  D(x): 0.9058    D(G(z)): 0.5312 / 0.4822
+[4/5][1168/1583]        Processed [7500/202624]         Loss_D: 1.0483  Loss_G: 0.6622  D(x): 0.8526    D(G(z)): 0.5721 / 0.5182
+[4/5][1218/1583]        Processed [7550/202624]         Loss_D: 0.9981  Loss_G: 0.6578  D(x): 0.8580    D(G(z)): 0.5526 / 0.5242
+[4/5][1268/1583]        Processed [7600/202624]         Loss_D: 0.8960  Loss_G: 0.6679  D(x): 0.8656    D(G(z)): 0.5191 / 0.5163
+[4/5][1318/1583]        Processed [7650/202624]         Loss_D: 0.9404  Loss_G: 0.6580  D(x): 0.8273    D(G(z)): 0.5137 / 0.5249
+[4/5][1368/1583]        Processed [7700/202624]         Loss_D: 0.9616  Loss_G: 0.6686  D(x): 0.8416    D(G(z)): 0.5342 / 0.5163
+[4/5][1418/1583]        Processed [7750/202624]         Loss_D: 0.9473  Loss_G: 0.6943  D(x): 0.8572    D(G(z)): 0.5364 / 0.5019
+[4/5][1468/1583]        Processed [7800/202624]         Loss_D: 0.9833  Loss_G: 0.6551  D(x): 0.8664    D(G(z)): 0.5574 / 0.5233
+Scaled (6464, 299, 299, 3) (10000, 299, 299, 3)
+202/202 [==============================] - 193s 940ms/step
+313/313 [==============================] - 308s 977ms/step
+FID: 461.723
+Average FID score for the last 10000 processed images at [6463/1583]    is [461.72259755863536]
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.9633  Loss_G: 0.7088  D(x): 0.8918    D(G(z)): 0.5644 / 0.4958
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 1.0585  Loss_G: 0.5892  D(x): 0.7642    D(G(z)): 0.5256 / 0.5579
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   7:05:05
+        Energy: 0.1418536 kWh
+        CO2eq:  14.3070399 g
+        This is equivalent to:
+        0.133089 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:425.10272998809813 minutes.
+80 images saved in outputs/

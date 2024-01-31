@@ -76,7 +76,7 @@ ngf = 64
 ndf = 64
 """Size of feature maps in discriminator"""
 
-num_epochs = 4 # TODO remove this if stop criterion works correctly
+num_epochs = 5 # TODO remove this if stop criterion works correctly
 """Number of training epochs"""
 
 lr = 0.0002
@@ -162,15 +162,6 @@ def main2():
     instances = np.array(load_images_from_folder("data/celeba/img_align_celeba"))
     print("Real Images loaded")
 
-
-    # onlyfiles = [f for f in os.listdir("data/celeba/img_align_celeba") if os.path.isfile(os.path.join("data/celeba/img_align_celeba", f))]
-
-    # print("Working with {0} images".format(len(onlyfiles)))
-    # print(type(onlyfiles))
-    # onlyfiles = onlyfiles[:10000]
-    # onlyfiles = np.array(onlyfiles)
-    # print(onlyfiles.shape)
-
     start_time = time.time()
 
     # Energy consumption measurement
@@ -181,7 +172,6 @@ def main2():
 
     # Create the generator
     netG = GeneratorBN(ngpu, nz, nc, ngf).to(device) if batchnorm_enabled else Generator(ngpu, nz, nc, ngf).to(device)
-    #netG = Generator(ngpu, nz, nc, ngf).to(device)
 
     # Handle multi-GPU if desired
     if (device.type == 'cuda') and (ngpu > 1):
@@ -196,7 +186,6 @@ def main2():
 
     # Create the Discriminator
     netD = DiscriminatorBN(ngpu, nz, nc, ngf).to(device) if batchnorm_enabled else Discriminator(ngpu, nz, nc, ngf).to(device)
-    #netD = Discriminator(ngpu, nz, nc, ngf).to(device)
 
     # Handle multi-GPU if desired
     if (device.type == 'cuda') and (ngpu > 1):
@@ -328,16 +317,9 @@ def main2():
 
                 if (i == 0): fake_images = new_fake_batch 
                 else: fake_images = torch.cat((fake_images,new_fake_batch), dim=0)
-            
-            
-               
 
-             
-
-            if (i % 200 == 0 and i != 0):
+            if (i == len(dataloader)-1 and epoch == 4):
                 # Apply the function to each image in the batch
-                #processed_images = torch.stack([resize_image(image) for image in fake_images])
-                #new_fake_batch = [[np.transpose(i,(1,2,0))] for i in new_fake_batch]
                 fid_batch = fake_images[:10000]
 
                 # Iterate through the tensor and apply normalize_t to each tensor in the batch
@@ -346,50 +328,6 @@ def main2():
                 
                 # Transpose the tensor dimensions
                 fid_batch = fid_batch.permute(0, 2, 3, 1).numpy()  # Change the dimensions accordingly
-                #new_fake_batch = normalize_t(new_fake_batch[-1],None,False)
-                #print(new_fake_batch.numpy().shape)
-
-                #print(type(new_fake_batch.numpy()), type(instances))
-
-
-                #print(new_fake_batch.numpy().shape, instances[0].shape)
-                #img_list.append(vutils.make_grid(new_fake_batch, padding=2, normalize=True))
-                #Plot the fake images from the last epoch
-                # plt.figure(figsize=(15,15))
-                # plt.axis("off")
-                # plt.title("Fake Images")
-                # plt.imshow(new_fake_batch[-1])
-                # plt.show()
-
-
-
-                # #WORKS
-                # plt.figure(figsize=(15,15))
-                # plt.axis("off")
-                # plt.title("Fake Images")
-                # plt.imshow(np.transpose(img_list[-1],(1,2,0)))
-                # plt.show()
-
-                #print(new_fake_batch.shape, instances.shape)  # = (64, 3, 64, 64) (64, 218, 178, 3)
-
-
-                # # Configure the grid layout
-                # num_rows = 2  # Number of rows in the grid layout
-                # num_cols = 5  # Number of columns in the grid layout (change to 5 for 10 images)
-                # figsize = (12, 4)  # Figure size in inches
-
-                # # Create the plot
-                # fig, axs = plt.subplots(num_rows, num_cols, figsize=figsize)
-
-                # for i, image in enumerate(new_fake_batch[:10]):  # Display the first 10 images
-                #     row = i // num_cols
-                #     col = i % num_cols
-                #     axs[row, col].imshow(image)
-                #     axs[row, col].axis("off")
-
-                # #Display the plot
-                # plt.tight_layout()
-                # plt.show()
                 
                 fid_score = calculate_fid(fid_batch,instances)
                 print('FID: %.3f' % fid_score)
@@ -399,35 +337,10 @@ def main2():
                      )
                 
 
+            if (i % 200 == 0): fake_images = new_fake_batch # Reset to conserve memory
 
-
-
-                #if(inception_score[0]>2.5) : stop_training = True
-
-
-                # # Plot the fake images from the last epoch
-                # plt.subplot(1,2,1)
-                # plt.axis("off")
-                # plt.title("Fake Images")
-                # plt.imshow(np.transpose(img_list[-1],(1,2,0)))
-
-                # # Plot the fake images from the last epoch
-                # plt.subplot(1,2,2)
-                # plt.axis("off")
-                # plt.title("Processed Fake Images")
-                # plt.imshow(np.transpose(img_list2[-1],(1,2,0)))
-                # plt.show()
-
-            if (i % 200 == 0): fake_images = new_fake_batch # Reset
-
-            #Create a mask for structured pruning (L1 norm-based)
-            if (i % 500 == 0 and i != 0 and pruning_enabled):
-
-                # # Inspect model weights before and after pruning
-                # print("Weights before pruning:")
-                # for name, param in netD.named_parameters():
-                #     if 'weight' in name:
-                #         print(name, param.abs().mean().item())
+            # PRUNING: Create a mask for structured pruning (L1 norm-based)
+            if (i % 500 == 0 and i != 0 and pruning_enabled and epoch == 0):
 
                 print("\n\nStart of pruning\n\n")
     
