@@ -36,7 +36,7 @@ import cv2
 import torch.nn.utils.prune as prune
 
 # Set random seed for reproducibility
-manualSeed = 998
+manualSeed = 997
 #manualSeed = random.randint(1, 10000) # use if you want new results
 random.seed(manualSeed)
 torch.manual_seed(manualSeed)

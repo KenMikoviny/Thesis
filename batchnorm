@@ -1,12 +1,6 @@
-inception score mean:  2.1814857
-inception score std:  0.123393066
-Average Inception score for the last 100 processed images at [700/1583] is [(2.1814857, 0.123393066)]
-[2/5][734/1583] Processed [3900/202624]         Loss_D: 0.5118  Loss_G: 2.4498  D(x): 0.8442    D(G(z)): 0.2480 / 0.1300
-[2/5][784/1583] Processed [3950/202624] 
-
-
-py main.py --batchnorm --no_pruning    
-Random Seed:  999
+PS C:\Users\kenmi\Desktop\skol\P2\Thesis\dcgan> py main2.py --batchnorm --no_pruning
+Random Seed:  996
+Real Images loaded
 CarbonTracker: The following components were found: GPU with device(s) NVIDIA GeForce RTX 3060 Laptop GPU.
 GeneratorBN(
   (main): Sequential(
@@ -44,360 +38,230 @@ DiscriminatorBN(
   )
 )
 Starting Training Loop...
-[0/5][50/1583]  Processed [50/202624]   Loss_D: 0.2033  Loss_G: 12.7830 D(x): 0.9623    D(G(z)): 0.1258 / 0.0000
-[0/5][100/1583] Processed [100/202624]  Loss_D: 0.5058  Loss_G: 38.2683 D(x): 0.8430    D(G(z)): 0.0000 / 0.0000
-2023-11-01 10:47:44.717123: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+[0/5][50/1583]  Processed [50/202624]   Loss_D: 0.2402  Loss_G: 12.4831 D(x): 0.9657    D(G(z)): 0.1450 / 0.0000
+[0/5][100/1583] Processed [100/202624]  Loss_D: 1.2348  Loss_G: 17.9848 D(x): 0.9619    D(G(z)): 0.5434 / 0.0000
+[0/5][150/1583] Processed [150/202624]  Loss_D: 1.7432  Loss_G: 5.3137  D(x): 0.3455    D(G(z)): 0.0033 / 0.0253
+[0/5][200/1583] Processed [200/202624]  Loss_D: 0.8772  Loss_G: 10.4536 D(x): 0.9176    D(G(z)): 0.4903 / 0.0001
+[0/5][250/1583] Processed [250/202624]  Loss_D: 1.1394  Loss_G: 3.9390  D(x): 0.4736    D(G(z)): 0.0092 / 0.0343
+[0/5][300/1583] Processed [300/202624]  Loss_D: 1.4385  Loss_G: 7.2164  D(x): 0.4077    D(G(z)): 0.0050 / 0.0047
+[0/5][350/1583] Processed [350/202624]  Loss_D: 1.1453  Loss_G: 9.3218  D(x): 0.9237    D(G(z)): 0.5707 / 0.0009
+[0/5][400/1583] Processed [400/202624]  Loss_D: 0.4494  Loss_G: 2.0921  D(x): 0.8328    D(G(z)): 0.1613 / 0.2041
+[0/5][450/1583] Processed [450/202624]  Loss_D: 2.6788  Loss_G: 2.4799  D(x): 0.2291    D(G(z)): 0.0029 / 0.1804
+[0/5][500/1583] Processed [500/202624]  Loss_D: 0.4081  Loss_G: 5.3466  D(x): 0.8786    D(G(z)): 0.1909 / 0.0106
+[0/5][550/1583] Processed [550/202624]  Loss_D: 0.5406  Loss_G: 4.1734  D(x): 0.8111    D(G(z)): 0.2001 / 0.0321
+[0/5][600/1583] Processed [600/202624]  Loss_D: 0.3402  Loss_G: 3.6547  D(x): 0.8379    D(G(z)): 0.0898 / 0.0403
+[0/5][650/1583] Processed [650/202624]  Loss_D: 0.4928  Loss_G: 3.8677  D(x): 0.7059    D(G(z)): 0.0384 / 0.0387
+[0/5][700/1583] Processed [700/202624]  Loss_D: 0.5069  Loss_G: 4.5225  D(x): 0.8395    D(G(z)): 0.2265 / 0.0197
+[0/5][750/1583] Processed [750/202624]  Loss_D: 0.3118  Loss_G: 2.8197  D(x): 0.8692    D(G(z)): 0.1013 / 0.1133
+[0/5][800/1583] Processed [800/202624]  Loss_D: 0.4106  Loss_G: 4.3811  D(x): 0.8491    D(G(z)): 0.1571 / 0.0238
+[0/5][850/1583] Processed [850/202624]  Loss_D: 0.7679  Loss_G: 3.4870  D(x): 0.8706    D(G(z)): 0.3192 / 0.0940
+[0/5][900/1583] Processed [900/202624]  Loss_D: 0.4085  Loss_G: 3.9286  D(x): 0.8297    D(G(z)): 0.1515 / 0.0340
+[0/5][950/1583] Processed [950/202624]  Loss_D: 0.8185  Loss_G: 6.5829  D(x): 0.9363    D(G(z)): 0.4715 / 0.0026
+[0/5][1000/1583]        Processed [1000/202624]         Loss_D: 0.6111  Loss_G: 4.9595  D(x): 0.8698    D(G(z)): 0.3276 / 0.0132
+[0/5][1050/1583]        Processed [1050/202624]         Loss_D: 0.4463  Loss_G: 5.5209  D(x): 0.9635    D(G(z)): 0.2857 / 0.0080
+[0/5][1100/1583]        Processed [1100/202624]         Loss_D: 0.3715  Loss_G: 3.9843  D(x): 0.8018    D(G(z)): 0.0839 / 0.0324
+[0/5][1150/1583]        Processed [1150/202624]         Loss_D: 0.6372  Loss_G: 2.8204  D(x): 0.7047    D(G(z)): 0.1349 / 0.0913
+[0/5][1200/1583]        Processed [1200/202624]         Loss_D: 0.5785  Loss_G: 3.2910  D(x): 0.7586    D(G(z)): 0.1891 / 0.0661
+[0/5][1250/1583]        Processed [1250/202624]         Loss_D: 0.9054  Loss_G: 5.9197  D(x): 0.8790    D(G(z)): 0.4694 / 0.0056
+[0/5][1300/1583]        Processed [1300/202624]         Loss_D: 0.9163  Loss_G: 6.7602  D(x): 0.9172    D(G(z)): 0.4938 / 0.0026
+[0/5][1350/1583]        Processed [1350/202624]         Loss_D: 0.3322  Loss_G: 4.8667  D(x): 0.9280    D(G(z)): 0.1934 / 0.0143
+[0/5][1400/1583]        Processed [1400/202624]         Loss_D: 0.6450  Loss_G: 4.1508  D(x): 0.8893    D(G(z)): 0.3446 / 0.0271
+[0/5][1450/1583]        Processed [1450/202624]         Loss_D: 0.6360  Loss_G: 4.4540  D(x): 0.8392    D(G(z)): 0.3099 / 0.0171
+[0/5][1500/1583]        Processed [1500/202624]         Loss_D: 0.4962  Loss_G: 3.0162  D(x): 0.7402    D(G(z)): 0.1210 / 0.0721
+[0/5][1550/1583]        Processed [1550/202624]         Loss_D: 1.8994  Loss_G: 8.4909  D(x): 0.9763    D(G(z)): 0.7672 / 0.0008
+CarbonTracker: 
+Predicted consumption for 5 epoch(s):
+        Time:   4:25:09
+        Energy: 0.1016935 kWh
+        CO2eq:  10.2565840 g
+        This is equivalent to:
+        0.095410 km travelled by car
+[1/5][17/1583]  Processed [1600/202624]         Loss_D: 1.3130  Loss_G: 7.8482  D(x): 0.9706    D(G(z)): 0.6483 / 0.0007
+[1/5][67/1583]  Processed [1650/202624]         Loss_D: 0.3030  Loss_G: 3.5510  D(x): 0.8598    D(G(z)): 0.1105 / 0.0438
+[1/5][117/1583] Processed [1700/202624]         Loss_D: 0.4839  Loss_G: 4.7387  D(x): 0.8996    D(G(z)): 0.2730 / 0.0153
+[1/5][167/1583] Processed [1750/202624]         Loss_D: 0.8740  Loss_G: 1.5435  D(x): 0.5179    D(G(z)): 0.0146 / 0.2860
+[1/5][217/1583] Processed [1800/202624]         Loss_D: 0.5734  Loss_G: 5.4363  D(x): 0.8899    D(G(z)): 0.3206 / 0.0069
+[1/5][267/1583] Processed [1850/202624]         Loss_D: 0.3539  Loss_G: 3.4754  D(x): 0.8159    D(G(z)): 0.0805 / 0.0508
+[1/5][317/1583] Processed [1900/202624]         Loss_D: 0.5085  Loss_G: 4.3145  D(x): 0.9352    D(G(z)): 0.3082 / 0.0255
+[1/5][367/1583] Processed [1950/202624]         Loss_D: 0.8095  Loss_G: 5.0251  D(x): 0.8348    D(G(z)): 0.3764 / 0.0152
+[1/5][417/1583] Processed [2000/202624]         Loss_D: 0.9972  Loss_G: 1.8514  D(x): 0.4778    D(G(z)): 0.0065 / 0.2461
+[1/5][467/1583] Processed [2050/202624]         Loss_D: 0.4582  Loss_G: 3.6901  D(x): 0.8623    D(G(z)): 0.2279 / 0.0379
+[1/5][517/1583] Processed [2100/202624]         Loss_D: 0.4622  Loss_G: 2.7052  D(x): 0.7519    D(G(z)): 0.1089 / 0.0979
+[1/5][567/1583] Processed [2150/202624]         Loss_D: 0.4950  Loss_G: 2.3028  D(x): 0.7108    D(G(z)): 0.0661 / 0.1382
+[1/5][617/1583] Processed [2200/202624]         Loss_D: 0.3837  Loss_G: 3.6042  D(x): 0.8252    D(G(z)): 0.1433 / 0.0434
+[1/5][667/1583] Processed [2250/202624]         Loss_D: 0.4936  Loss_G: 3.1919  D(x): 0.8009    D(G(z)): 0.1881 / 0.0632
+[1/5][717/1583] Processed [2300/202624]         Loss_D: 0.6893  Loss_G: 1.8630  D(x): 0.6124    D(G(z)): 0.0748 / 0.2123
+[1/5][767/1583] Processed [2350/202624]         Loss_D: 0.4291  Loss_G: 2.5591  D(x): 0.8006    D(G(z)): 0.1556 / 0.1031
+[1/5][817/1583] Processed [2400/202624]         Loss_D: 0.7594  Loss_G: 1.9833  D(x): 0.6227    D(G(z)): 0.1230 / 0.1870
+[1/5][867/1583] Processed [2450/202624]         Loss_D: 0.7719  Loss_G: 1.2789  D(x): 0.5345    D(G(z)): 0.0221 / 0.3435
+[1/5][917/1583] Processed [2500/202624]         Loss_D: 0.5969  Loss_G: 4.0646  D(x): 0.8366    D(G(z)): 0.2924 / 0.0248
+[1/5][967/1583] Processed [2550/202624]         Loss_D: 1.0535  Loss_G: 4.9626  D(x): 0.9536    D(G(z)): 0.5666 / 0.0171
+[1/5][1017/1583]        Processed [2600/202624]         Loss_D: 0.9412  Loss_G: 4.7870  D(x): 0.9597    D(G(z)): 0.5265 / 0.0141
+[1/5][1067/1583]        Processed [2650/202624]         Loss_D: 0.5037  Loss_G: 1.9532  D(x): 0.7418    D(G(z)): 0.1410 / 0.1760
+[1/5][1117/1583]        Processed [2700/202624]         Loss_D: 0.4944  Loss_G: 3.9750  D(x): 0.8510    D(G(z)): 0.2485 / 0.0269
+[1/5][1167/1583]        Processed [2750/202624]         Loss_D: 0.4710  Loss_G: 3.7355  D(x): 0.8415    D(G(z)): 0.2204 / 0.0370
+[1/5][1217/1583]        Processed [2800/202624]         Loss_D: 0.7081  Loss_G: 4.5493  D(x): 0.9345    D(G(z)): 0.4238 / 0.0156
+[1/5][1267/1583]        Processed [2850/202624]         Loss_D: 0.5148  Loss_G: 2.1716  D(x): 0.7374    D(G(z)): 0.1484 / 0.1527
+[1/5][1317/1583]        Processed [2900/202624]         Loss_D: 0.5325  Loss_G: 2.9133  D(x): 0.7870    D(G(z)): 0.2138 / 0.0758
+[1/5][1367/1583]        Processed [2950/202624]         Loss_D: 0.6319  Loss_G: 3.3226  D(x): 0.9181    D(G(z)): 0.3773 / 0.0575
+[1/5][1417/1583]        Processed [3000/202624]         Loss_D: 0.6723  Loss_G: 2.3424  D(x): 0.7550    D(G(z)): 0.2792 / 0.1216
+[1/5][1467/1583]        Processed [3050/202624]         Loss_D: 0.6339  Loss_G: 4.0422  D(x): 0.8949    D(G(z)): 0.3776 / 0.0235
+[1/5][1517/1583]        Processed [3100/202624]         Loss_D: 0.6828  Loss_G: 4.5122  D(x): 0.9295    D(G(z)): 0.4167 / 0.0171
+[1/5][1567/1583]        Processed [3150/202624]         Loss_D: 0.6743  Loss_G: 1.9375  D(x): 0.6076    D(G(z)): 0.1021 / 0.1893
+[2/5][34/1583]  Processed [3200/202624]         Loss_D: 0.6568  Loss_G: 1.6821  D(x): 0.6282    D(G(z)): 0.1042 / 0.2300
+[2/5][84/1583]  Processed [3250/202624]         Loss_D: 1.0624  Loss_G: 5.5512  D(x): 0.9531    D(G(z)): 0.5794 / 0.0074
+[2/5][134/1583] Processed [3300/202624]         Loss_D: 0.6216  Loss_G: 4.2095  D(x): 0.8950    D(G(z)): 0.3626 / 0.0215
+[2/5][184/1583] Processed [3350/202624]         Loss_D: 0.8208  Loss_G: 1.7257  D(x): 0.5781    D(G(z)): 0.1266 / 0.2402
+[2/5][234/1583] Processed [3400/202624]         Loss_D: 0.4260  Loss_G: 3.4457  D(x): 0.8720    D(G(z)): 0.2227 / 0.0460
+[2/5][284/1583] Processed [3450/202624]         Loss_D: 0.5103  Loss_G: 1.6642  D(x): 0.7093    D(G(z)): 0.0940 / 0.2304
+[2/5][334/1583] Processed [3500/202624]         Loss_D: 0.6519  Loss_G: 1.8481  D(x): 0.7161    D(G(z)): 0.2178 / 0.2022
+[2/5][384/1583] Processed [3550/202624]         Loss_D: 0.9007  Loss_G: 4.2666  D(x): 0.9442    D(G(z)): 0.5021 / 0.0222
+[2/5][434/1583] Processed [3600/202624]         Loss_D: 0.8519  Loss_G: 1.2345  D(x): 0.5143    D(G(z)): 0.0642 / 0.3479
+[2/5][484/1583] Processed [3650/202624]         Loss_D: 1.1526  Loss_G: 5.0461  D(x): 0.9316    D(G(z)): 0.6182 / 0.0103
+[2/5][534/1583] Processed [3700/202624]         Loss_D: 0.7182  Loss_G: 2.0265  D(x): 0.5809    D(G(z)): 0.0530 / 0.1716
+[2/5][584/1583] Processed [3750/202624]         Loss_D: 0.4447  Loss_G: 2.9767  D(x): 0.8626    D(G(z)): 0.2293 / 0.0694
+[2/5][634/1583] Processed [3800/202624]         Loss_D: 1.0034  Loss_G: 0.8706  D(x): 0.4721    D(G(z)): 0.0399 / 0.4785
+[2/5][684/1583] Processed [3850/202624]         Loss_D: 0.9054  Loss_G: 4.5035  D(x): 0.9484    D(G(z)): 0.5253 / 0.0170
+[2/5][734/1583] Processed [3900/202624]         Loss_D: 0.9162  Loss_G: 2.7656  D(x): 0.8537    D(G(z)): 0.4733 / 0.0860
+[2/5][784/1583] Processed [3950/202624]         Loss_D: 0.8392  Loss_G: 3.4931  D(x): 0.8353    D(G(z)): 0.4292 / 0.0406
+[2/5][834/1583] Processed [4000/202624]         Loss_D: 0.5117  Loss_G: 1.7956  D(x): 0.7308    D(G(z)): 0.1404 / 0.2068
+[2/5][884/1583] Processed [4050/202624]         Loss_D: 0.4276  Loss_G: 2.4448  D(x): 0.7279    D(G(z)): 0.0606 / 0.1242
+[2/5][934/1583] Processed [4100/202624]         Loss_D: 0.7610  Loss_G: 1.2931  D(x): 0.5641    D(G(z)): 0.0689 / 0.3276
+[2/5][984/1583] Processed [4150/202624]         Loss_D: 0.7550  Loss_G: 2.9771  D(x): 0.8563    D(G(z)): 0.3987 / 0.0727
+[2/5][1034/1583]        Processed [4200/202624]         Loss_D: 0.5522  Loss_G: 2.1189  D(x): 0.7294    D(G(z)): 0.1704 / 0.1518
+[2/5][1084/1583]        Processed [4250/202624]         Loss_D: 0.5099  Loss_G: 2.1725  D(x): 0.7084    D(G(z)): 0.0991 / 0.1504
+[2/5][1134/1583]        Processed [4300/202624]         Loss_D: 0.6180  Loss_G: 2.3451  D(x): 0.7578    D(G(z)): 0.2440 / 0.1187
+[2/5][1184/1583]        Processed [4350/202624]         Loss_D: 0.5345  Loss_G: 2.8398  D(x): 0.8202    D(G(z)): 0.2541 / 0.0768
+[2/5][1234/1583]        Processed [4400/202624]         Loss_D: 1.0547  Loss_G: 0.9910  D(x): 0.4250    D(G(z)): 0.0326 / 0.4218
+[2/5][1284/1583]        Processed [4450/202624]         Loss_D: 0.7362  Loss_G: 3.1406  D(x): 0.8578    D(G(z)): 0.3990 / 0.0573
+[2/5][1334/1583]        Processed [4500/202624]         Loss_D: 0.4328  Loss_G: 2.6866  D(x): 0.7882    D(G(z)): 0.1518 / 0.0903
+[2/5][1384/1583]        Processed [4550/202624]         Loss_D: 0.5623  Loss_G: 2.9213  D(x): 0.8305    D(G(z)): 0.2822 / 0.0704
+[2/5][1434/1583]        Processed [4600/202624]         Loss_D: 0.6329  Loss_G: 1.4840  D(x): 0.6005    D(G(z)): 0.0620 / 0.2710
+[2/5][1484/1583]        Processed [4650/202624]         Loss_D: 0.5417  Loss_G: 2.4800  D(x): 0.7808    D(G(z)): 0.2266 / 0.1103
+[2/5][1534/1583]        Processed [4700/202624]         Loss_D: 0.5673  Loss_G: 3.1744  D(x): 0.8527    D(G(z)): 0.2934 / 0.0553
+[3/5][1/1583]   Processed [4750/202624]         Loss_D: 0.4377  Loss_G: 2.2956  D(x): 0.7496    D(G(z)): 0.1060 / 0.1267
+[3/5][51/1583]  Processed [4800/202624]         Loss_D: 0.6352  Loss_G: 2.5031  D(x): 0.7051    D(G(z)): 0.1866 / 0.1139
+[3/5][101/1583] Processed [4850/202624]         Loss_D: 0.3561  Loss_G: 3.1245  D(x): 0.8369    D(G(z)): 0.1469 / 0.0581
+[3/5][151/1583] Processed [4900/202624]         Loss_D: 0.4815  Loss_G: 2.6562  D(x): 0.8004    D(G(z)): 0.2017 / 0.0891
+[3/5][201/1583] Processed [4950/202624]         Loss_D: 0.4953  Loss_G: 3.0041  D(x): 0.8912    D(G(z)): 0.2853 / 0.0677
+[3/5][251/1583] Processed [5000/202624]         Loss_D: 0.3956  Loss_G: 2.5629  D(x): 0.8190    D(G(z)): 0.1581 / 0.0994
+[3/5][301/1583] Processed [5050/202624]         Loss_D: 0.7705  Loss_G: 1.6706  D(x): 0.5417    D(G(z)): 0.0519 / 0.2412
+[3/5][351/1583] Processed [5100/202624]         Loss_D: 0.8661  Loss_G: 4.3099  D(x): 0.9192    D(G(z)): 0.4948 / 0.0208
+[3/5][401/1583] Processed [5150/202624]         Loss_D: 0.8101  Loss_G: 2.2192  D(x): 0.6175    D(G(z)): 0.1797 / 0.1453
+[3/5][451/1583] Processed [5200/202624]         Loss_D: 0.6889  Loss_G: 1.5725  D(x): 0.6458    D(G(z)): 0.1687 / 0.2442
+[3/5][501/1583] Processed [5250/202624]         Loss_D: 1.2215  Loss_G: 1.0991  D(x): 0.3782    D(G(z)): 0.1175 / 0.3748
+[3/5][551/1583] Processed [5300/202624]         Loss_D: 1.5023  Loss_G: 5.1662  D(x): 0.9612    D(G(z)): 0.7263 / 0.0089
+[3/5][601/1583] Processed [5350/202624]         Loss_D: 0.6722  Loss_G: 1.8034  D(x): 0.6010    D(G(z)): 0.0919 / 0.2064
+[3/5][651/1583] Processed [5400/202624]         Loss_D: 0.4324  Loss_G: 2.3152  D(x): 0.8291    D(G(z)): 0.1928 / 0.1229
+[3/5][701/1583] Processed [5450/202624]         Loss_D: 1.1304  Loss_G: 0.7093  D(x): 0.4369    D(G(z)): 0.1407 / 0.5390
+[3/5][751/1583] Processed [5500/202624]         Loss_D: 0.4765  Loss_G: 2.4339  D(x): 0.7357    D(G(z)): 0.1174 / 0.1108
+[3/5][801/1583] Processed [5550/202624]         Loss_D: 0.7326  Loss_G: 4.2779  D(x): 0.9482    D(G(z)): 0.4561 / 0.0192
+[3/5][851/1583] Processed [5600/202624]         Loss_D: 0.6187  Loss_G: 1.7917  D(x): 0.6166    D(G(z)): 0.0634 / 0.2055
+[3/5][901/1583] Processed [5650/202624]         Loss_D: 0.6101  Loss_G: 1.7875  D(x): 0.7352    D(G(z)): 0.2145 / 0.2154
+[3/5][951/1583] Processed [5700/202624]         Loss_D: 0.4646  Loss_G: 2.1504  D(x): 0.7096    D(G(z)): 0.0625 / 0.1487
+[3/5][1001/1583]        Processed [5750/202624]         Loss_D: 0.8249  Loss_G: 3.8783  D(x): 0.9514    D(G(z)): 0.4974 / 0.0282
+[3/5][1051/1583]        Processed [5800/202624]         Loss_D: 0.7563  Loss_G: 1.3715  D(x): 0.6007    D(G(z)): 0.1532 / 0.3110
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000023A17086970>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+[3/5][1101/1583]        Processed [5850/202624]         Loss_D: 0.3808  Loss_G: 2.6733  D(x): 0.8770    D(G(z)): 0.2015 / 0.0879
+[3/5][1151/1583]        Processed [5900/202624]         Loss_D: 0.4857  Loss_G: 2.1319  D(x): 0.7707    D(G(z)): 0.1730 / 0.1531
+[3/5][1201/1583]        Processed [5950/202624]         Loss_D: 0.6577  Loss_G: 3.2355  D(x): 0.8505    D(G(z)): 0.3513 / 0.0540
+[3/5][1251/1583]        Processed [6000/202624]         Loss_D: 0.9278  Loss_G: 1.1886  D(x): 0.4703    D(G(z)): 0.0614 / 0.3673
+[3/5][1301/1583]        Processed [6050/202624]         Loss_D: 0.4900  Loss_G: 2.6523  D(x): 0.8676    D(G(z)): 0.2707 / 0.0852
+[3/5][1351/1583]        Processed [6100/202624]         Loss_D: 1.0900  Loss_G: 1.4016  D(x): 0.4107    D(G(z)): 0.0412 / 0.3089
+[3/5][1401/1583]        Processed [6150/202624]         Loss_D: 0.5725  Loss_G: 2.4221  D(x): 0.6231    D(G(z)): 0.0448 / 0.1155
+[3/5][1451/1583]        Processed [6200/202624]         Loss_D: 0.9465  Loss_G: 1.3613  D(x): 0.4962    D(G(z)): 0.0949 / 0.3007
+[3/5][1501/1583]        Processed [6250/202624]         Loss_D: 0.6373  Loss_G: 3.0481  D(x): 0.8120    D(G(z)): 0.3183 / 0.0605
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000023A17076E20>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+[3/5][1551/1583]        Processed [6300/202624]         Loss_D: 0.9217  Loss_G: 1.5934  D(x): 0.4798    D(G(z)): 0.0569 / 0.2491
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000020999EA8550>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000026D94178550>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+[4/5][18/1583]  Processed [6350/202624]         Loss_D: 0.5206  Loss_G: 3.0786  D(x): 0.8152    D(G(z)): 0.2496 / 0.0605
+[4/5][68/1583]  Processed [6400/202624]         Loss_D: 1.6960  Loss_G: 6.1382  D(x): 0.9603    D(G(z)): 0.7595 / 0.0041
+[4/5][118/1583] Processed [6450/202624]         Loss_D: 0.6057  Loss_G: 1.7794  D(x): 0.7308    D(G(z)): 0.2105 / 0.2009
+[4/5][168/1583] Processed [6500/202624]         Loss_D: 0.8071  Loss_G: 4.1309  D(x): 0.9388    D(G(z)): 0.4877 / 0.0222
+[4/5][218/1583] Processed [6550/202624]         Loss_D: 0.5115  Loss_G: 2.0543  D(x): 0.7065    D(G(z)): 0.1174 / 0.1636
+[4/5][268/1583] Processed [6600/202624]         Loss_D: 0.5150  Loss_G: 1.5597  D(x): 0.7088    D(G(z)): 0.1230 / 0.2417
+[4/5][318/1583] Processed [6650/202624]         Loss_D: 0.6513  Loss_G: 3.5016  D(x): 0.8935    D(G(z)): 0.3754 / 0.0432
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000023A17076F10>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+[4/5][368/1583] Processed [6700/202624]         Loss_D: 0.4282  Loss_G: 1.9149  D(x): 0.7616    D(G(z)): 0.1225 / 0.1776
+[4/5][418/1583] Processed [6750/202624]         Loss_D: 0.7302  Loss_G: 3.0235  D(x): 0.8123    D(G(z)): 0.3639 / 0.0627
+[4/5][468/1583] Processed [6800/202624]         Loss_D: 0.4654  Loss_G: 2.1870  D(x): 0.7513    D(G(z)): 0.1352 / 0.1444
+[4/5][518/1583] Processed [6850/202624]         Loss_D: 1.5432  Loss_G: 6.4360  D(x): 0.9011    D(G(z)): 0.6709 / 0.0033
+[4/5][568/1583] Processed [6900/202624]         Loss_D: 0.5065  Loss_G: 2.1074  D(x): 0.7766    D(G(z)): 0.1897 / 0.1468
+[4/5][618/1583] Processed [6950/202624]         Loss_D: 0.8393  Loss_G: 4.6795  D(x): 0.8884    D(G(z)): 0.4755 / 0.0152
+[4/5][668/1583] Processed [7000/202624]         Loss_D: 0.6265  Loss_G: 2.7404  D(x): 0.8968    D(G(z)): 0.3683 / 0.0787
+[4/5][718/1583] Processed [7050/202624]         Loss_D: 0.3816  Loss_G: 2.9047  D(x): 0.8058    D(G(z)): 0.1303 / 0.0716
+[4/5][768/1583] Processed [7100/202624]         Loss_D: 0.8345  Loss_G: 3.7452  D(x): 0.8885    D(G(z)): 0.4537 / 0.0346
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000023A170867F0>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+[4/5][818/1583] Processed [7150/202624]         Loss_D: 0.5272  Loss_G: 2.0383  D(x): 0.7398    D(G(z)): 0.1652 / 0.1666
+[4/5][868/1583] Processed [7200/202624]         Loss_D: 1.3523  Loss_G: 0.3311  D(x): 0.3236    D(G(z)): 0.0362 / 0.7432
+[4/5][918/1583] Processed [7250/202624]         Loss_D: 0.7974  Loss_G: 2.7277  D(x): 0.8642    D(G(z)): 0.4303 / 0.0841
+[4/5][968/1583] Processed [7300/202624]         Loss_D: 0.7595  Loss_G: 1.3832  D(x): 0.5342    D(G(z)): 0.0563 / 0.2898
+[4/5][1018/1583]        Processed [7350/202624]         Loss_D: 0.6462  Loss_G: 1.7504  D(x): 0.6057    D(G(z)): 0.0750 / 0.2261
+[4/5][1068/1583]        Processed [7400/202624]         Loss_D: 0.4488  Loss_G: 2.7438  D(x): 0.7937    D(G(z)): 0.1678 / 0.0861
+[4/5][1118/1583]        Processed [7450/202624]         Loss_D: 0.7608  Loss_G: 1.3165  D(x): 0.5322    D(G(z)): 0.0394 / 0.3247
+[4/5][1168/1583]        Processed [7500/202624]         Loss_D: 0.6073  Loss_G: 2.0596  D(x): 0.7005    D(G(z)): 0.1655 / 0.1640
+[4/5][1218/1583]        Processed [7550/202624]         Loss_D: 0.4785  Loss_G: 2.6649  D(x): 0.8384    D(G(z)): 0.2398 / 0.0858
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000023A17076910>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+[4/5][1268/1583]        Processed [7600/202624]         Loss_D: 2.1744  Loss_G: 0.0316  D(x): 0.1514    D(G(z)): 0.0252 / 0.9693
+[4/5][1318/1583]        Processed [7650/202624]         Loss_D: 0.8597  Loss_G: 3.8144  D(x): 0.9162    D(G(z)): 0.4909 / 0.0292
+[4/5][1368/1583]        Processed [7700/202624]         Loss_D: 0.5326  Loss_G: 2.3331  D(x): 0.7537    D(G(z)): 0.1715 / 0.1331
+[4/5][1418/1583]        Processed [7750/202624]         Loss_D: 0.6035  Loss_G: 3.0642  D(x): 0.8502    D(G(z)): 0.3174 / 0.0586
+[4/5][1468/1583]        Processed [7800/202624]         Loss_D: 0.8919  Loss_G: 3.4651  D(x): 0.8545    D(G(z)): 0.4615 / 0.0454
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.9611  Loss_G: 5.6731  D(x): 0.9322    D(G(z)): 0.5388 / 0.0063
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.7676  Loss_G: 1.6781  D(x): 0.5504    D(G(z)): 0.0720 / 0.2350
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000023A191F2C70>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+2024-02-01 22:02:19.348442: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-202/202 [==============================] - 211s 1s/step
-inception score mean:  1.3606548
-inception score std:  0.18983582
-Average Inception score for the last 100 processed images at [100/1583] is [(1.3606548, 0.18983582)] 
-[0/5][150/1583] Processed [150/202624]  Loss_D: 0.2981  Loss_G: 6.1747  D(x): 0.8808    D(G(z)): 0.0837 / 0.0045
-[0/5][200/1583] Processed [200/202624]  Loss_D: 1.0617  Loss_G: 6.8296  D(x): 0.9573    D(G(z)): 0.5804 / 0.0039
-202/202 [==============================] - 223s 1s/step
-inception score mean:  1.7173014
-inception score std:  0.30444205
-Average Inception score for the last 100 processed images at [200/1583] is [(1.7173014, 0.30444205)] 
-[0/5][250/1583] Processed [250/202624]  Loss_D: 0.3923  Loss_G: 4.9255  D(x): 0.7766    D(G(z)): 0.0568 / 0.0165
-[0/5][300/1583] Processed [300/202624]  Loss_D: 0.7261  Loss_G: 5.5333  D(x): 0.7961    D(G(z)): 0.2998 / 0.0068
-202/202 [==============================] - 224s 1s/step
-inception score mean:  1.9685233
-inception score std:  0.15831508
-Average Inception score for the last 100 processed images at [300/1583] is [(1.9685233, 0.15831508)] 
-[0/5][350/1583] Processed [350/202624]  Loss_D: 0.5015  Loss_G: 3.6757  D(x): 0.7578    D(G(z)): 0.0991 / 0.0487
-[0/5][400/1583] Processed [400/202624]  Loss_D: 0.4386  Loss_G: 3.6398  D(x): 0.8023    D(G(z)): 0.1519 / 0.0471
-202/202 [==============================] - 237s 1s/step
-inception score mean:  2.219722
-inception score std:  0.21777369
-Average Inception score for the last 100 processed images at [400/1583] is [(2.219722, 0.21777369)] 
-[0/5][450/1583] Processed [450/202624]  Loss_D: 0.4097  Loss_G: 4.2343  D(x): 0.7793    D(G(z)): 0.0766 / 0.0277
-[0/5][500/1583] Processed [500/202624]  Loss_D: 0.5760  Loss_G: 5.0894  D(x): 0.9189    D(G(z)): 0.2889 / 0.0146
-202/202 [==============================] - 213s 1s/step
-inception score mean:  2.4271088
-inception score std:  0.23609664
-Average Inception score for the last 100 processed images at [500/1583] is [(2.4271088, 0.23609664)] 
-[0/5][550/1583] Processed [550/202624]  Loss_D: 0.5649  Loss_G: 3.6208  D(x): 0.7147    D(G(z)): 0.1046 / 0.0476
-[0/5][600/1583] Processed [600/202624]  Loss_D: 0.4508  Loss_G: 5.1594  D(x): 0.7442    D(G(z)): 0.0171 / 0.0126
-202/202 [==============================] - 212s 1s/step
-inception score mean:  2.2791114
-inception score std:  0.2629741
-Average Inception score for the last 100 processed images at [600/1583] is [(2.2791114, 0.2629741)] 
-[0/5][650/1583] Processed [650/202624]  Loss_D: 1.5068  Loss_G: 9.4232  D(x): 0.9182    D(G(z)): 0.6049 / 0.0005
-[0/5][700/1583] Processed [700/202624]  Loss_D: 0.4842  Loss_G: 5.8549  D(x): 0.7133    D(G(z)): 0.0201 / 0.0076
-202/202 [==============================] - 211s 1s/step
-inception score mean:  2.7159896
-inception score std:  0.29992616
-Average Inception score for the last 100 processed images at [700/1583] is [(2.7159896, 0.29992616)] 
-[0/5][750/1583] Processed [750/202624]  Loss_D: 0.5456  Loss_G: 3.7959  D(x): 0.7883    D(G(z)): 0.1961 / 0.0380
-[0/5][800/1583] Processed [800/202624]  Loss_D: 0.5381  Loss_G: 3.3521  D(x): 0.6944    D(G(z)): 0.0414 / 0.0619
-202/202 [==============================] - 205s 1s/step
-inception score mean:  2.6357093
-inception score std:  0.1886386
-Average Inception score for the last 100 processed images at [800/1583] is [(2.6357093, 0.1886386)] 
-[0/5][850/1583] Processed [850/202624]  Loss_D: 0.6514  Loss_G: 2.7476  D(x): 0.6594    D(G(z)): 0.0797 / 0.0996
-[0/5][900/1583] Processed [900/202624]  Loss_D: 0.4961  Loss_G: 4.5015  D(x): 0.8789    D(G(z)): 0.2528 / 0.0249
-202/202 [==============================] - 207s 1s/step
-inception score mean:  2.641716
-inception score std:  0.2781544
-Average Inception score for the last 100 processed images at [900/1583] is [(2.641716, 0.2781544)] 
-[0/5][950/1583] Processed [950/202624]  Loss_D: 0.2948  Loss_G: 4.0342  D(x): 0.8178    D(G(z)): 0.0399 / 0.0282
-[0/5][1000/1583]        Processed [1000/202624]         Loss_D: 0.4405  Loss_G: 4.4397  D(x): 0.8000    D(G(z)): 0.1474 / 0.0219
-202/202 [==============================] - 209s 1s/step
-inception score mean:  2.6956172
-inception score std:  0.25627044
-Average Inception score for the last 100 processed images at [1000/1583]        is [(2.6956172, 0.25627044)] 
-[0/5][1050/1583]        Processed [1050/202624]         Loss_D: 0.3685  Loss_G: 4.3226  D(x): 0.8387    D(G(z)): 0.1241 / 0.0289
-[0/5][1100/1583]        Processed [1100/202624]         Loss_D: 0.5714  Loss_G: 4.8374  D(x): 0.8566    D(G(z)): 0.2676 / 0.0163
-202/202 [==============================] - 218s 1s/step
-inception score mean:  2.5748978
-inception score std:  0.16668041
-Average Inception score for the last 100 processed images at [1100/1583]        is [(2.5748978, 0.16668041)] 
-[0/5][1150/1583]        Processed [1150/202624]         Loss_D: 0.4139  Loss_G: 3.6336  D(x): 0.7703    D(G(z)): 0.0778 / 0.0490
-[0/5][1200/1583]        Processed [1200/202624]         Loss_D: 0.2302  Loss_G: 4.8129  D(x): 0.8711    D(G(z)): 0.0624 / 0.0135
-202/202 [==============================] - 244s 1s/step
-inception score mean:  2.7480748
-inception score std:  0.2460878
-Average Inception score for the last 100 processed images at [1200/1583]        is [(2.7480748, 0.2460878)] 
-[0/5][1250/1583]        Processed [1250/202624]         Loss_D: 0.2493  Loss_G: 4.5749  D(x): 0.8786    D(G(z)): 0.0820 / 0.0258
-[0/5][1300/1583]        Processed [1300/202624]         Loss_D: 0.4502  Loss_G: 6.2310  D(x): 0.8929    D(G(z)): 0.2286 / 0.0069
-202/202 [==============================] - 217s 1s/step
-inception score mean:  2.6911228
-inception score std:  0.31975818
-Average Inception score for the last 100 processed images at [1300/1583]        is [(2.6911228, 0.31975818)] 
-[0/5][1350/1583]        Processed [1350/202624]         Loss_D: 0.8453  Loss_G: 4.4581  D(x): 0.5683    D(G(z)): 0.0066 / 0.0464
-[0/5][1400/1583]        Processed [1400/202624]         Loss_D: 0.4478  Loss_G: 3.7528  D(x): 0.7693    D(G(z)): 0.0717 / 0.0465
-202/202 [==============================] - 222s 1s/step
-inception score mean:  2.703784
-inception score std:  0.22285146
-Average Inception score for the last 100 processed images at [1400/1583]        is [(2.703784, 0.22285146)] 
-[0/5][1450/1583]        Processed [1450/202624]         Loss_D: 0.3228  Loss_G: 3.6516  D(x): 0.7964    D(G(z)): 0.0305 / 0.0415
-[0/5][1500/1583]        Processed [1500/202624]         Loss_D: 0.9274  Loss_G: 2.0022  D(x): 0.5525    D(G(z)): 0.1239 / 0.2006
-202/202 [==============================] - 211s 1s/step
-inception score mean:  2.5994332
-inception score std:  0.2730742
-Average Inception score for the last 100 processed images at [1500/1583]        is [(2.5994332, 0.2730742)] 
-[0/5][1550/1583]        Processed [1550/202624]         Loss_D: 0.6915  Loss_G: 4.5590  D(x): 0.8321    D(G(z)): 0.3305 / 0.0190
-[1/5][17/1583]  Processed [1600/202624]         Loss_D: 1.6646  Loss_G: 8.7256  D(x): 0.9472    D(G(z)): 0.7185 / 0.0008
-[1/5][67/1583]  Processed [1650/202624]         Loss_D: 0.3993  Loss_G: 3.4516  D(x): 0.8840    D(G(z)): 0.2006 / 0.0581
-202/202 [==============================] - 216s 1s/step
-inception score mean:  2.5630515
-inception score std:  0.28404853
-Average Inception score for the last 100 processed images at [100/1583] is [(2.5630515, 0.28404853)] 
-[1/5][117/1583] Processed [1700/202624]         Loss_D: 0.4143  Loss_G: 3.5221  D(x): 0.7905    D(G(z)): 0.0850 / 0.0474
-[1/5][167/1583] Processed [1750/202624]         Loss_D: 1.0245  Loss_G: 6.8701  D(x): 0.9717    D(G(z)): 0.5688 / 0.0020
-202/202 [==============================] - 207s 1s/step
-inception score mean:  2.6728983
-inception score std:  0.21955393
-Average Inception score for the last 100 processed images at [200/1583] is [(2.6728983, 0.21955393)] 
-[1/5][217/1583] Processed [1800/202624]         Loss_D: 0.4883  Loss_G: 3.0040  D(x): 0.7778    D(G(z)): 0.1532 / 0.0707
-[1/5][267/1583] Processed [1850/202624]         Loss_D: 1.1269  Loss_G: 6.7610  D(x): 0.9209    D(G(z)): 0.5608 / 0.0029
-202/202 [==============================] - 206s 1s/step
-inception score mean:  2.255858
-inception score std:  0.17728493
-Average Inception score for the last 100 processed images at [300/1583] is [(2.255858, 0.17728493)] 
-[1/5][317/1583] Processed [1900/202624]         Loss_D: 0.6596  Loss_G: 3.2916  D(x): 0.6174    D(G(z)): 0.0275 / 0.0698
-[1/5][367/1583] Processed [1950/202624]         Loss_D: 0.5652  Loss_G: 3.9320  D(x): 0.7666    D(G(z)): 0.1930 / 0.0382
-202/202 [==============================] - 215s 1s/step
-inception score mean:  2.377224
-inception score std:  0.2089959
-Average Inception score for the last 100 processed images at [400/1583] is [(2.377224, 0.2089959)] 
-[1/5][417/1583] Processed [2000/202624]         Loss_D: 0.7410  Loss_G: 1.3195  D(x): 0.5964    D(G(z)): 0.0643 / 0.3479
-[1/5][467/1583] Processed [2050/202624]         Loss_D: 0.4163  Loss_G: 3.3121  D(x): 0.7457    D(G(z)): 0.0533 / 0.0588
-202/202 [==============================] - 204s 999ms/step
-inception score mean:  2.3751893
-inception score std:  0.22113451
-Average Inception score for the last 100 processed images at [500/1583] is [(2.3751893, 0.22113451)] 
-[1/5][517/1583] Processed [2100/202624]         Loss_D: 0.4106  Loss_G: 2.9905  D(x): 0.7758    D(G(z)): 0.0858 / 0.0735
-[1/5][567/1583] Processed [2150/202624]         Loss_D: 0.6015  Loss_G: 4.1664  D(x): 0.6346    D(G(z)): 0.0146 / 0.0432
-202/202 [==============================] - 219s 1s/step
-inception score mean:  2.2804945
-inception score std:  0.2496934
-Average Inception score for the last 100 processed images at [600/1583] is [(2.2804945, 0.2496934)] 
-[1/5][617/1583] Processed [2200/202624]         Loss_D: 0.9050  Loss_G: 7.1749  D(x): 0.9555    D(G(z)): 0.4857 / 0.0020
-[1/5][667/1583] Processed [2250/202624]         Loss_D: 1.1576  Loss_G: 6.3834  D(x): 0.9400    D(G(z)): 0.5757 / 0.0034
-202/202 [==============================] - 209s 1s/step
-inception score mean:  2.2928808
-inception score std:  0.17889413
-Average Inception score for the last 100 processed images at [700/1583] is [(2.2928808, 0.17889413)] 
-[1/5][717/1583] Processed [2300/202624]         Loss_D: 0.3858  Loss_G: 3.1830  D(x): 0.7622    D(G(z)): 0.0660 / 0.0711
-[1/5][767/1583] Processed [2350/202624]         Loss_D: 0.3162  Loss_G: 3.4876  D(x): 0.8569    D(G(z)): 0.1239 / 0.0445
-202/202 [==============================] - 204s 996ms/step
-inception score mean:  2.381487
-inception score std:  0.17415972
-Average Inception score for the last 100 processed images at [800/1583] is [(2.381487, 0.17415972)] 
-[1/5][817/1583] Processed [2400/202624]         Loss_D: 1.2665  Loss_G: 5.8552  D(x): 0.9655    D(G(z)): 0.5790 / 0.0113
-[1/5][867/1583] Processed [2450/202624]         Loss_D: 0.4349  Loss_G: 3.7110  D(x): 0.8602    D(G(z)): 0.2236 / 0.0325
-202/202 [==============================] - 206s 1s/step
-inception score mean:  2.3021026
-inception score std:  0.23936109
-Average Inception score for the last 100 processed images at [900/1583] is [(2.3021026, 0.23936109)] 
-[1/5][917/1583] Processed [2500/202624]         Loss_D: 0.9431  Loss_G: 6.7984  D(x): 0.9618    D(G(z)): 0.5249 / 0.0027
-[1/5][967/1583] Processed [2550/202624]         Loss_D: 0.5664  Loss_G: 3.1334  D(x): 0.9360    D(G(z)): 0.3384 / 0.0760
-202/202 [==============================] - 205s 1s/step
-inception score mean:  2.392349
-inception score std:  0.2737254
-Average Inception score for the last 100 processed images at [1000/1583]        is [(2.392349, 0.2737254)] 
-[1/5][1017/1583]        Processed [2600/202624]         Loss_D: 0.2871  Loss_G: 3.2026  D(x): 0.8470    D(G(z)): 0.0883 / 0.0598
-[1/5][1067/1583]        Processed [2650/202624]         Loss_D: 0.4692  Loss_G: 3.3663  D(x): 0.8513    D(G(z)): 0.2222 / 0.0518
-202/202 [==============================] - 206s 1s/step
-inception score mean:  2.3188434
-inception score std:  0.20674154
-Average Inception score for the last 100 processed images at [1100/1583]        is [(2.3188434, 0.20674154)] 
-[1/5][1117/1583]        Processed [2700/202624]         Loss_D: 0.7802  Loss_G: 5.3696  D(x): 0.9036    D(G(z)): 0.4329 / 0.0096
-[1/5][1167/1583]        Processed [2750/202624]         Loss_D: 0.7596  Loss_G: 1.0301  D(x): 0.5811    D(G(z)): 0.0622 / 0.4204
-202/202 [==============================] - 207s 1s/step
-inception score mean:  2.33248
-inception score std:  0.14675772
-Average Inception score for the last 100 processed images at [1200/1583]        is [(2.33248, 0.14675772)] 
-[1/5][1217/1583]        Processed [2800/202624]         Loss_D: 0.2408  Loss_G: 3.3143  D(x): 0.8615    D(G(z)): 0.0660 / 0.0589
-[1/5][1267/1583]        Processed [2850/202624]         Loss_D: 1.3508  Loss_G: 4.7785  D(x): 0.9358    D(G(z)): 0.6300 / 0.0150
-202/202 [==============================] - 226s 1s/step
-inception score mean:  2.3220112
-inception score std:  0.10008122
-Average Inception score for the last 100 processed images at [1300/1583]        is [(2.3220112, 0.10008122)] 
-[1/5][1317/1583]        Processed [2900/202624]         Loss_D: 0.9383  Loss_G: 0.5964  D(x): 0.4905    D(G(z)): 0.0507 / 0.5821
-[1/5][1367/1583]        Processed [2950/202624]         Loss_D: 0.7222  Loss_G: 2.5580  D(x): 0.6561    D(G(z)): 0.1513 / 0.1129
-202/202 [==============================] - 208s 1s/step
-inception score mean:  2.1590562
-inception score std:  0.1286894
-Average Inception score for the last 100 processed images at [1400/1583]        is [(2.1590562, 0.1286894)] 
-[1/5][1417/1583]        Processed [3000/202624]         Loss_D: 0.8433  Loss_G: 4.8369  D(x): 0.9090    D(G(z)): 0.4529 / 0.0235
-[1/5][1467/1583]        Processed [3050/202624]         Loss_D: 0.4860  Loss_G: 2.6518  D(x): 0.7515    D(G(z)): 0.1269 / 0.0995
-202/202 [==============================] - 203s 996ms/step
-inception score mean:  2.2889006
-inception score std:  0.10936158
-Average Inception score for the last 100 processed images at [1500/1583]        is [(2.2889006, 0.10936158)] 
-[1/5][1517/1583]        Processed [3100/202624]         Loss_D: 0.4849  Loss_G: 2.1390  D(x): 0.7045    D(G(z)): 0.0729 / 0.1581
-[1/5][1567/1583]        Processed [3150/202624]         Loss_D: 0.3700  Loss_G: 2.6405  D(x): 0.8168    D(G(z)): 0.1249 / 0.1009
-[2/5][34/1583]  Processed [3200/202624]         Loss_D: 0.7194  Loss_G: 3.8376  D(x): 0.8710    D(G(z)): 0.3970 / 0.0284
-[2/5][84/1583]  Processed [3250/202624]         Loss_D: 0.7158  Loss_G: 3.3639  D(x): 0.9080    D(G(z)): 0.4097 / 0.0508
-202/202 [==============================] - 207s 1s/step
-inception score mean:  2.1357975
-inception score std:  0.075636424
-Average Inception score for the last 100 processed images at [100/1583] is [(2.1357975, 0.075636424)] 
-[2/5][134/1583] Processed [3300/202624]         Loss_D: 0.5567  Loss_G: 2.6133  D(x): 0.8188    D(G(z)): 0.2634 / 0.1011
-[2/5][184/1583] Processed [3350/202624]         Loss_D: 0.5531  Loss_G: 3.9673  D(x): 0.8877    D(G(z)): 0.3166 / 0.0279
-202/202 [==============================] - 206s 1s/step
-inception score mean:  2.253645
-inception score std:  0.09256128
-Average Inception score for the last 100 processed images at [200/1583] is [(2.253645, 0.09256128)] 
-[2/5][234/1583] Processed [3400/202624]         Loss_D: 0.5199  Loss_G: 3.8449  D(x): 0.9085    D(G(z)): 0.2973 / 0.0319
-[2/5][284/1583] Processed [3450/202624]         Loss_D: 0.8660  Loss_G: 5.5382  D(x): 0.9352    D(G(z)): 0.5016 / 0.0065
-202/202 [==============================] - 207s 1s/step
-inception score mean:  2.2679284
-inception score std:  0.091756895
-Average Inception score for the last 100 processed images at [300/1583] is [(2.2679284, 0.091756895)] 
-[2/5][334/1583] Processed [3500/202624]         Loss_D: 0.7852  Loss_G: 4.1376  D(x): 0.9624    D(G(z)): 0.4708 / 0.0240
-[2/5][384/1583] Processed [3550/202624]         Loss_D: 0.5539  Loss_G: 3.1453  D(x): 0.8123    D(G(z)): 0.2441 / 0.0619
-202/202 [==============================] - 205s 1s/step
-inception score mean:  2.2881806
-inception score std:  0.12483412
-Average Inception score for the last 100 processed images at [400/1583] is [(2.2881806, 0.12483412)] 
-[2/5][434/1583] Processed [3600/202624]         Loss_D: 1.0824  Loss_G: 5.7062  D(x): 0.9451    D(G(z)): 0.5837 / 0.0058
-[2/5][484/1583] Processed [3650/202624]         Loss_D: 0.4141  Loss_G: 2.5668  D(x): 0.7715    D(G(z)): 0.1129 / 0.1064
-202/202 [==============================] - 214s 1s/step
-inception score mean:  2.1953685
-inception score std:  0.08117608
-Average Inception score for the last 100 processed images at [500/1583] is [(2.1953685, 0.08117608)] 
-[2/5][534/1583] Processed [3700/202624]         Loss_D: 0.5853  Loss_G: 2.4859  D(x): 0.7758    D(G(z)): 0.2426 / 0.1064
-[2/5][584/1583] Processed [3750/202624]         Loss_D: 0.4797  Loss_G: 3.0943  D(x): 0.8564    D(G(z)): 0.2318 / 0.0701
-202/202 [==============================] - 223s 1s/step
-inception score mean:  2.21675
-inception score std:  0.09559997
-Average Inception score for the last 100 processed images at [600/1583] is [(2.21675, 0.09559997)] 
-[2/5][634/1583] Processed [3800/202624]         Loss_D: 1.0044  Loss_G: 4.1289  D(x): 0.8874    D(G(z)): 0.5286 / 0.0250
-[2/5][684/1583] Processed [3850/202624]         Loss_D: 0.6569  Loss_G: 1.9728  D(x): 0.6962    D(G(z)): 0.1808 / 0.1871
-202/202 [==============================] - 212s 1s/step
-inception score mean:  2.1814857
-inception score std:  0.123393066
-Average Inception score for the last 100 processed images at [700/1583] is [(2.1814857, 0.123393066)]
-[2/5][734/1583] Processed [3900/202624]         Loss_D: 0.5118  Loss_G: 2.4498  D(x): 0.8442    D(G(z)): 0.2480 / 0.1300
-[2/5][784/1583] Processed [3950/202624]         Loss_D: 0.8168  Loss_G: 3.8713  D(x): 0.9519    D(G(z)): 0.4746 / 0.0320
-202/202 [==============================] - 216s 1s/step
-inception score mean:  2.2525325
-inception score std:  0.11779958
-Average Inception score for the last 100 processed images at [800/1583] is [(2.2525325, 0.11779958)]
-[2/5][834/1583] Processed [4000/202624]         Loss_D: 0.9435  Loss_G: 2.5995  D(x): 0.6248    D(G(z)): 0.2841 / 0.1167
-[2/5][884/1583] Processed [4050/202624]         Loss_D: 0.6949  Loss_G: 1.3672  D(x): 0.6078    D(G(z)): 0.1053 / 0.2905
-202/202 [==============================] - 236s 1s/step
-inception score mean:  2.2808099
-inception score std:  0.121921316
-Average Inception score for the last 100 processed images at [900/1583] is [(2.2808099, 0.121921316)]
-[2/5][934/1583] Processed [4100/202624]         Loss_D: 0.7977  Loss_G: 4.4884  D(x): 0.9420    D(G(z)): 0.4670 / 0.0167
-[2/5][984/1583] Processed [4150/202624]         Loss_D: 1.5964  Loss_G: 5.8818  D(x): 0.9754    D(G(z)): 0.7331 / 0.0051
-202/202 [==============================] - 238s 1s/step
-inception score mean:  2.3024895
-inception score std:  0.099895984
-Average Inception score for the last 100 processed images at [1000/1583]        is [(2.3024895, 0.099895984)] 
-[2/5][1034/1583]        Processed [4200/202624]         Loss_D: 0.5794  Loss_G: 2.5198  D(x): 0.7456    D(G(z)): 0.2095 / 0.1027
-[2/5][1084/1583]        Processed [4250/202624]         Loss_D: 0.4185  Loss_G: 2.6551  D(x): 0.7979    D(G(z)): 0.1473 / 0.0964
-202/202 [==============================] - 224s 1s/step
-inception score mean:  2.1985824
-inception score std:  0.1011203
-Average Inception score for the last 100 processed images at [1100/1583]        is [(2.1985824, 0.1011203)] 
-[2/5][1134/1583]        Processed [4300/202624]         Loss_D: 0.5662  Loss_G: 3.5589  D(x): 0.9133    D(G(z)): 0.3423 / 0.0378
-[2/5][1184/1583]        Processed [4350/202624]         Loss_D: 0.6169  Loss_G: 2.3974  D(x): 0.8042    D(G(z)): 0.2756 / 0.1215
-202/202 [==============================] - 224s 1s/step
-inception score mean:  2.1933599
-inception score std:  0.122898825
-Average Inception score for the last 100 processed images at [1200/1583]        is [(2.1933599, 0.122898825)] 
-[2/5][1234/1583]        Processed [4400/202624]         Loss_D: 0.5944  Loss_G: 3.7805  D(x): 0.8724    D(G(z)): 0.3249 / 0.0317
-[2/5][1284/1583]        Processed [4450/202624]         Loss_D: 1.5486  Loss_G: 4.2258  D(x): 0.7468    D(G(z)): 0.6409 / 0.0254
-202/202 [==============================] - 220s 1s/step
-inception score mean:  2.3322175
-inception score std:  0.08881172
-Average Inception score for the last 100 processed images at [1300/1583]        is [(2.3322175, 0.08881172)] 
-[2/5][1334/1583]        Processed [4500/202624]         Loss_D: 1.0221  Loss_G: 0.4624  D(x): 0.4471    D(G(z)): 0.0787 / 0.6549
-[2/5][1384/1583]        Processed [4550/202624]         Loss_D: 1.8129  Loss_G: 0.4275  D(x): 0.2262    D(G(z)): 0.0187 / 0.6834
-202/202 [==============================] - 226s 1s/step
-inception score mean:  2.259714
-inception score std:  0.09439929
-Average Inception score for the last 100 processed images at [1400/1583]        is [(2.259714, 0.09439929)] 
-[2/5][1434/1583]        Processed [4600/202624]         Loss_D: 0.2356  Loss_G: 2.7765  D(x): 0.9133    D(G(z)): 0.1231 / 0.0916
-[2/5][1484/1583]        Processed [4650/202624]         Loss_D: 0.4496  Loss_G: 2.1407  D(x): 0.7338    D(G(z)): 0.0970 / 0.1508
-202/202 [==============================] - 243s 1s/step
-inception score mean:  2.2346356
-inception score std:  0.09646673
-Average Inception score for the last 100 processed images at [1500/1583]        is [(2.2346356, 0.09646673)] 
-[2/5][1534/1583]        Processed [4700/202624]         Loss_D: 0.5879  Loss_G: 2.4078  D(x): 0.7980    D(G(z)): 0.2658 / 0.1161
-[3/5][1/1583]   Processed [4750/202624]         Loss_D: 0.6728  Loss_G: 3.4244  D(x): 0.8551    D(G(z)): 0.3604 / 0.0484
-[3/5][51/1583]  Processed [4800/202624]         Loss_D: 0.5218  Loss_G: 2.4650  D(x): 0.7816    D(G(z)): 0.2101 / 0.1108
-202/202 [==============================] - 233s 1s/step
-inception score mean:  2.254641
-inception score std:  0.10160722
-Average Inception score for the last 100 processed images at [100/1583] is [(2.254641, 0.10160722)] 
-[3/5][101/1583] Processed [4850/202624]         Loss_D: 0.4365  Loss_G: 2.9999  D(x): 0.8444    D(G(z)): 0.2109 / 0.0625
-[3/5][151/1583] Processed [4900/202624]         Loss_D: 0.5945  Loss_G: 1.9501  D(x): 0.7414    D(G(z)): 0.2197 / 0.1748
-202/202 [==============================] - 216s 1s/step
-inception score mean:  2.2537014
-inception score std:  0.110927485
-Average Inception score for the last 100 processed images at [200/1583] is [(2.2537014, 0.110927485)] 
-[3/5][201/1583] Processed [4950/202624]         Loss_D: 0.7199  Loss_G: 1.6933  D(x): 0.6601    D(G(z)): 0.1969 / 0.2326
-[3/5][251/1583] Processed [5000/202624]         Loss_D: 1.7969  Loss_G: 6.1696  D(x): 0.9749    D(G(z)): 0.7623 / 0.0037
-202/202 [==============================] - 231s 1s/step
-inception score mean:  2.1597984
-inception score std:  0.07707121
-Average Inception score for the last 100 processed images at [300/1583] is [(2.1597984, 0.07707121)] 
-[3/5][301/1583] Processed [5050/202624]         Loss_D: 0.7522  Loss_G: 2.5660  D(x): 0.8237    D(G(z)): 0.3744 / 0.1051
-[3/5][351/1583] Processed [5100/202624]         Loss_D: 0.6172  Loss_G: 3.0972  D(x): 0.8671    D(G(z)): 0.3374 / 0.0642
-202/202 [==============================] - 219s 1s/step
-inception score mean:  2.1862273
-inception score std:  0.07233618
-Average Inception score for the last 100 processed images at [400/1583] is [(2.1862273, 0.07233618)] 
-[3/5][401/1583] Processed [5150/202624]         Loss_D: 1.2033  Loss_G: 0.5371  D(x): 0.3800    D(G(z)): 0.0549 / 0.6191
-[3/5][451/1583] Processed [5200/202624]         Loss_D: 0.6043  Loss_G: 2.0674  D(x): 0.7201    D(G(z)): 0.1900 / 0.1567
-202/202 [==============================] - 220s 1s/step
-inception score mean:  2.1611943
-inception score std:  0.10676414
-Average Inception score for the last 100 processed images at [500/1583] is [(2.1611943, 0.10676414)] 
-[3/5][501/1583] Processed [5250/202624]         Loss_D: 3.9617  Loss_G: 0.7526  D(x): 0.0375    D(G(z)): 0.0029 / 0.5418
-[3/5][551/1583] Processed [5300/202624]         Loss_D: 0.7079  Loss_G: 1.5619  D(x): 0.6500    D(G(z)): 0.1669 / 0.2640
-202/202 [==============================] - 220s 1s/step
-inception score mean:  2.142266
-inception score std:  0.08900165
-Average Inception score for the last 100 processed images at [600/1583] is [(2.142266, 0.08900165)] 
-[3/5][601/1583] Processed [5350/202624]         Loss_D: 0.6029  Loss_G: 1.9573  D(x): 0.7693    D(G(z)): 0.2514 / 0.1677
-[3/5][651/1583] Processed [5400/202624]         Loss_D: 0.5092  Loss_G: 1.9745  D(x): 0.7170    D(G(z)): 0.1235 / 0.1700
-202/202 [==============================] - 232s 1s/step
-inception score mean:  2.1749613
-inception score std:  0.09003345
-Average Inception score for the last 100 processed images at [700/1583] is [(2.1749613, 0.09003345)] 
-[3/5][701/1583] Processed [5450/202624]         Loss_D: 0.6502  Loss_G: 2.0895  D(x): 0.6336    D(G(z)): 0.1101 / 0.1734
-[3/5][751/1583] Processed [5500/202624]         Loss_D: 1.0244  Loss_G: 4.3686  D(x): 0.9238    D(G(z)): 0.5542 / 0.0193
-202/202 [==============================] - 216s 1s/step
-inception score mean:  2.2084303
-inception score std:  0.056878317
-Average Inception score for the last 100 processed images at [800/1583] is [(2.2084303, 0.056878317)] 
-[3/5][801/1583] Processed [5550/202624]         Loss_D: 1.2257  Loss_G: 4.2395  D(x): 0.9471    D(G(z)): 0.6301 / 0.0243
-[3/5][851/1583] Processed [5600/202624]         Loss_D: 0.9423  Loss_G: 1.6379  D(x): 0.4631    D(G(z)): 0.0402 / 0.2503
-202/202 [==============================] - 212s 1s/step
-inception score mean:  2.2168639
-inception score std:  0.09790292
-Average Inception score for the last 100 processed images at [900/1583] is [(2.2168639, 0.09790292)] 
-[3/5][901/1583] Processed [5650/202624]         Loss_D: 0.6512  Loss_G: 1.8823  D(x): 0.7321    D(G(z)): 0.2362 / 0.1839
-[3/5][951/1583] Processed [5700/202624]         Loss_D: 0.6888  Loss_G: 1.7460  D(x): 0.5680    D(G(z)): 0.0345 / 0.2227
-202/202 [==============================] - 239s 1s/step
-inception score mean:  2.2341514
-inception score std:  0.07562104
-Average Inception score for the last 100 processed images at [1000/1583]        is [(2.2341514, 0.07562104)]
-[3/5][1001/1583]        Processed [5750/202624]         Loss_D: 0.6943  Loss_G: 2.8817  D(x): 0.8618    D(G(z)): 0.3734 / 0.0781
-[3/5][1051/1583]        Processed [5800/202624]         Loss_D: 0.8283  Loss_G: 1.4956  D(x): 0.5749    D(G(z)): 0.1453 / 0.2850
-202/202 [==============================] - 229s 1s/step
-inception score mean:  2.266674
-inception score std:  0.0893816
-Average Inception score for the last 100 processed images at [1100/1583]        is [(2.266674, 0.0893816)]
-[3/5][1101/1583]        Processed [5850/202624]         Loss_D: 0.8231  Loss_G: 3.0556  D(x): 0.7744    D(G(z)): 0.3736 / 0.0626
-[3/5][1151/1583]        Processed [5900/202624]         Loss_D: 0.8323  Loss_G: 1.4108  D(x): 0.5649    D(G(z)): 0.1497 / 0.2860
-202/202 [==============================] - 214s 1s/step
-inception score mean:  2.2605078
-inception score std:  0.12813453
-Average Inception score for the last 100 processed images at [1200/1583]        is [(2.2605078, 0.12813453)]
-[3/5][1201/1583]        Processed [5950/202624]         Loss_D: 0.5481  Loss_G: 2.5391  D(x): 0.8204    D(G(z)): 0.2634 / 0.1020
-[3/5][1251/1583]        Processed [6000/202624]         Loss_D: 0.6068  Loss_G: 2.7592  D(x): 0.8320    D(G(z)): 0.2971 / 0.0838
-202/202 [==============================] - 260s 1s/step
-inception score mean:  2.2646718
-inception score std:  0.10079853
-Average Inception score for the last 100 processed images at [1300/1583]        is [(2.2646718, 0.10079853)]
-[3/5][1301/1583]        Processed [6050/202624]         Loss_D: 0.6305  Loss_G: 2.3150  D(x): 0.7334    D(G(z)): 0.2310 / 0.1269
-[3/5][1351/1583]        Processed [6100/202624]         Loss_D: 0.8881  Loss_G: 1.6779  D(x): 0.5699    D(G(z)): 0.1775 / 0.2412
-Traceback (most recent call last):
+313/313 [==============================] - 304s 962ms/step
+313/313 [==============================] - 302s 963ms/step
+FID: 460.666
+Average FID score for the last 10000 processed images at [9999/1583]    is [460.66577566622567]
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000023A16C9A430>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:41:09
+        Energy: 0.0977068 kWh
+        CO2eq:  9.8544948 g
+        This is equivalent to:
+        0.091670 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:281.17190859715146 minutes.
+80 images saved in outputs/
