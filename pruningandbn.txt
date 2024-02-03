@@ -1,0 +1,253 @@
+PS C:\Users\kenmi\Desktop\skol\P2\Thesis\dcgan> py main2.py --batchnorm --pruning
+Random Seed:  997
+Real Images loaded
+CarbonTracker: The following components were found: GPU with device(s) NVIDIA GeForce RTX 3060 Laptop GPU.
+GeneratorBN(
+  (main): Sequential(
+    (0): ConvTranspose2d(100, 512, kernel_size=(4, 4), stride=(1, 1), bias=False)
+    (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): ConvTranspose2d(512, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU(inplace=True)
+    (6): ConvTranspose2d(256, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (7): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (8): ReLU(inplace=True)
+    (9): ConvTranspose2d(128, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (10): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (11): ReLU(inplace=True)
+    (12): ConvTranspose2d(64, 3, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (13): Tanh()
+  )
+)
+DiscriminatorBN(
+  (main): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (1): LeakyReLU(negative_slope=0.2, inplace=True)
+    (2): Conv2d(64, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (4): LeakyReLU(negative_slope=0.2, inplace=True)
+    (5): Conv2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (6): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (7): LeakyReLU(negative_slope=0.2, inplace=True)
+    (8): Conv2d(256, 512, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+    (9): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (10): LeakyReLU(negative_slope=0.2, inplace=True)
+    (11): Conv2d(512, 1, kernel_size=(4, 4), stride=(1, 1), bias=False)
+    (12): Sigmoid()
+  )
+)
+Starting Training Loop...
+[0/5][50/1583]  Processed [50/202624]   Loss_D: 0.1306  Loss_G: 19.5239 D(x): 0.9295    D(G(z)): 0.0000 / 0.0000
+[0/5][100/1583] Processed [100/202624]  Loss_D: 0.2587  Loss_G: 5.7705  D(x): 0.8782    D(G(z)): 0.0417 / 0.0057
+[0/5][150/1583] Processed [150/202624]  Loss_D: 0.3673  Loss_G: 5.7820  D(x): 0.9568    D(G(z)): 0.2354 / 0.0062
+[0/5][200/1583] Processed [200/202624]  Loss_D: 0.4744  Loss_G: 5.1107  D(x): 0.7445    D(G(z)): 0.0251 / 0.0130
+[0/5][250/1583] Processed [250/202624]  Loss_D: 0.7688  Loss_G: 5.2818  D(x): 0.6003    D(G(z)): 0.0089 / 0.0069
+[0/5][300/1583] Processed [300/202624]  Loss_D: 0.4506  Loss_G: 3.7950  D(x): 0.7942    D(G(z)): 0.1202 / 0.0432
+[0/5][350/1583] Processed [350/202624]  Loss_D: 1.1713  Loss_G: 1.7785  D(x): 0.4941    D(G(z)): 0.1156 / 0.2588
+[0/5][400/1583] Processed [400/202624]  Loss_D: 0.7546  Loss_G: 4.9201  D(x): 0.8273    D(G(z)): 0.3434 / 0.0179
+[0/5][450/1583] Processed [450/202624]  Loss_D: 0.4557  Loss_G: 5.3032  D(x): 0.8522    D(G(z)): 0.2038 / 0.0102
+[0/5][500/1583] Processed [500/202624]  Loss_D: 0.4335  Loss_G: 5.3702  D(x): 0.9123    D(G(z)): 0.2526 / 0.0086
+
+
+Start of pruning
+
+
+
+
+End of pruning
+
+
+[0/5][550/1583] Processed [550/202624]  Loss_D: 0.6053  Loss_G: 4.5074  D(x): 0.8757    D(G(z)): 0.3387 / 0.0229
+[0/5][600/1583] Processed [600/202624]  Loss_D: 0.4986  Loss_G: 4.1349  D(x): 0.7964    D(G(z)): 0.1608 / 0.0319
+[0/5][650/1583] Processed [650/202624]  Loss_D: 0.3664  Loss_G: 5.1559  D(x): 0.7637    D(G(z)): 0.0250 / 0.0110
+[0/5][700/1583] Processed [700/202624]  Loss_D: 0.5951  Loss_G: 5.7516  D(x): 0.8707    D(G(z)): 0.2728 / 0.0067
+[0/5][750/1583] Processed [750/202624]  Loss_D: 0.2884  Loss_G: 3.0722  D(x): 0.8858    D(G(z)): 0.1304 / 0.0735
+[0/5][800/1583] Processed [800/202624]  Loss_D: 0.8127  Loss_G: 6.6180  D(x): 0.9076    D(G(z)): 0.4385 / 0.0027
+[0/5][850/1583] Processed [850/202624]  Loss_D: 1.8236  Loss_G: 7.5788  D(x): 0.9417    D(G(z)): 0.7337 / 0.0015
+[0/5][900/1583] Processed [900/202624]  Loss_D: 0.4632  Loss_G: 3.7386  D(x): 0.7676    D(G(z)): 0.1106 / 0.0466
+[0/5][950/1583] Processed [950/202624]  Loss_D: 0.5712  Loss_G: 4.3927  D(x): 0.8279    D(G(z)): 0.2248 / 0.0244
+[0/5][1000/1583]        Processed [1000/202624]         Loss_D: 0.4688  Loss_G: 3.7242  D(x): 0.8504    D(G(z)): 0.2071 / 0.0458
+
+
+Start of pruning
+
+
+
+
+End of pruning
+
+
+[0/5][1050/1583]        Processed [1050/202624]         Loss_D: 0.7614  Loss_G: 3.0344  D(x): 0.8707    D(G(z)): 0.3788 / 0.0912
+[0/5][1100/1583]        Processed [1100/202624]         Loss_D: 0.6464  Loss_G: 2.3377  D(x): 0.6737    D(G(z)): 0.1081 / 0.1594
+[0/5][1150/1583]        Processed [1150/202624]         Loss_D: 1.7222  Loss_G: 8.2714  D(x): 0.9665    D(G(z)): 0.6917 / 0.0015
+[0/5][1200/1583]        Processed [1200/202624]         Loss_D: 0.7514  Loss_G: 4.7084  D(x): 0.9247    D(G(z)): 0.4052 / 0.0249
+[0/5][1250/1583]        Processed [1250/202624]         Loss_D: 0.9269  Loss_G: 6.8905  D(x): 0.9348    D(G(z)): 0.4904 / 0.0028
+[0/5][1300/1583]        Processed [1300/202624]         Loss_D: 0.7724  Loss_G: 4.9384  D(x): 0.9199    D(G(z)): 0.4362 / 0.0139
+[0/5][1350/1583]        Processed [1350/202624]         Loss_D: 0.6406  Loss_G: 3.3469  D(x): 0.6690    D(G(z)): 0.0951 / 0.0746
+[0/5][1400/1583]        Processed [1400/202624]         Loss_D: 0.4639  Loss_G: 3.8135  D(x): 0.9073    D(G(z)): 0.2622 / 0.0377
+[0/5][1450/1583]        Processed [1450/202624]         Loss_D: 0.6864  Loss_G: 2.8968  D(x): 0.7101    D(G(z)): 0.1678 / 0.0928
+[0/5][1500/1583]        Processed [1500/202624]         Loss_D: 0.8200  Loss_G: 5.4794  D(x): 0.8693    D(G(z)): 0.4208 / 0.0067
+
+
+Start of pruning
+
+
+
+
+End of pruning
+
+
+[0/5][1550/1583]        Processed [1550/202624]         Loss_D: 0.6001  Loss_G: 2.9455  D(x): 0.7195    D(G(z)): 0.1591 / 0.0843
+CarbonTracker: 
+Predicted consumption for 5 epoch(s):
+        Time:   4:25:22
+        Energy: 0.1016310 kWh
+        CO2eq:  10.2502796 g
+        This is equivalent to:
+        0.095351 km travelled by car
+[1/5][17/1583]  Processed [1600/202624]         Loss_D: 0.6717  Loss_G: 3.1372  D(x): 0.8976    D(G(z)): 0.3551 / 0.0771
+[1/5][67/1583]  Processed [1650/202624]         Loss_D: 1.2400  Loss_G: 6.3901  D(x): 0.8459    D(G(z)): 0.5346 / 0.0045
+[1/5][117/1583] Processed [1700/202624]         Loss_D: 0.5149  Loss_G: 2.6582  D(x): 0.7012    D(G(z)): 0.0667 / 0.1043
+[1/5][167/1583] Processed [1750/202624]         Loss_D: 0.7046  Loss_G: 5.5472  D(x): 0.9042    D(G(z)): 0.3919 / 0.0062
+[1/5][217/1583] Processed [1800/202624]         Loss_D: 2.0000  Loss_G: 3.4216  D(x): 0.2546    D(G(z)): 0.0011 / 0.0685
+[1/5][267/1583] Processed [1850/202624]         Loss_D: 0.6223  Loss_G: 2.1524  D(x): 0.6677    D(G(z)): 0.0911 / 0.1619
+[1/5][317/1583] Processed [1900/202624]         Loss_D: 0.7761  Loss_G: 5.3693  D(x): 0.8596    D(G(z)): 0.3953 / 0.0103
+[1/5][367/1583] Processed [1950/202624]         Loss_D: 1.0114  Loss_G: 4.5676  D(x): 0.8979    D(G(z)): 0.5126 / 0.0192
+[1/5][417/1583] Processed [2000/202624]         Loss_D: 0.4305  Loss_G: 2.7341  D(x): 0.7664    D(G(z)): 0.1167 / 0.0874
+[1/5][467/1583] Processed [2050/202624]         Loss_D: 0.8048  Loss_G: 2.9214  D(x): 0.6907    D(G(z)): 0.2778 / 0.0936
+[1/5][517/1583] Processed [2100/202624]         Loss_D: 0.3750  Loss_G: 3.8017  D(x): 0.9054    D(G(z)): 0.2064 / 0.0333
+[1/5][567/1583] Processed [2150/202624]         Loss_D: 0.4864  Loss_G: 3.2208  D(x): 0.8292    D(G(z)): 0.2102 / 0.0579
+[1/5][617/1583] Processed [2200/202624]         Loss_D: 0.4699  Loss_G: 2.6375  D(x): 0.7664    D(G(z)): 0.1462 / 0.0955
+[1/5][667/1583] Processed [2250/202624]         Loss_D: 0.8026  Loss_G: 4.4678  D(x): 0.9036    D(G(z)): 0.4511 / 0.0215
+[1/5][717/1583] Processed [2300/202624]         Loss_D: 0.3673  Loss_G: 2.9800  D(x): 0.8417    D(G(z)): 0.1410 / 0.0867
+[1/5][767/1583] Processed [2350/202624]         Loss_D: 0.4763  Loss_G: 2.4586  D(x): 0.7651    D(G(z)): 0.1419 / 0.1188
+[1/5][817/1583] Processed [2400/202624]         Loss_D: 0.6595  Loss_G: 5.1156  D(x): 0.9563    D(G(z)): 0.3942 / 0.0124
+[1/5][867/1583] Processed [2450/202624]         Loss_D: 1.2577  Loss_G: 4.4737  D(x): 0.9337    D(G(z)): 0.6237 / 0.0255
+[1/5][917/1583] Processed [2500/202624]         Loss_D: 1.8462  Loss_G: 1.0879  D(x): 0.2323    D(G(z)): 0.0049 / 0.4295
+[1/5][967/1583] Processed [2550/202624]         Loss_D: 0.5130  Loss_G: 2.3744  D(x): 0.7081    D(G(z)): 0.0921 / 0.1280
+[1/5][1017/1583]        Processed [2600/202624]         Loss_D: 0.4323  Loss_G: 2.9584  D(x): 0.8171    D(G(z)): 0.1668 / 0.0724
+[1/5][1067/1583]        Processed [2650/202624]         Loss_D: 0.6741  Loss_G: 4.9194  D(x): 0.9487    D(G(z)): 0.3969 / 0.0182
+[1/5][1117/1583]        Processed [2700/202624]         Loss_D: 0.5034  Loss_G: 2.4877  D(x): 0.7341    D(G(z)): 0.1281 / 0.1201
+[1/5][1167/1583]        Processed [2750/202624]         Loss_D: 1.8692  Loss_G: 6.2465  D(x): 0.9147    D(G(z)): 0.7572 / 0.0037
+[1/5][1217/1583]        Processed [2800/202624]         Loss_D: 0.7030  Loss_G: 1.5648  D(x): 0.5773    D(G(z)): 0.0405 / 0.2665
+[1/5][1267/1583]        Processed [2850/202624]         Loss_D: 0.4934  Loss_G: 2.4358  D(x): 0.7765    D(G(z)): 0.1733 / 0.1188
+[1/5][1317/1583]        Processed [2900/202624]         Loss_D: 0.7297  Loss_G: 4.1792  D(x): 0.9240    D(G(z)): 0.4251 / 0.0231
+[1/5][1367/1583]        Processed [2950/202624]         Loss_D: 1.1620  Loss_G: 5.0682  D(x): 0.9151    D(G(z)): 0.5802 / 0.0156
+[1/5][1417/1583]        Processed [3000/202624]         Loss_D: 0.7348  Loss_G: 2.3277  D(x): 0.5944    D(G(z)): 0.0801 / 0.1432
+[1/5][1467/1583]        Processed [3050/202624]         Loss_D: 0.9873  Loss_G: 0.8550  D(x): 0.4743    D(G(z)): 0.0810 / 0.4801
+[1/5][1517/1583]        Processed [3100/202624]         Loss_D: 0.5232  Loss_G: 2.4496  D(x): 0.7870    D(G(z)): 0.1964 / 0.1130
+[1/5][1567/1583]        Processed [3150/202624]         Loss_D: 0.4123  Loss_G: 3.0677  D(x): 0.8163    D(G(z)): 0.1510 / 0.0698
+[2/5][34/1583]  Processed [3200/202624]         Loss_D: 0.7412  Loss_G: 1.5229  D(x): 0.5685    D(G(z)): 0.0750 / 0.2695
+[2/5][84/1583]  Processed [3250/202624]         Loss_D: 1.1196  Loss_G: 5.0879  D(x): 0.9521    D(G(z)): 0.5852 / 0.0101
+[2/5][134/1583] Processed [3300/202624]         Loss_D: 0.4008  Loss_G: 3.2040  D(x): 0.8831    D(G(z)): 0.2170 / 0.0549
+[2/5][184/1583] Processed [3350/202624]         Loss_D: 0.5924  Loss_G: 3.4352  D(x): 0.8818    D(G(z)): 0.3331 / 0.0466
+[2/5][234/1583] Processed [3400/202624]         Loss_D: 0.8008  Loss_G: 1.9350  D(x): 0.5269    D(G(z)): 0.0323 / 0.2011
+[2/5][284/1583] Processed [3450/202624]         Loss_D: 0.6696  Loss_G: 1.4302  D(x): 0.5842    D(G(z)): 0.0554 / 0.2835
+[2/5][334/1583] Processed [3500/202624]         Loss_D: 1.0834  Loss_G: 1.7176  D(x): 0.6172    D(G(z)): 0.3419 / 0.2294
+[2/5][384/1583] Processed [3550/202624]         Loss_D: 0.8120  Loss_G: 1.2850  D(x): 0.5448    D(G(z)): 0.1094 / 0.3207
+[2/5][434/1583] Processed [3600/202624]         Loss_D: 0.3692  Loss_G: 2.6198  D(x): 0.8186    D(G(z)): 0.1327 / 0.0947
+[2/5][484/1583] Processed [3650/202624]         Loss_D: 0.6603  Loss_G: 1.8123  D(x): 0.6609    D(G(z)): 0.1619 / 0.2138
+[2/5][534/1583] Processed [3700/202624]         Loss_D: 0.5798  Loss_G: 2.1790  D(x): 0.7384    D(G(z)): 0.2027 / 0.1410
+[2/5][584/1583] Processed [3750/202624]         Loss_D: 0.9145  Loss_G: 3.6786  D(x): 0.7948    D(G(z)): 0.4423 / 0.0368
+[2/5][634/1583] Processed [3800/202624]         Loss_D: 0.5324  Loss_G: 2.4561  D(x): 0.8000    D(G(z)): 0.2358 / 0.1164
+[2/5][684/1583] Processed [3850/202624]         Loss_D: 0.6719  Loss_G: 2.8594  D(x): 0.8050    D(G(z)): 0.3220 / 0.0804
+[2/5][734/1583] Processed [3900/202624]         Loss_D: 1.0582  Loss_G: 5.1131  D(x): 0.9389    D(G(z)): 0.5698 / 0.0097
+[2/5][784/1583] Processed [3950/202624]         Loss_D: 0.9037  Loss_G: 0.9660  D(x): 0.4874    D(G(z)): 0.0604 / 0.4228
+[2/5][834/1583] Processed [4000/202624]         Loss_D: 0.6454  Loss_G: 2.4277  D(x): 0.8171    D(G(z)): 0.3128 / 0.1112
+[2/5][884/1583] Processed [4050/202624]         Loss_D: 0.5562  Loss_G: 1.9766  D(x): 0.7520    D(G(z)): 0.2068 / 0.1702
+[2/5][934/1583] Processed [4100/202624]         Loss_D: 0.7308  Loss_G: 3.2710  D(x): 0.8106    D(G(z)): 0.3642 / 0.0532
+[2/5][984/1583] Processed [4150/202624]         Loss_D: 0.5721  Loss_G: 2.6655  D(x): 0.8104    D(G(z)): 0.2635 / 0.0915
+[2/5][1034/1583]        Processed [4200/202624]         Loss_D: 0.5020  Loss_G: 2.0864  D(x): 0.7671    D(G(z)): 0.1749 / 0.1552
+[2/5][1084/1583]        Processed [4250/202624]         Loss_D: 0.5981  Loss_G: 3.1795  D(x): 0.8833    D(G(z)): 0.3471 / 0.0564
+[2/5][1134/1583]        Processed [4300/202624]         Loss_D: 1.9780  Loss_G: 4.4339  D(x): 0.9339    D(G(z)): 0.7971 / 0.0215
+[2/5][1184/1583]        Processed [4350/202624]         Loss_D: 0.8258  Loss_G: 1.1865  D(x): 0.5641    D(G(z)): 0.1482 / 0.3596
+[2/5][1234/1583]        Processed [4400/202624]         Loss_D: 0.5491  Loss_G: 1.6979  D(x): 0.6961    D(G(z)): 0.1261 / 0.2216
+[2/5][1284/1583]        Processed [4450/202624]         Loss_D: 0.6336  Loss_G: 2.7904  D(x): 0.7588    D(G(z)): 0.2621 / 0.0820
+[2/5][1334/1583]        Processed [4500/202624]         Loss_D: 0.7641  Loss_G: 2.8259  D(x): 0.7780    D(G(z)): 0.3596 / 0.0776
+[2/5][1384/1583]        Processed [4550/202624]         Loss_D: 0.5929  Loss_G: 1.7839  D(x): 0.7399    D(G(z)): 0.1980 / 0.2106
+[2/5][1434/1583]        Processed [4600/202624]         Loss_D: 0.6183  Loss_G: 3.0718  D(x): 0.8234    D(G(z)): 0.2994 / 0.0636
+[2/5][1484/1583]        Processed [4650/202624]         Loss_D: 0.8442  Loss_G: 1.2975  D(x): 0.4986    D(G(z)): 0.0746 / 0.3177
+[2/5][1534/1583]        Processed [4700/202624]         Loss_D: 0.7583  Loss_G: 3.3174  D(x): 0.8550    D(G(z)): 0.4053 / 0.0524
+[3/5][1/1583]   Processed [4750/202624]         Loss_D: 0.6347  Loss_G: 3.1533  D(x): 0.8073    D(G(z)): 0.3002 / 0.0603
+[3/5][51/1583]  Processed [4800/202624]         Loss_D: 0.6683  Loss_G: 2.2885  D(x): 0.7676    D(G(z)): 0.2845 / 0.1282
+[3/5][101/1583] Processed [4850/202624]         Loss_D: 0.9274  Loss_G: 1.2212  D(x): 0.5033    D(G(z)): 0.1068 / 0.3494
+[3/5][151/1583] Processed [4900/202624]         Loss_D: 0.9656  Loss_G: 2.5281  D(x): 0.8879    D(G(z)): 0.5134 / 0.1138
+[3/5][201/1583] Processed [4950/202624]         Loss_D: 0.6264  Loss_G: 1.8773  D(x): 0.6433    D(G(z)): 0.1214 / 0.1934
+[3/5][251/1583] Processed [5000/202624]         Loss_D: 0.6313  Loss_G: 2.3755  D(x): 0.7933    D(G(z)): 0.2970 / 0.1140
+[3/5][301/1583] Processed [5050/202624]         Loss_D: 0.6301  Loss_G: 2.1928  D(x): 0.7864    D(G(z)): 0.2853 / 0.1379
+[3/5][351/1583] Processed [5100/202624]         Loss_D: 0.8670  Loss_G: 3.6173  D(x): 0.8973    D(G(z)): 0.4810 / 0.0395
+[3/5][401/1583] Processed [5150/202624]         Loss_D: 1.2891  Loss_G: 0.8654  D(x): 0.3699    D(G(z)): 0.1066 / 0.4691
+[3/5][451/1583] Processed [5200/202624]         Loss_D: 0.5971  Loss_G: 2.7862  D(x): 0.8037    D(G(z)): 0.2777 / 0.0807
+[3/5][501/1583] Processed [5250/202624]         Loss_D: 0.6751  Loss_G: 1.6950  D(x): 0.6550    D(G(z)): 0.1653 / 0.2239
+[3/5][551/1583] Processed [5300/202624]         Loss_D: 0.7581  Loss_G: 3.0096  D(x): 0.8186    D(G(z)): 0.3777 / 0.0675
+[3/5][601/1583] Processed [5350/202624]         Loss_D: 0.7384  Loss_G: 1.4307  D(x): 0.6128    D(G(z)): 0.1570 / 0.2873
+[3/5][651/1583] Processed [5400/202624]         Loss_D: 0.8967  Loss_G: 3.9908  D(x): 0.8901    D(G(z)): 0.4988 / 0.0247
+[3/5][701/1583] Processed [5450/202624]         Loss_D: 0.6224  Loss_G: 2.8883  D(x): 0.8153    D(G(z)): 0.3053 / 0.0767
+[3/5][751/1583] Processed [5500/202624]         Loss_D: 0.7849  Loss_G: 2.9872  D(x): 0.8530    D(G(z)): 0.4206 / 0.0675
+[3/5][801/1583] Processed [5550/202624]         Loss_D: 0.5891  Loss_G: 1.9148  D(x): 0.6630    D(G(z)): 0.1148 / 0.1845
+[3/5][851/1583] Processed [5600/202624]         Loss_D: 0.6072  Loss_G: 1.9759  D(x): 0.6635    D(G(z)): 0.1259 / 0.1811
+[3/5][901/1583] Processed [5650/202624]         Loss_D: 0.8640  Loss_G: 4.0662  D(x): 0.9092    D(G(z)): 0.4917 / 0.0244
+[3/5][951/1583] Processed [5700/202624]         Loss_D: 0.7254  Loss_G: 2.6369  D(x): 0.8613    D(G(z)): 0.3960 / 0.0937
+[3/5][1001/1583]        Processed [5750/202624]         Loss_D: 0.6331  Loss_G: 2.0862  D(x): 0.6643    D(G(z)): 0.1524 / 0.1571
+[3/5][1051/1583]        Processed [5800/202624]         Loss_D: 1.3965  Loss_G: 1.6198  D(x): 0.3457    D(G(z)): 0.0334 / 0.2513
+[3/5][1101/1583]        Processed [5850/202624]         Loss_D: 0.4618  Loss_G: 2.3900  D(x): 0.7911    D(G(z)): 0.1775 / 0.1127
+[3/5][1151/1583]        Processed [5900/202624]         Loss_D: 0.7336  Loss_G: 2.4386  D(x): 0.7823    D(G(z)): 0.3383 / 0.1175
+[3/5][1201/1583]        Processed [5950/202624]         Loss_D: 0.6273  Loss_G: 2.6039  D(x): 0.8143    D(G(z)): 0.2943 / 0.0999
+[3/5][1251/1583]        Processed [6000/202624]         Loss_D: 0.7039  Loss_G: 3.0610  D(x): 0.8626    D(G(z)): 0.3928 / 0.0599
+[3/5][1301/1583]        Processed [6050/202624]         Loss_D: 0.6700  Loss_G: 2.8720  D(x): 0.8652    D(G(z)): 0.3707 / 0.0754
+[3/5][1351/1583]        Processed [6100/202624]         Loss_D: 0.6934  Loss_G: 2.0077  D(x): 0.6668    D(G(z)): 0.1942 / 0.1639
+[3/5][1401/1583]        Processed [6150/202624]         Loss_D: 0.6873  Loss_G: 2.0284  D(x): 0.6598    D(G(z)): 0.1931 / 0.1674
+[3/5][1451/1583]        Processed [6200/202624]         Loss_D: 0.7242  Loss_G: 2.4127  D(x): 0.7271    D(G(z)): 0.2873 / 0.1195
+[3/5][1501/1583]        Processed [6250/202624]         Loss_D: 0.5591  Loss_G: 3.0475  D(x): 0.8260    D(G(z)): 0.2763 / 0.0637
+[3/5][1551/1583]        Processed [6300/202624]         Loss_D: 1.4319  Loss_G: 0.2131  D(x): 0.3438    D(G(z)): 0.1774 / 0.8199
+[4/5][18/1583]  Processed [6350/202624]         Loss_D: 0.5866  Loss_G: 2.2906  D(x): 0.7592    D(G(z)): 0.2311 / 0.1281
+[4/5][68/1583]  Processed [6400/202624]         Loss_D: 0.6901  Loss_G: 1.4854  D(x): 0.6170    D(G(z)): 0.1249 / 0.2644
+[4/5][118/1583] Processed [6450/202624]         Loss_D: 0.7059  Loss_G: 2.0400  D(x): 0.6778    D(G(z)): 0.2259 / 0.1638
+[4/5][168/1583] Processed [6500/202624]         Loss_D: 0.7116  Loss_G: 3.3205  D(x): 0.8543    D(G(z)): 0.3836 / 0.0479
+[4/5][218/1583] Processed [6550/202624]         Loss_D: 0.6721  Loss_G: 1.9266  D(x): 0.7268    D(G(z)): 0.2445 / 0.1825
+[4/5][268/1583] Processed [6600/202624]         Loss_D: 0.6102  Loss_G: 2.1210  D(x): 0.7539    D(G(z)): 0.2417 / 0.1514
+[4/5][318/1583] Processed [6650/202624]         Loss_D: 0.7567  Loss_G: 2.9349  D(x): 0.8534    D(G(z)): 0.4048 / 0.0696
+[4/5][368/1583] Processed [6700/202624]         Loss_D: 1.0011  Loss_G: 0.8708  D(x): 0.4723    D(G(z)): 0.1001 / 0.4636
+[4/5][418/1583] Processed [6750/202624]         Loss_D: 0.6323  Loss_G: 1.7982  D(x): 0.6323    D(G(z)): 0.1116 / 0.2086
+[4/5][468/1583] Processed [6800/202624]         Loss_D: 0.5767  Loss_G: 2.9910  D(x): 0.8381    D(G(z)): 0.2978 / 0.0711
+[4/5][518/1583] Processed [6850/202624]         Loss_D: 0.8181  Loss_G: 3.8442  D(x): 0.9196    D(G(z)): 0.4744 / 0.0300
+[4/5][568/1583] Processed [6900/202624]         Loss_D: 0.7257  Loss_G: 2.0241  D(x): 0.7358    D(G(z)): 0.2879 / 0.1670
+[4/5][618/1583] Processed [6950/202624]         Loss_D: 0.6204  Loss_G: 2.5163  D(x): 0.7581    D(G(z)): 0.2556 / 0.0967
+[4/5][668/1583] Processed [7000/202624]         Loss_D: 0.4674  Loss_G: 2.4837  D(x): 0.7969    D(G(z)): 0.1857 / 0.1085
+[4/5][718/1583] Processed [7050/202624]         Loss_D: 1.6354  Loss_G: 4.5422  D(x): 0.9666    D(G(z)): 0.7250 / 0.0194
+[4/5][768/1583] Processed [7100/202624]         Loss_D: 0.7038  Loss_G: 1.4566  D(x): 0.5890    D(G(z)): 0.0960 / 0.2809
+[4/5][818/1583] Processed [7150/202624]         Loss_D: 0.5885  Loss_G: 1.6063  D(x): 0.6715    D(G(z)): 0.1383 / 0.2374
+[4/5][868/1583] Processed [7200/202624]         Loss_D: 0.7177  Loss_G: 1.1106  D(x): 0.5783    D(G(z)): 0.0916 / 0.3771
+[4/5][918/1583] Processed [7250/202624]         Loss_D: 0.5946  Loss_G: 2.9597  D(x): 0.8626    D(G(z)): 0.3233 / 0.0691
+[4/5][968/1583] Processed [7300/202624]         Loss_D: 0.6025  Loss_G: 2.2069  D(x): 0.7737    D(G(z)): 0.2597 / 0.1357
+[4/5][1018/1583]        Processed [7350/202624]         Loss_D: 0.6595  Loss_G: 2.3780  D(x): 0.8541    D(G(z)): 0.3605 / 0.1125
+[4/5][1068/1583]        Processed [7400/202624]         Loss_D: 1.7697  Loss_G: 0.3034  D(x): 0.2244    D(G(z)): 0.0256 / 0.7868
+[4/5][1118/1583]        Processed [7450/202624]         Loss_D: 0.5262  Loss_G: 2.2983  D(x): 0.8115    D(G(z)): 0.2389 / 0.1194
+[4/5][1168/1583]        Processed [7500/202624]         Loss_D: 0.5697  Loss_G: 1.8901  D(x): 0.6791    D(G(z)): 0.1198 / 0.1820
+[4/5][1218/1583]        Processed [7550/202624]         Loss_D: 0.6525  Loss_G: 1.9315  D(x): 0.6888    D(G(z)): 0.1935 / 0.1820
+[4/5][1268/1583]        Processed [7600/202624]         Loss_D: 0.6468  Loss_G: 1.7507  D(x): 0.6803    D(G(z)): 0.1782 / 0.2015
+[4/5][1318/1583]        Processed [7650/202624]         Loss_D: 0.4789  Loss_G: 2.2340  D(x): 0.7157    D(G(z)): 0.1006 / 0.1428
+[4/5][1368/1583]        Processed [7700/202624]         Loss_D: 1.0873  Loss_G: 1.5656  D(x): 0.5598    D(G(z)): 0.2674 / 0.2599
+[4/5][1418/1583]        Processed [7750/202624]         Loss_D: 0.8492  Loss_G: 4.0867  D(x): 0.8753    D(G(z)): 0.4639 / 0.0236
+[4/5][1468/1583]        Processed [7800/202624]         Loss_D: 0.6953  Loss_G: 2.9595  D(x): 0.8200    D(G(z)): 0.3545 / 0.0652
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 1.1207  Loss_G: 4.3567  D(x): 0.9613    D(G(z)): 0.6078 / 0.0180
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.6093  Loss_G: 2.5348  D(x): 0.7897    D(G(z)): 0.2800 / 0.0958
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-02-02 16:58:03.775405: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 312s 973ms/step
+313/313 [==============================] - 301s 960ms/step
+FID: 460.688
+Average FID score for the last 10000 processed images at [9999/1583]    is [460.68798946452154]
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:42:46
+        Energy: 0.0970077 kWh
+        CO2eq:  9.7839862 g
+        This is equivalent to:
+        0.091014 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:282.7979792118073 minutes.
+80 images saved in outputs/

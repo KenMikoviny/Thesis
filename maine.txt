@@ -271,3 +271,50 @@ Actual consumption for 5 epoch(s):
 CarbonTracker: Finished monitoring.
 DONE TRAINING
 total time spent training:284.86665521860124 minutes.
+
+996:
+
+[4/5][1468/1583]        Processed [7800/202624]         Loss_D: 0.6704  Loss_G: 2.6154  D(x): 0.7991    D(G(z)): 0.3163 / 0.1020
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.6900  Loss_G: 3.4084  D(x): 0.9170    D(G(z)): 0.4199 / 0.0456
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.5774  Loss_G: 2.3753  D(x): 0.7359    D(G(z)): 0.2000 / 0.1173
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-02-02 05:01:21.227601: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 310s 980ms/step
+313/313 [==============================] - 304s 970ms/step
+FID: 460.425
+Average FID score for the last 10000 processed images at [9999/1583]    is [460.4248019196983]
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:42:25
+        Energy: 0.0926691 kWh
+        CO2eq:  9.3463996 g
+        This is equivalent to:
+        0.086943 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:282.4568181236585 minutes.
+80 images saved in outputs/
+
+997:
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 1.1207  Loss_G: 4.3567  D(x): 0.9613    D(G(z)): 0.6078 / 0.0180
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.6093  Loss_G: 2.5348  D(x): 0.7897    D(G(z)): 0.2800 / 0.0958
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-02-02 16:58:03.775405: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 312s 973ms/step
+313/313 [==============================] - 301s 960ms/step
+FID: 460.688
+Average FID score for the last 10000 processed images at [9999/1583]    is [460.68798946452154]
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:42:46
+        Energy: 0.0970077 kWh
+        CO2eq:  9.7839862 g
+        This is equivalent to:
+        0.091014 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:282.7979792118073 minutes.
+80 images saved in outputs/
