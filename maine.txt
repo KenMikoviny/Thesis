@@ -119,7 +119,7 @@ CarbonTracker: Finished monitoring.
 DONE TRAINING
 total time spent training:284.99838571548463 minutes.
 
-997
+996
 
 /5][1468/1583]        Processed [7800/202624]         Loss_D: 0.8919  Loss_G: 3.4651  D(x): 0.8545    D(G(z)): 0.4615 / 0.0454
 [4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.9611  Loss_G: 5.6731  D(x): 0.9322    D(G(z)): 0.5388 / 0.0063
