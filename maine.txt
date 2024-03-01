@@ -71,6 +71,155 @@ total time spent training:263.22725820938746 minutes.
 80 images saved in outputs/
 
 
+995
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.9483  Loss_G: 0.7452  D(x): 0.8723    D(G(z)): 0.5419 / 0.4781
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.9574  Loss_G: 0.7653  D(x): 0.9162    D(G(z)): 0.5753 / 0.4675
+FID: 461.581
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.5814276757227]
+
+CarbonTracker: Average carbon intensity during training was 475.00 gCO2/kWh at detected location: UNDETECTED.
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:01:45
+        Energy: 0.0808472 kWh
+        CO2eq:  38.4024434 g
+        This is equivalent to:
+        0.3572320 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:241.76273382902144 minutes.
+
+994
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.9920  Loss_G: 0.6770  D(x): 0.8995    D(G(z)): 0.5778 / 0.5115
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 1.0650  Loss_G: 0.5863  D(x): 0.7223    D(G(z)): 0.4705 / 0.5598
+313/313 [==============================] - 231s 731ms/step
+313/313 [==============================] - 230s 732ms/step
+FID: 461.566
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.5662624691147]
+
+CarbonTracker: Average carbon intensity during training was 475.00 gCO2/kWh at detected location: UNDETECTED.
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:00:01
+        Energy: 0.0799309 kWh
+        CO2eq:  37.9671612 g
+        This is equivalent to:
+        0.3531829 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:240.01889511346818 minutes.
+
+993
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.9947  Loss_G: 0.6773  D(x): 0.8294    D(G(z)): 0.5429 / 0.5104
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.9816  Loss_G: 0.6913  D(x): 0.8735    D(G(z)): 0.5598 / 0.5044
+
+313/313 [==============================] - 230s 734ms/step
+FID: 461.577
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.5765523341878]
+
+CarbonTracker: Average carbon intensity during training was 475.00 gCO2/kWh at detected location: UNDETECTED.
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:00:51
+        Energy: 0.0793730 kWh
+        CO2eq:  37.7021737 g
+        This is equivalent to:
+        0.3507179 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:240.8489781578382 minutes.
+
+992
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.9415  Loss_G: 0.7025  D(x): 0.8944    D(G(z)): 0.5560 / 0.5005
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 1.0317  Loss_G: 0.5898  D(x): 0.7560    D(G(z)): 0.5057 / 0.5584
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+
+313/313 [==============================] - 230s 732ms/step
+FID: 461.765
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.7650634158964]
+
+CarbonTracker: Average carbon intensity during training was 475.00 gCO2/kWh at detected location: UNDETECTED.
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:01:26
+        Energy: 0.0800670 kWh
+        CO2eq:  38.0318391 g
+        This is equivalent to:
+        0.3537846 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:241.44067846934 minutes.
+
+991
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.9945  Loss_G: 0.7256  D(x): 0.7998    D(G(z)): 0.5200 / 0.4873
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.9711  Loss_G: 0.6806  D(x): 0.8654    D(G(z)): 0.5519 / 0.5093
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+313/313 [==============================] - 230s 732ms/step
+FID: 461.907
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.9068716467285]
+
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:00:52
+        Energy: 0.0863652 kWh
+        CO2eq:  41.0234805 g
+        This is equivalent to:
+        0.3816138 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:240.86371717055638 minutes.
+
+990
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.9169  Loss_G: 0.6509  D(x): 0.8241    D(G(z)): 0.5012 / 0.5254
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.9837  Loss_G: 0.8034  D(x): 0.8877    D(G(z)): 0.5649 / 0.4543
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+
+313/313 [==============================] - 236s 734ms/step
+313/313 [==============================] - 229s 729ms/step
+FID: 461.786
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.7860503068938]
+
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   3:59:40
+        Energy: 0.0783246 kWh
+        CO2eq:  37.2042003 g
+        This is equivalent to:
+        0.3460856 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:239.67327574888864 minutes.
+
+989
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.9802  Loss_G: 0.8394  D(x): 0.9306    D(G(z)): 0.5882 / 0.4356
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.9638  Loss_G: 0.6119  D(x): 0.8487    D(G(z)): 0.5389 / 0.5450
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+
+313/313 [==============================] - 236s 741ms/step
+274/313 [=========================>....] - ETA: 28sStatus code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x00000205661692E0>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+
+313/313 [==============================] - 231s 736ms/step
+FID: 461.679
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.6785043222667]
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:00:40
+        Energy: 0.0797674 kWh
+        CO2eq:  37.8895358 g
+        This is equivalent to:
+        0.3524608 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:240.66842338641484 minutes.
+
+
 
 
 
@@ -141,6 +290,191 @@ CarbonTracker: Finished monitoring.
 DONE TRAINING
 total time spent training:281.17190859715146 minutes.
 80 images saved in outputs/
+
+
+995
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.5082  Loss_G: 2.2693  D(x): 0.7670    D(G(z)): 0.1865 / 0.1277
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.6089  Loss_G: 2.4529  D(x): 0.7672    D(G(z)): 0.2496 / 0.1144
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+WARNING:tensorflow:From c:\Users\kenmi\Desktop\skol\P2\Thesis\.venv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2024-02-18 04:47:43.014210: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From c:\Users\kenmi\Desktop\skol\P2\Thesis\.venv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+313/313 [==============================] - 232s 733ms/step
+147/313 [=============>................] - ETA: 2:02CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 100.85782 gCO2/kWh.
+313/313 [==============================] - 230s 732ms/step
+FID: 461.259
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.25921433057516]
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 100.85782 gCO2/kWh.
+CarbonTracker: Average carbon intensity during training was 100.86 gCO2/kWh at detected location: Bratislava, Bratislava Region, SK.
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:17:16
+        Energy: 0.0851107 kWh
+        CO2eq:  8.5840749 g
+        This is equivalent to:
+        0.0798519 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:257.2719531416893 minutes.
+
+994
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 1.2434  Loss_G: 0.3833  D(x): 0.3600    D(G(z)): 0.0382 / 0.7127
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.5735  Loss_G: 3.2068  D(x): 0.8721    D(G(z)): 0.3216 / 0.0521
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+WARNING:tensorflow:From c:\Users\kenmi\Desktop\skol\P2\Thesis\.venv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2024-02-18 14:49:48.251471: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From c:\Users\kenmi\Desktop\skol\P2\Thesis\.venv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+313/313 [==============================] - 231s 731ms/step
+181/313 [================>.............] - ETA: 1:36CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 100.85782 gCO2/kWh.
+313/313 [==============================] - 229s 730ms/step
+FID: 460.240
+Average FID score for the last 10000 processed images at [9999/1583]    is [460.2395609689612]
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 100.85782 gCO2/kWh.
+CarbonTracker: Average carbon intensity during training was 100.86 gCO2/kWh at detected location: Bratislava, Bratislava Region, SK.
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:16:51
+        Energy: 0.0859305 kWh
+        CO2eq:  8.6667621 g
+        This is equivalent to:
+        0.0806210 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:256.8607129851977 minutes.
+
+993
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.5383  Loss_G: 1.8178  D(x): 0.7473    D(G(z)): 0.1832 / 0.1905
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.5063  Loss_G: 3.5627  D(x): 0.8658    D(G(z)): 0.2627 / 0.0401
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+WARNING:tensorflow:From c:\Users\kenmi\Desktop\skol\P2\Thesis\.venv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2024-02-18 19:57:55.271124: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From c:\Users\kenmi\Desktop\skol\P2\Thesis\.venv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+313/313 [==============================] - 233s 737ms/step
+154/313 [=============>................] - ETA: 1:58Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000025BDA76DDC0>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "c:\Users\kenmi\Desktop\skol\P2\Thesis\.venv\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 94, in carbon_intensity
+    raise exceptions.IPLocationError("Failed to retrieve location based on IP.")
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+313/313 [==============================] - 234s 744ms/step
+FID: 460.678
+Average FID score for the last 10000 processed images at [9999/1583]    is [460.6776720740014]
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000025BB1E34AF0>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "c:\Users\kenmi\Desktop\skol\P2\Thesis\.venv\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 94, in carbon_intensity
+    raise exceptions.IPLocationError("Failed to retrieve location based on IP.")
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+CarbonTracker: Average carbon intensity during training was 100.86 gCO2/kWh at detected location: UNDETECTED.
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:17:12
+        Energy: 0.0890308 kWh
+        CO2eq:  8.9794503 g
+        This is equivalent to:
+        0.0835298 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:257.20540000597634 minutes.
+80 images saved in outputs/
+
+992:
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.6871  Loss_G: 4.2476  D(x): 0.9247    D(G(z)): 0.4181 / 0.0197
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.5843  Loss_G: 2.0389  D(x): 0.6544    D(G(z)): 0.0921 / 0.1691
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+313/313 [==============================] - 232s 733ms/step
+ 40/313 [==>...........................] - ETA: 3:20Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000002A3D47A3CD0>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+313/313 [==============================] - 230s 732ms/step
+FID: 460.933
+Average FID score for the last 10000 processed images at [9999/1583]    is [460.93318665460197]
+
+CarbonTracker: Average carbon intensity during training was 475.00 gCO2/kWh at detected location: UNDETECTED.
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:18:32
+        Energy: 0.0868695 kWh
+        CO2eq:  41.2629961 g
+        This is equivalent to:
+        0.3838418 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:258.539032137394 minutes.
+
+991:
+
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.4850  Loss_G: 2.6653  D(x): 0.7644    D(G(z)): 0.1619 / 0.0915
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.9649  Loss_G: 4.1000  D(x): 0.9413    D(G(z)): 0.5250 / 0.0271
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+FID: 461.042
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.04247934074795]
+
+CarbonTracker: Average carbon intensity during training was 475.00 gCO2/kWh at detected location: UNDETECTED.
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:16:58
+        Energy: 0.0876020 kWh
+        CO2eq:  41.6109638 g
+        This is equivalent to:
+        0.3870787 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:256.9711891531944 minutes.
+
+990
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.4776  Loss_G: 3.8999  D(x): 0.9288    D(G(z)): 0.3040 / 0.0306
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 1.5726  Loss_G: 0.4422  D(x): 0.2720    D(G(z)): 0.0323 / 0.6946
+FID: 460.348
+Average FID score for the last 10000 processed images at [9999/1583]    is [460.3482118520274]
+
+CarbonTracker: Average carbon intensity during training was 475.00 gCO2/kWh at detected location: UNDETECTED.
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:17:16
+        Energy: 0.0854837 kWh
+        CO2eq:  40.6047602 g
+        This is equivalent to:
+        0.3777187 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:257.2654023806254 minutes.
+
+
+989
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.4122  Loss_G: 3.1754  D(x): 0.8492    D(G(z)): 0.1932 / 0.0585
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.4523  Loss_G: 2.2314  D(x): 0.7982    D(G(z)): 0.1803 / 0.1321
+FID: 461.249
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.2490049863082]
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:18:25
+        Energy: 0.0849963 kWh
+        CO2eq:  40.3732249 g
+        This is equivalent to:
+        0.3755649 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:258.43000339667003 minutes.
+
+
+
+
+
 
 
 
@@ -243,6 +577,317 @@ CarbonTracker: Finished monitoring.
 DONE TRAINING
 total time spent training:261.8498063484828 minutes.
 
+997
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.9833  Loss_G: 0.7239  D(x): 0.7904    D(G(z)): 0.5119 / 0.4902
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 1.0343  Loss_G: 0.6968  D(x): 0.8639    D(G(z)): 0.5753 / 0.5007
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+WARNING:tensorflow:From c:\Users\kenmi\Desktop\skol\P2\Thesis\.venv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2024-02-17 19:36:35.322651: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From c:\Users\kenmi\Desktop\skol\P2\Thesis\.venv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+313/313 [==============================] - 236s 745ms/step
+2024-02-17 19:41:21.984461: W tensorflow/core/kernels/data/prefetch_autotuner.cc:52] Prefetch autotuner tried to allocate 34329984 bytes after encountering the first element of size 34329984 bytes.This already causes the autotune ram budget to be exceeded. To stay within the ram budget, either increase the ram budget or reduce element size
+313/313 [==============================] - 234s 745ms/step
+FID: 461.665
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.66501305416546]
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 100.85782 gCO2/kWh.
+CarbonTracker: Average carbon intensity during training was 100.86 gCO2/kWh at detected location: Bratislava, Bratislava Region, SK.
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   3:58:40
+        Energy: 0.0798613 kWh
+        CO2eq:  8.0546362 g
+        This is equivalent to:
+        0.0749268 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:238.6853876153628 minutes.
+
+996:
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.9931  Loss_G: 0.6363  D(x): 0.7964    D(G(z)): 0.5186 / 0.5321
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.9252  Loss_G: 0.6195  D(x): 0.8123    D(G(z)): 0.4982 / 0.5416
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+WARNING:tensorflow:From c:\Users\kenmi\Desktop\skol\P2\Thesis\.venv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2024-02-17 14:29:42.087378: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From c:\Users\kenmi\Desktop\skol\P2\Thesis\.venv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+313/313 [==============================] - 235s 739ms/step
+313/313 [==============================] - 231s 734ms/step
+FID: 461.635
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.63471738598855]
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 100.85782 gCO2/kWh.
+CarbonTracker: Average carbon intensity during training was 100.86 gCO2/kWh at detected location: Bratislava, Bratislava Region, SK.
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   3:58:09
+        Energy: 0.0792466 kWh
+        CO2eq:  7.9926370 g
+        This is equivalent to:
+        0.0743501 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:238.17104669411978 minutes.
+
+995:
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 1.0443  Loss_G: 0.7354  D(x): 0.9055    D(G(z)): 0.6046 / 0.4828
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.9685  Loss_G: 0.6963  D(x): 0.8526    D(G(z)): 0.5431 / 0.5006
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+WARNING:tensorflow:From c:\Users\kenmi\Desktop\skol\P2\Thesis\.venv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2024-02-17 05:04:06.022579: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From c:\Users\kenmi\Desktop\skol\P2\Thesis\.venv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+313/313 [==============================] - 234s 735ms/step
+296/313 [===========================>..] - ETA: 12sCarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 100.85782 gCO2/kWh.
+313/313 [==============================] - 230s 733ms/step
+FID: 461.684
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.6843939298898]
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 100.85782 gCO2/kWh.
+CarbonTracker: Average carbon intensity during training was 100.86 gCO2/kWh at detected location: Bratislava, Bratislava Region, SK.
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:00:26
+        Energy: 0.0804374 kWh
+        CO2eq:  8.1127422 g
+        This is equivalent to:
+        0.0754674 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:240.44408112764359 minutes.
+
+994:
+
+
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 100.85782 gCO2/kWh.
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.9679  Loss_G: 0.7142  D(x): 0.8530    D(G(z)): 0.5447 / 0.4924
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 1.0391  Loss_G: 0.6298  D(x): 0.7811    D(G(z)): 0.5253 / 0.5378
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+WARNING:tensorflow:From c:\Users\kenmi\Desktop\skol\P2\Thesis\.venv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2024-02-16 17:33:19.273687: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From c:\Users\kenmi\Desktop\skol\P2\Thesis\.venv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+313/313 [==============================] - 232s 733ms/step
+313/313 [==============================] - 229s 730ms/step
+FID: 461.505
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.50463267861096]
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 100.85782 gCO2/kWh.
+CarbonTracker: Average carbon intensity during training was 100.86 gCO2/kWh at detected location: Banská Bystrica, Banská Bystrica Region, SK.   
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   3:59:08
+        Energy: 0.0811990 kWh
+        CO2eq:  8.1895569 g
+        This is equivalent to:
+        0.0761819 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:239.15319380362828 minutes.
+
+993:
+
+4/5][668/1583] Processed [7000/202624]         Loss_D: 1.0412  Loss_G: 0.7036  D(x): 0.9021    D(G(z)): 0.6029 / 0.4977
+[4/5][718/1583] Processed [7050/202624]         Loss_D: 0.9346  Loss_G: 0.7103  D(x): 0.8660    D(G(z)): 0.5389 / 0.4942
+[4/5][768/1583] Processed [7100/202624]         Loss_D: 0.9294  Loss_G: 0.7383  D(x): 0.8890    D(G(z)): 0.5474 / 0.4810
+[4/5][818/1583] Processed [7150/202624]         Loss_D: 0.9561  Loss_G: 0.7177  D(x): 0.8633    D(G(z)): 0.5450 / 0.4929
+[4/5][868/1583] Processed [7200/202624]         Loss_D: 1.0210  Loss_G: 0.6778  D(x): 0.8374    D(G(z)): 0.5534 / 0.5100
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 100.85782 gCO2/kWh.
+[4/5][918/1583] Processed [7250/202624]         Loss_D: 1.0280  Loss_G: 0.6964  D(x): 0.8890    D(G(z)): 0.5888 / 0.5014
+[4/5][968/1583] Processed [7300/202624]         Loss_D: 1.0990  Loss_G: 0.5438  D(x): 0.7381    D(G(z)): 0.5311 / 0.5837
+[4/5][1018/1583]        Processed [7350/202624]         Loss_D: 0.9871  Loss_G: 0.6902  D(x): 0.7827    D(G(z)): 0.5079 / 0.5071
+[4/5][1068/1583]        Processed [7400/202624]         Loss_D: 1.0000  Loss_G: 0.6627  D(x): 0.8143    D(G(z)): 0.5355 / 0.5205
+[4/5][1118/1583]        Processed [7450/202624]         Loss_D: 0.9898  Loss_G: 0.7149  D(x): 0.8306    D(G(z)): 0.5430 / 0.4926
+[4/5][1168/1583]        Processed [7500/202624]         Loss_D: 1.0572  Loss_G: 0.6253  D(x): 0.7809    D(G(z)): 0.5358 / 0.5372
+[4/5][1218/1583]        Processed [7550/202624]         Loss_D: 1.0280  Loss_G: 0.6311  D(x): 0.8116    D(G(z)): 0.5480 / 0.5355
+[4/5][1268/1583]        Processed [7600/202624]         Loss_D: 0.9906  Loss_G: 0.7760  D(x): 0.8483    D(G(z)): 0.5525 / 0.4631
+[4/5][1318/1583]        Processed [7650/202624]         Loss_D: 0.9538  Loss_G: 0.6760  D(x): 0.8947    D(G(z)): 0.5598 / 0.5114
+[4/5][1368/1583]        Processed [7700/202624]         Loss_D: 0.9455  Loss_G: 0.7340  D(x): 0.8873    D(G(z)): 0.5534 / 0.4829
+[4/5][1418/1583]        Processed [7750/202624]         Loss_D: 1.0035  Loss_G: 0.8105  D(x): 0.8983    D(G(z)): 0.5812 / 0.4487
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 100.85782 gCO2/kWh.
+[4/5][1468/1583]        Processed [7800/202624]         Loss_D: 0.9998  Loss_G: 0.6613  D(x): 0.8383    D(G(z)): 0.5450 / 0.5193
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 1.0009  Loss_G: 0.6799  D(x): 0.8467    D(G(z)): 0.5538 / 0.5119
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 1.0081  Loss_G: 0.6829  D(x): 0.8790    D(G(z)): 0.5727 / 0.5086
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+WARNING:tensorflow:From c:\Users\kenmi\Desktop\skol\P2\Thesis\.venv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2024-02-15 17:34:13.061840: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From c:\Users\kenmi\Desktop\skol\P2\Thesis\.venv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+313/313 [==============================] - 231s 728ms/step
+294/313 [===========================>..] - ETA: 13sCarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 100.85782 gCO2/kWh.
+313/313 [==============================] - 227s 723ms/step
+FID: 461.736
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.73559074492493]
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 100.85782 gCO2/kWh.
+CarbonTracker: Average carbon intensity during training was 100.86 gCO2/kWh at detected location: Banská Bystrica, Banská Bystrica Region, SK.   
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:00:27
+        Energy: 0.0779091 kWh
+        CO2eq:  7.8577428 g
+        This is equivalent to:
+        0.0730953 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:240.4662662903468 minutes.
+
+992:
+
+[4/5][1468/1583]        Processed [7800/202624]         Loss_D: 0.9963  Loss_G: 0.6993  D(x): 0.8248    D(G(z)): 0.5399 / 0.5001
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 1.1251  Loss_G: 0.7710  D(x): 0.8603    D(G(z)): 0.6103 / 0.4687
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 1.1259  Loss_G: 0.5795  D(x): 0.7739    D(G(z)): 0.5505 / 0.5656
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-02-14 15:46:42.316578: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 306s 968ms/step
+313/313 [==============================] - 303s 966ms/step
+FID: 461.492
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.4915264923415]
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:22:55
+        Energy: 0.0888915 kWh
+        CO2eq:  8.9654005 g
+        This is equivalent to:
+        0.083399 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:262.93399409453076 minutes.
+
+991:
+
+[4/5][818/1583] Processed [7150/202624]         Loss_D: 1.0076  Loss_G: 0.6366  D(x): 0.7874    D(G(z)): 0.5186 / 0.5318
+[4/5][868/1583] Processed [7200/202624]         Loss_D: 0.9616  Loss_G: 0.6013  D(x): 0.8157    D(G(z)): 0.5126 / 0.5540
+[4/5][918/1583] Processed [7250/202624]         Loss_D: 0.9367  Loss_G: 0.6512  D(x): 0.8286    D(G(z)): 0.5149 / 0.5243
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000022EAA5BFC40>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+[4/5][968/1583] Processed [7300/202624]         Loss_D: 0.8862  Loss_G: 0.7499  D(x): 0.8821    D(G(z)): 0.5245 / 0.4762
+[4/5][1018/1583]        Processed [7350/202624]         Loss_D: 0.9679  Loss_G: 0.8254  D(x): 0.9064    D(G(z)): 0.5735 / 0.4416
+[4/5][1068/1583]        Processed [7400/202624]         Loss_D: 1.0745  Loss_G: 0.6295  D(x): 0.8675    D(G(z)): 0.5894 / 0.5359
+[4/5][1118/1583]        Processed [7450/202624]         Loss_D: 0.9912  Loss_G: 0.6703  D(x): 0.8362    D(G(z)): 0.5461 / 0.5143
+[4/5][1168/1583]        Processed [7500/202624]         Loss_D: 1.0570  Loss_G: 0.6009  D(x): 0.7904    D(G(z)): 0.5286 / 0.5527
+[4/5][1218/1583]        Processed [7550/202624]         Loss_D: 0.9588  Loss_G: 0.6729  D(x): 0.8423    D(G(z)): 0.5339 / 0.5142
+[4/5][1268/1583]        Processed [7600/202624]         Loss_D: 1.0070  Loss_G: 0.6494  D(x): 0.8630    D(G(z)): 0.5656 / 0.5253
+[4/5][1318/1583]        Processed [7650/202624]         Loss_D: 0.9249  Loss_G: 0.6860  D(x): 0.8686    D(G(z)): 0.5316 / 0.5059
+[4/5][1368/1583]        Processed [7700/202624]         Loss_D: 0.9898  Loss_G: 0.7278  D(x): 0.8858    D(G(z)): 0.5678 / 0.4858
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000022EA8080B20>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+[4/5][1418/1583]        Processed [7750/202624]         Loss_D: 1.0108  Loss_G: 0.6251  D(x): 0.8647    D(G(z)): 0.5672 / 0.5378
+[4/5][1468/1583]        Processed [7800/202624]         Loss_D: 0.9890  Loss_G: 0.7351  D(x): 0.8391    D(G(z)): 0.5404 / 0.4829
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.9796  Loss_G: 0.7234  D(x): 0.8754    D(G(z)): 0.5622 / 0.4888
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.9171  Loss_G: 0.7639  D(x): 0.8831    D(G(z)): 0.5386 / 0.4705
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-02-14 04:31:29.189271: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 303s 960ms/step
+ 49/313 [===>..........................] - ETA: 4:08Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000022ED182BC40>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+313/313 [==============================] - 298s 949ms/step
+FID: 461.399
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.39936451032986]
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000022EAA5B4190>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+CarbonTracker:
+Actual consumption for 5 epoch(s):
+        Time:   4:19:20
+        Energy: 0.0883566 kWh
+        CO2eq:  8.9114564 g
+        This is equivalent to:
+        0.082897 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:259.3447381178538 minutes.
+
+990:
+
+[4/5][1468/1583]        Processed [7800/202624]         Loss_D: 0.9937  Loss_G: 0.7642  D(x): 0.8401    D(G(z)): 0.5472 / 0.4706
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.9541  Loss_G: 0.7631  D(x): 0.8515    D(G(z)): 0.5378 / 0.4704
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.9768  Loss_G: 0.7091  D(x): 0.8829    D(G(z)): 0.5662 / 0.4946
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-02-13 21:19:15.263401: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+289/313 [==========================>...] - ETA: 23sStatus code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000001F92DF00370>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+313/313 [==============================] - 309s 979ms/step
+313/313 [==============================] - 302s 964ms/step
+FID: 461.533
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.5325238620837]
+Status code Unknown from http://ipinfo.io/json: ERROR - HTTPConnectionPool(host='ipinfo.io', port=80): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000001F92DDCB2B0>: Failed to resolve 'ipinfo.io' ([Errno 11001] getaddrinfo failed)"))
+CarbonTracker: INFO - Traceback (most recent call last):
+  File "C:\Users\kenmi\AppData\Local\Programs\Python\Python39\lib\site-packages\carbontracker\emissions\intensity\intensity.py", line 104, in carbon_intensity
+    raise exceptions.IPLocationError(
+carbontracker.exceptions.IPLocationError: Failed to retrieve location based on IP.
+
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:21:14
+        Energy: 0.0933919 kWh
+        CO2eq:  9.4193074 g
+        This is equivalent to:
+        0.087621 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:261.2539172808329 minutes.
+
+989:
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 1.0137  Loss_G: 0.6925  D(x): 0.8800    D(G(z)): 0.5778 / 0.5026
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 1.0329  Loss_G: 0.6803  D(x): 0.8159    D(G(z)): 0.5496 / 0.5117
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-02-13 16:39:23.109317: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 307s 968ms/step
+313/313 [==============================] - 303s 966ms/step
+FID: 461.583
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.58344560746775]
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:20:25
+        Energy: 0.0884647 kWh
+        CO2eq:  8.9223534 g
+        This is equivalent to:
+        0.082999 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:260.4427749752998 minutes.
+
+
+
+
+
+
+
+
 
 BN AND PRUNING
 
@@ -318,3 +963,168 @@ CarbonTracker: Finished monitoring.
 DONE TRAINING
 total time spent training:282.7979792118073 minutes.
 80 images saved in outputs/
+
+
+
+995:
+
+4/5][1518/1583]        Processed [7850/202624]         Loss_D: 1.4328  Loss_G: 4.5878  D(x): 0.8554    D(G(z)): 0.6609 / 0.0168
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.4397  Loss_G: 2.4675  D(x): 0.7988    D(G(z)): 0.1677 / 0.1059
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-02-10 16:02:17.853628: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 311s 981ms/step
+313/313 [==============================] - 304s 970ms/step
+FID: 461.375
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.37527645219245]
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:45:40
+        Energy: 0.0967725 kWh
+        CO2eq:  9.7602622 g
+        This is equivalent to:
+        0.090793 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:285.7051642537117 minutes.
+80 images saved in outputs/
+
+994:
+
+[4/5][1418/1583]        Processed [7750/202624]         Loss_D: 0.5963  Loss_G: 3.1242  D(x): 0.8165    D(G(z)): 0.2855 / 0.0616
+[4/5][1468/1583]        Processed [7800/202624]         Loss_D: 0.6470  Loss_G: 2.4024  D(x): 0.7587    D(G(z)): 0.2743 / 0.1101
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.7341  Loss_G: 1.1184  D(x): 0.6040    D(G(z)): 0.1382 / 0.3740
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.6712  Loss_G: 4.1889  D(x): 0.9268    D(G(z)): 0.4189 / 0.0204
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-02-10 22:58:41.245434: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 307s 972ms/step
+313/313 [==============================] - 305s 970ms/step
+FID: 461.275
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.27543923500116]
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:40:57
+        Energy: 0.0944902 kWh
+        CO2eq:  9.5300708 g
+        This is equivalent to:
+        0.088652 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:280.99120277166367 minutes.
+
+
+993:
+
+[4/5][1468/1583]        Processed [7800/202624]         Loss_D: 0.6188  Loss_G: 3.1398  D(x): 0.9208    D(G(z)): 0.3807 / 0.0575
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.5288  Loss_G: 1.7183  D(x): 0.6946    D(G(z)): 0.1210 / 0.2151
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.6143  Loss_G: 2.8353  D(x): 0.8601    D(G(z)): 0.3387 / 0.0790
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-02-11 03:48:04.354960: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 307s 971ms/step
+313/313 [==============================] - 301s 960ms/step
+FID: 460.868
+Average FID score for the last 10000 processed images at [9999/1583]    is [460.8683342252693]
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:41:26
+        Energy: 0.0932061 kWh
+        CO2eq:  9.4005659 g
+        This is equivalent to:
+        0.087447 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:281.46452453533806 minutes.
+
+992:
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 1.4944  Loss_G: 4.3393  D(x): 0.9660    D(G(z)): 0.6950 / 0.0221
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.6216  Loss_G: 1.6184  D(x): 0.7273    D(G(z)): 0.1922 / 0.2344
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-02-11 19:30:52.713853: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 308s 972ms/step
+313/313 [==============================] - 302s 960ms/step
+FID: 460.791
+Average FID score for the last 10000 processed images at [9999/1583]    is [460.7911710999639]
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:41:04
+        Energy: 0.0957694 kWh
+        CO2eq:  9.6590906 g
+        This is equivalent to:
+        0.089852 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:281.09508646329243 minutes.
+
+991:
+
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.5350  Loss_G: 2.0058  D(x): 0.6874    D(G(z)): 0.0932 / 0.1701
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 1.4453  Loss_G: 4.4978  D(x): 0.9671    D(G(z)): 0.6939 / 0.0193
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-02-12 06:13:22.199668: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 306s 963ms/step
+313/313 [==============================] - 301s 960ms/step
+FID: 461.297
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.2970650481146]
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:43:07
+        Energy: 0.0927113 kWh
+        CO2eq:  9.3506576 g
+        This is equivalent to:
+        0.086983 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:283.14554453690846 minutes.
+
+990:
+
+[4/5][1418/1583]        Processed [7750/202624]         Loss_D: 0.9702  Loss_G: 1.2410  D(x): 0.4540    D(G(z)): 0.0557 / 0.3401
+[4/5][1468/1583]        Processed [7800/202624]         Loss_D: 0.5243  Loss_G: 1.6610  D(x): 0.7163    D(G(z)): 0.1383 / 0.2341
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.4768  Loss_G: 3.6462  D(x): 0.9153    D(G(z)): 0.2982 / 0.0345
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.6170  Loss_G: 1.7649  D(x): 0.6383    D(G(z)): 0.1053 / 0.2093
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-02-12 16:12:53.821980: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 307s 972ms/step
+313/313 [==============================] - 303s 964ms/step
+FID: 460.779
+Average FID score for the last 10000 processed images at [9999/1583]    is [460.7793107935511]
+CarbonTracker:
+Actual consumption for 5 epoch(s):
+        Time:   4:43:12
+        Energy: 0.0977174 kWh
+        CO2eq:  9.8555678 g
+        This is equivalent to:
+        0.091680 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:283.2276444474856 minutes.
+
+989:
+
+[4/5][1418/1583]        Processed [7750/202624]         Loss_D: 0.6017  Loss_G: 1.8759  D(x): 0.7387    D(G(z)): 0.2226 / 0.1853
+[4/5][1468/1583]        Processed [7800/202624]         Loss_D: 0.7335  Loss_G: 1.5697  D(x): 0.5757    D(G(z)): 0.0916 / 0.2464
+[4/5][1518/1583]        Processed [7850/202624]         Loss_D: 0.4367  Loss_G: 2.3937  D(x): 0.8036    D(G(z)): 0.1740 / 0.1152
+[4/5][1568/1583]        Processed [7900/202624]         Loss_D: 0.4814  Loss_G: 1.8398  D(x): 0.7330    D(G(z)): 0.1220 / 0.1842
+Scaled (10000, 299, 299, 3) (10000, 299, 299, 3)
+2024-02-13 03:47:52.120061: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+313/313 [==============================] - 309s 974ms/step
+313/313 [==============================] - 302s 961ms/step
+FID: 461.215
+Average FID score for the last 10000 processed images at [9999/1583]    is [461.2149798097692]
+CarbonTracker: 
+Actual consumption for 5 epoch(s):
+        Time:   4:44:03
+        Energy: 0.0938447 kWh
+        CO2eq:  9.4649731 g
+        This is equivalent to:
+        0.088046 km travelled by car
+CarbonTracker: Finished monitoring.
+DONE TRAINING
+total time spent training:284.08648188114165 minutes.
