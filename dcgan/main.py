@@ -76,7 +76,7 @@ ngf = 64
 ndf = 64
 """Size of feature maps in discriminator"""
 
-num_epochs = 5 # TODO remove this if stop criterion works correctly
+num_epochs = 5 # remove this if stop criterion works correctly
 """Number of training epochs"""
 
 lr = 0.0002
