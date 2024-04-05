@@ -1,0 +1,15 @@
+Edition    Windows 11 Home
+Version    23H2
+Installed on    02/02/2023
+OS build    22631.3155
+Experience    Windows Feature Experience Pack 1000.22684.1000.0
+Device name    DESKTOP-34UPDBC
+Processor    AMD Ryzen 7 5800H with Radeon Graphics            3.20 GHz
+Installed RAM    32.0 GB (31.9 GB usable)
+Device ID    5167E089-0616-43F8-BCCB-CC956D8AE70D
+Product ID    00326-10000-00000-AA923
+System type    64-bit operating system, x64-based processor
+Pen and touch    No pen or touch input is available for this display
+
+NVIDIA GeForce RTX 3060 Laptop GPU
+

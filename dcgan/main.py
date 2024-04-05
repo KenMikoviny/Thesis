@@ -21,6 +21,7 @@ import argparse
 from generator import Generator, GeneratorBN
 from discriminator import Discriminator, DiscriminatorBN
 from inception import calculate_inception_score, resize_image
+from fid import calculate_fid, scale_images
 
 from IPython.display import HTML
 
@@ -35,7 +36,7 @@ import cv2
 import torch.nn.utils.prune as prune
 
 # Set random seed for reproducibility
-manualSeed = 999
+manualSeed = 989
 #manualSeed = random.randint(1, 10000) # use if you want new results
 random.seed(manualSeed)
 torch.manual_seed(manualSeed)
@@ -75,7 +76,7 @@ ngf = 64
 ndf = 64
 """Size of feature maps in discriminator"""
 
-num_epochs = 4 # TODO remove this if stop criterion works correctly
+num_epochs = 5 # TODO remove this if stop criterion works correctly
 """Number of training epochs"""
 
 lr = 0.0002
@@ -119,18 +120,58 @@ print_interval = 50
 improvement_threshold = 0.05  # Define the improvement threshold (5%)
 window_size = 100  # Set the window size for calculating average loss
 
-def main():
+def load_images_from_folder(folder, max_images=10000):
+    images = []
+    counter = 0
+    for filename in os.listdir(folder):
+        if counter >= max_images:
+            break
+        img = cv2.imread(os.path.join(folder, filename))
+        if img is not None:
+            img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+            images.append(img)
+            counter += 1
+    return images
+
+def normalize_t(tensor, value_range, scale_each):
+    tensor = tensor.clone()  # Avoid modifying tensor in-place
+    if value_range is not None and not isinstance(value_range, tuple):
+        raise TypeError("value_range has to be a tuple (min, max) if specified. min and max are numbers")
+
+    def norm_ip(img, low, high):
+        img.clamp_(min=low, max=high)
+        img.sub_(low).div_(max(high - low, 1e-5))
+
+    def norm_range(t, value_range):
+        if value_range is not None:
+            norm_ip(t, value_range[0], value_range[1])
+        else:
+            norm_ip(t, float(t.min()), float(t.max()))
+
+    if scale_each:
+        for t in tensor:  # Loop over mini-batch dimension
+            norm_range(t, value_range)
+    else:
+        norm_range(tensor, value_range)
+
+    return tensor
+
+def main2():
+
+
+    instances = np.array(load_images_from_folder("data/celeba/img_align_celeba"))
+    print("Real Images loaded")
+
     start_time = time.time()
 
     # Energy consumption measurement
-    tracker = CarbonTracker(epochs=num_epochs, epochs_before_pred = -1, monitor_epochs=-1, decimal_precision = 7)
+    tracker = CarbonTracker(epochs=num_epochs, epochs_before_pred = 1, monitor_epochs=-1, decimal_precision = 7)
 
     # Decide which device we want to run on
     device = torch.device("cuda:0" if (torch.cuda.is_available() and ngpu > 0) else "cpu")
 
     # Create the generator
     netG = GeneratorBN(ngpu, nz, nc, ngf).to(device) if batchnorm_enabled else Generator(ngpu, nz, nc, ngf).to(device)
-    #netG = Generator(ngpu, nz, nc, ngf).to(device)
 
     # Handle multi-GPU if desired
     if (device.type == 'cuda') and (ngpu > 1):
@@ -145,7 +186,6 @@ def main():
 
     # Create the Discriminator
     netD = DiscriminatorBN(ngpu, nz, nc, ngf).to(device) if batchnorm_enabled else Discriminator(ngpu, nz, nc, ngf).to(device)
-    #netD = Discriminator(ngpu, nz, nc, ngf).to(device)
 
     # Handle multi-GPU if desired
     if (device.type == 'cuda') and (ngpu > 1):
@@ -183,16 +223,17 @@ def main():
 
     # Lists to keep track of progress
     img_list = []
+    img_list2 = []
     G_losses = []
     D_losses = []
 
     print("Starting Training Loop...")
-    # Initialize flag variable for early stopping
-    stop_training = False
-
     # For each epoch
     for epoch in range(num_epochs):
-      
+        torch.cuda.empty_cache()
+
+        # Initialize flag variable for early stopping
+        stop_training = False
         if stop_training:
             break  # Exit the epoch processing loop
 
@@ -201,7 +242,7 @@ def main():
         epoch_losses = []
         # For each batch in the dataloader
         for i, data in enumerate(dataloader, 0):
-            
+
             ############################
             # (1) Update D network: maximize log(D(x)) + log(1 - D(G(z)))
             ###########################
@@ -263,81 +304,43 @@ def main():
 
 
             # Check how the generator is doing by saving G's output on fixed_noise
-            if (image_counter % 500 == 0) or ((epoch == num_epochs-1) and (i == len(dataloader)-1)):
+            if (image_counter % 100 == 0) or ((epoch == num_epochs-1) and (i == len(dataloader)-1)):
                 with torch.no_grad():
                     fake = netG(fixed_noise).detach().cpu()
                 img_list.append(vutils.make_grid(fake, padding=2, normalize=True))
 
 
-            # img_list2 = []
-            # Check inception score every 50 epochs
+
             with torch.no_grad():
                 new_fake_batch = netG(fixed_noise).detach().cpu()
-            
-            
-            if (i == 0): fake_images = new_fake_batch 
-            else: fake_images = torch.cat((fake_images,new_fake_batch), dim=0)   
+                img_list2.append(new_fake_batch[-1])
 
-             
+                if (i == 0): fake_images = new_fake_batch 
+                else: fake_images = torch.cat((fake_images,new_fake_batch), dim=0)
 
-            if (i % 100 == 0 and i != 0 and epoch > 0):
+            if (i == len(dataloader)-1 and epoch == 4):
                 # Apply the function to each image in the batch
-                processed_images = torch.stack([resize_image(image) for image in fake_images])
+                fid_batch = fake_images[:10000]
 
-                inception_score = calculate_inception_score(processed_images)
+                # Iterate through the tensor and apply normalize_t to each tensor in the batch
+                for i in range(fid_batch.size(0)):
+                    fid_batch[i] = normalize_t(fid_batch[i], None, False)
+                
+                # Transpose the tensor dimensions
+                fid_batch = fid_batch.permute(0, 2, 3, 1).numpy()  # Change the dimensions accordingly
+                
+                fid_score = calculate_fid(fid_batch,instances)
+                print('FID: %.3f' % fid_score)
 
-                # img_list2.append(vutils.make_grid(fake_images, padding=2, normalize=True))
-                print(f'Average Inception score for the last 100 processed images at [{i}/{len(dataloader)}]\t'
-                      f'is [{inception_score}] \t'
+                print(f'Average FID score for the last 10000 processed images at [{i}/{len(dataloader)}]\t'
+                      f'is [{fid_score}] \t'
                      )
                 
-                
-            if (i % 100 == 0 and pruning_enabled): fake_images = new_fake_batch # Reset
-                # # Configure the grid layout
-                # num_rows = 2  # Number of rows in the grid layout
-                # num_cols = 5  # Number of columns in the grid layout (change to 5 for 10 images)
-                # figsize = (12, 4)  # Figure size in inches
 
-                # # Create the plot
-                # fig, axs = plt.subplots(num_rows, num_cols, figsize=figsize)
+            if (i % 200 == 0): fake_images = new_fake_batch # Reset to conserve memory
 
-                # for i, image in enumerate(processed_images[:10]):  # Display the first 10 images
-                #     row = i // num_cols
-                #     col = i % num_cols
-                #     axs[row, col].imshow(image)
-                #     axs[row, col].axis("off")
-
-                # Display the plot
-                # plt.tight_layout()
-                # plt.show()
-
-                # # Plot the fake images from the last epoch
-                # plt.subplot(1,2,1)
-                # plt.axis("off")
-                # plt.title("Fake Images")
-                # plt.imshow(np.transpose(img_list[-1],(1,2,0)))
-
-                # # Plot the fake images from the last epoch
-                # plt.subplot(1,2,2)
-                # plt.axis("off")
-                # plt.title("Processed Fake Images")
-                # plt.imshow(np.transpose(img_list2[-1],(1,2,0)))
-                # plt.show()
-
-
-            # if(i == 501 and epoch == 1) : 
-            #     stop_training = True
-            #     print('aaaaa')
-            #     break
-
-            #Create a mask for structured pruning (L1 norm-based)
-            if (i == 500 and epoch == 0 and pruning_enabled):
-
-                # # Inspect model weights before and after pruning
-                # print("Weights before pruning:")
-                # for name, param in netD.named_parameters():
-                #     if 'weight' in name:
-                #         print(name, param.abs().mean().item())
+            # PRUNING: Create a mask for structured pruning (L1 norm-based)
+            if (i % 500 == 0 and i != 0 and pruning_enabled and epoch == 0):
 
                 print("\n\nStart of pruning\n\n")
     
@@ -355,42 +358,8 @@ def main():
                     if isinstance(layer, nn.Conv2d):
                         prune.remove(layer, 'weight')
 
-                for index, layer in enumerate(netG.main):
-                    if isinstance(layer, nn.Conv2d):
-                        if index == 0:  # First layer
-                            prune.l1_unstructured(layer, name="weight", amount=0.8)
-                        else:  # Subsequent layers
-                            prune.l1_unstructured(layer, name="weight", amount=0.2)
-
-                # Remove the pruning re-parametrization to speed up inference
-                for layer in netG.main:
-                    if isinstance(layer, nn.Conv2d):
-                        prune.remove(layer, 'weight')
-
                 print("\n\nEnd of pruning\n\n")
-            # # Check the stopping condition based on improvement in avg_loss
-            # if i % window_size == 0:
-
-            #     # Calculate the average loss for the current window
-            #     avg_loss = sum(epoch_losses[-window_size:]) / min(window_size, len(epoch_losses))
-
-            #     # Print the improvement for this epoch, remove later
-            #     print(f'Iteration [{i+1}/{total_images}] - Consecutive avg_windows without improvement: {consecutive_no_improvement}')
-            #     print(f'Avg loss [{avg_loss:.4f}] - Previous avg loss: {prev_avg_loss:.4f}')
-
-            #     if avg_loss > ((1 - improvement_threshold) * prev_avg_loss):
-            #         consecutive_no_improvement += 1
-            #         #if consecutive_no_improvement > 5:
-            #             #print("Stopping training due to insufficient improvement.")
-            #             #stop_training = True  # Set the flag to stop training
-            #             #break  # Exit the training loop
-            #     else:
-            #         consecutive_no_improvement = 0
-
-            #     prev_avg_loss = avg_loss  # Update the previous average loss
                 
-
-
             # Output training stats at the defined print interval
             if (image_counter % print_interval == 0):
                 # Output training stats
@@ -492,4 +461,4 @@ def weights_init(m):
 
 if __name__ == '__main__':
     print("Random Seed: ", manualSeed)
-    main()
+    main2()
